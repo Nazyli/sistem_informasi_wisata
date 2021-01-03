@@ -129,13 +129,13 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="../admin/rekreasi.html" class="nav-link active">
+                                    <a href="../admin/rekreasi.html" class="nav-link">
                                         <i class="far fa-circle nav-icon text-info"></i>
                                         <p>Wisata Rekreasi</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="../admin/kuliner.html" class="nav-link">
+                                    <a href="../admin/kuliner.html" class="nav-link active">
                                         <i class="far fa-circle nav-icon text-info"></i>
                                         <p class="">Wisata Kuliner</p>
                                     </a>
@@ -162,14 +162,14 @@
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1>Tambah Wisata Rekreasi</h1>
+                            <h1>Edit Wisata Kuliner</h1>
                         </div>
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
                                 <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
                                 <li class="breadcrumb-item"><a href="index.html">Admin</a></li>
-                                <li class="breadcrumb-item">Kelola Wisata Rekreasi</li>
-                                <li class="breadcrumb-item active">Tambah Data</li>
+                                <li class="breadcrumb-item">Kelola Wisata Kuliner</li>
+                                <li class="breadcrumb-item active">Edit Data</li>
                             </ol>
                         </div>
                     </div>
@@ -182,7 +182,7 @@
                         <div class="col-12">
                             <div class="card card-primary card-outline">
                                 <div class="card-header">
-                                    <h3 class="card-title">Tambah Data</h3>
+                                    <h3 class="card-title">Edit Data - Cafe Hello Bingsu </h3>
                                     <div class="card-tools">
                                         <button type="button" class="btn btn-tool" data-card-widget="collapse"
                                             title="Collapse">
@@ -195,14 +195,15 @@
                                     </div>
                                 </div>
                                 <div class="card-body">
-                                    <form action="../admin/rekreasi.html" method="post" id="addRekreasi">
+                                    <form action="../admin/kuliner.html" method="post" id="addRekreasi">
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <div class="form-group row">
                                                     <label for="namaWisata" class="col-sm-4 col-form-label">Nama</label>
                                                     <div class="col-sm-8">
                                                         <input type="text" class="form-control" name="namaWisata"
-                                                            id="namaWisata" placeholder="Nama Tempat Wisata">
+                                                            id="namaWisata" placeholder="Nama Tempat Wisata"
+                                                            value="Cafe Hello Bingsu ">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
@@ -211,11 +212,8 @@
                                                     <div class="col-sm-8">
                                                         <select class="custom-select" name="jenisWisata">
                                                             <option value="">Jenis Wisata</option>
-                                                            <option value="Taman Kota">Taman Kota</option>
-                                                            <option value="Kolam Renang">Kolam Renang</option>
-                                                            <option value="Religius">Religius</option>
-                                                            <option value="Bahari">Bahari</option>
-                                                            <option value="Budaya">Budaya</option>
+                                                            <option value="Tempat Makan">Tempat Makan</option>
+                                                            <option value="Kedai" selected>Kedai</option>
                                                         </select>
                                                     </div>
                                                 </div>
@@ -224,8 +222,8 @@
                                                         class="col-sm-4 col-form-label">Deskripsi</label>
                                                     <div class="col-sm-8">
                                                         <textarea class="form-control" rows="3"
-                                                            placeholder="Deskripsi Wisata . . ."
-                                                            name="deskripsi"></textarea>
+                                                            placeholder="Deskripsi Wisata . . ." name="deskripsi">Bingsu alias es serut Korea. Fruit Bingsu menu paling favorit. Selain karena ukurannya besar, isi buahnya macem-macem. Ada juga Durian Bingsu yang wanginya durian. Dengan ada tambahan es krim durian dan pancake durian di dalamnya
+                                                        </textarea>
                                                     </div>
                                                 </div>
 
@@ -234,14 +232,15 @@
                                                         Person</label>
                                                     <div class="col-sm-8">
                                                         <input type="text" class="form-control" name="cp" id="cp"
-                                                            placeholder="Kontak Person">
+                                                            placeholder="Kontak Person" value="Ahmad">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
                                                     <label for="noTelp" class="col-sm-4 col-form-label">No Telp</label>
                                                     <div class="col-sm-8">
                                                         <input type="text" class="form-control" name="noTelp"
-                                                            id="noTelp" placeholder="Nomor HP / Telp">
+                                                            id="noTelp" placeholder="Nomor HP / Telp"
+                                                            value="085735999111">
                                                     </div>
                                                 </div>
                                             </div>
@@ -251,7 +250,8 @@
                                                         class="col-sm-4 col-form-label">Email</label>
                                                     <div class="col-sm-8">
                                                         <input type="email" class="form-control" name="email" id="email"
-                                                            placeholder="example@email.com">
+                                                            placeholder="example@email.com"
+                                                            value="cafehellobingsu@gmail.com">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
@@ -259,7 +259,8 @@
                                                         Web</label>
                                                     <div class="col-sm-8">
                                                         <input type="url" class="form-control" name="alamatWeb"
-                                                            id="alamatWeb" placeholder="https://alamatwebsite.com">
+                                                            id="alamatWeb" placeholder="https://alamatwebsite.com"
+                                                            value="https://cafehellobingsu.com">
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
@@ -267,7 +268,7 @@
                                                     <div class="col-sm-8">
                                                         <textarea class="form-control" rows="3"
                                                             placeholder="Alamat Lengkap Wisata . . ."
-                                                            name="alamat"></textarea>
+                                                            name="alamat">Bingsu alias es serut Korea. Fruit Bingsu menu paling favorit. Selain karena ukurannya besar, isi buahnya macem-macem. Ada juga Durian Bingsu yang wanginya durian. Dengan ada tambahan es krim durian dan pancake durian di dalamnya</textarea>
                                                     </div>
                                                 </div>
                                                 <div class="form-group row">
@@ -275,14 +276,15 @@
                                                         Longitude</label>
                                                     <div class="col-sm-8">
                                                         <input type="text" class="form-control" name="LatLot"
-                                                            id="LatLot" placeholder="ex : -6.352961,106.830286">
+                                                            id="LatLot" placeholder="ex : -6.352961,106.830286"
+                                                            value="-6.3747141,106.8299211">
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="col-md-12">
                                                 <div class="float-right">
                                                     <button type="reset" class="btn btn-secondary">Reset</button>
-                                                    <button type="submit" class="btn btn-primary">Simpan</button>
+                                                    <button type="submit" class="btn btn-primary">Edit Data</button>
                                                 </div>
                                             </div>
                                         </div>
