@@ -60,3 +60,18 @@ $('#addRekreasi').validate({
     $(element).removeClass('is-invalid').addClass('is-valid');
   },
 });
+
+$(function() {
+  var Toast = Swal.mixin({
+    toast: true,
+    position: 'top-end',
+    showConfirmButton: false,
+    timer: 3000
+  });
+$('.swalSuccesDelete').click(function() {
+  Toast.fire({
+    icon: 'success',
+    title: ' Data Berhasil Dihapus'
+  })
+});
+});
