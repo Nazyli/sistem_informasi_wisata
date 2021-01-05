@@ -8,7 +8,12 @@
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+  <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+  <link rel="stylesheet" href="plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css">
   <link rel="stylesheet" href="dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="dist/css/style.css">
 </head>
 
 <body class="hold-transition layout-top-nav layout-navbar-fixed text-sm">
@@ -50,14 +55,7 @@
         </div>
         <ul class="order-1 order-md-3 navbar-nav navbar-no-expand ml-auto">
           <li class=" user user-menu">
-            <a class="nav-link" href="#">
-              <span class="hidden-xs">Login</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
-              <i class="fas fa-th-large"></i>
-            </a>
+            <a href="login.html" class="nav-link">Login</a>
           </li>
         </ul>
       </div>
@@ -118,15 +116,7 @@
         <div class="container">
           <div class="row mb-2">
             <div class="col-sm-6">
-              <h1 class="m-0"> Sistem Informasi Wisata Kota Depok <small>SIWIKODE</small></h1>
-              <h5 class="mb-2 mt-3 text-primary">Wisata Rekreasi & Kuliner Unggulan Kota Depok</h5>
-            </div>
-            <div class="col-sm-6">
-              <ol class="breadcrumb float-sm-right">
-                <li class="breadcrumb-item"><a href="#">Home</a></li>
-                <li class="breadcrumb-item"><a href="#">Layout</a></li>
-                <li class="breadcrumb-item active">Top Navigation</li>
-              </ol>
+              <h1 class="m-2 text-primary"> Sistem Informasi Wisata Kota Depok <small>SIWIKODE</small></h1>
             </div>
           </div>
         </div>
@@ -134,56 +124,63 @@
       <div class="content">
         <div class="container">
           <div class="row">
-            <div class="col-lg-6">
+            <div class="col-lg-4">
               <div class="card">
                 <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-
+                  <h5 class="card-title">Wisata 1</h5>
                   <p class="card-text">
-                    Some quick example text to build on the card title and make up the bulk of the card's
-                    content.
+                    <div class="row">
+                      <div class="col-md-4">
+                        <img src="dist/img/kuliner/2.jpg"
+                        class="img-fluid mb-2" alt="Gambar" /></div>
+                      <div class="col-md-8">
+                        <p class="text-secondary">
+                          Lorem ipsum represents a long-held tradition for designers, typographers and the like. Some people hate it and argue for its demise, but others ignore the hate as they create awesome tools to help create filler text for everyone from bacon lovers to Charlie Sheen fans.
+                        </p>
+                        <a href="#" class="card-link">Detail</a>
+                      </div>
+                    </div>
                   </p>
-
-                  <a href="#" class="card-link">Card link</a>
-                  <a href="#" class="card-link">Another link</a>
-                </div>
-              </div>
-
-              <div class="card card-primary card-outline">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-
-                  <p class="card-text">
-                    Some quick example text to build on the card title and make up the bulk of the card's
-                    content.
-                  </p>
-                  <a href="#" class="card-link">Card link</a>
-                  <a href="#" class="card-link">Another link</a>
                 </div>
               </div>
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-4">
               <div class="card">
-                <div class="card-header">
-                  <h5 class="card-title m-0">Featured</h5>
-                </div>
                 <div class="card-body">
-                  <h6 class="card-title">Special title treatment</h6>
-
-                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                  <h5 class="card-title">Wisata 1</h5>
+                  <p class="card-text">
+                    <div class="row">
+                      <div class="col-md-4">
+                        <img src="dist/img/kuliner/2.jpg"
+                        class="img-fluid mb-2" alt="Gambar" /></div>
+                      <div class="col-md-8">
+                        <p class="text-secondary">
+                          Lorem ipsum represents a long-held tradition for designers, typographers and the like. Some people hate it and argue for its demise, but others ignore the hate as they create awesome tools to help create filler text for everyone from bacon lovers to Charlie Sheen fans.
+                        </p>
+                        <a href="#" class="card-link">Detail</a>
+                      </div>
+                    </div>
+                  </p>
                 </div>
               </div>
-
-              <div class="card card-primary card-outline">
-                <div class="card-header">
-                  <h5 class="card-title m-0">Featured</h5>
-                </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="card">
                 <div class="card-body">
-                  <h6 class="card-title">Special title treatment</h6>
-
-                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                  <h5 class="card-title">Wisata 1</h5>
+                  <p class="card-text">
+                    <div class="row">
+                      <div class="col-md-4">
+                        <img src="dist/img/kuliner/2.jpg"
+                        class="img-fluid mb-2" alt="Gambar" /></div>
+                      <div class="col-md-8">
+                        <p class="text-secondary">
+                          Lorem ipsum represents a long-held tradition for designers, typographers and the like. Some people hate it and argue for its demise, but others ignore the hate as they create awesome tools to help create filler text for everyone from bacon lovers to Charlie Sheen fans.
+                        </p>
+                        <a href="#" class="card-link">Detail</a>
+                      </div>
+                    </div>
+                  </p>
                 </div>
               </div>
             </div>
@@ -210,8 +207,18 @@
   </div>
   <script src="plugins/jquery/jquery.min.js"></script>
   <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="plugins/datatables/jquery.dataTables.min.js"></script>
+  <script src="plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+  <script src="plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+  <script src="plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+  <script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+  <script src="plugins/jquery-validation/jquery.validate.min.js"></script>
+  <script src="plugins/jquery-validation/additional-methods.min.js"></script>
+  <script src="plugins/jquery-validation/localization/messages_id.min.js"></script>
+  <script src="plugins/sweetalert2/sweetalert2.min.js"></script>
   <script src="dist/js/adminlte.min.js"></script>
   <script src="dist/js/demo.js"></script>
+  <script src="dist/js/style.js"></script>
 </body>
 
 </html>
