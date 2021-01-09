@@ -32,7 +32,6 @@ $(function () {
 });
 
 
-
 // Validation Form
 $('#addRekreasi').validate({
   onkeyup: function (element) { $(element).valid() },
@@ -61,8 +60,38 @@ $('#addRekreasi').validate({
   },
 });
 
-$(function() {
-  $(document).on('click', '[data-toggle="lightbox"]', function(event) {
+
+$.validator.addMethod('cekEmail', function(value, element) {
+  return value == 'admin@gmail.com'
+}, 'Email yang anda masukkan tidak terdaftar!');
+
+$.validator.addMethod('cekPass', function(value, element) {
+  return value == 'admin'
+}, 'Password yang anda masukkan salah!');
+
+$('#login').validate({
+  onkeyup: function (element) { $(element).valid() },
+  onclick: function (element) { $(element).valid() },
+  rules: {
+    email: { required: true, email: true, cekEmail:true},
+    password: {
+      required: true,
+      cekPass: true,
+    },
+  },
+  messages: {},
+  errorClass: "invalid-feedback",
+  // errorElement: 'div',
+  highlight: function (element, errorClass, validClass) {
+
+    $(element).removeClass('is-valid').addClass('is-invalid');
+  },
+  unhighlight: function (element, errorClass, validClass) {
+    $(element).removeClass('is-invalid').addClass('is-valid');
+  },
+});
+$(function () {
+  $(document).on('click', '[data-toggle="lightbox"]', function (event) {
     event.preventDefault();
     $(this).ekkoLightbox({
       alwaysShowClose: true
@@ -74,10 +103,10 @@ $(function() {
     showConfirmButton: false,
     timer: 3000
   });
-$('.swalSuccesDelete').click(function() {
-  Toast.fire({
-    icon: 'success',
-    title: ' Data Berhasil Dihapus'
-  })
-});
+  $('.swalSuccesDelete').click(function () {
+    Toast.fire({
+      icon: 'success',
+      title: ' Data Berhasil Dihapus'
+    })
+  });
 });
