@@ -193,30 +193,22 @@
                                     </div>
                                 </div>
                                 <div class="card-body">
-                                    <select name="" id="">
-                                        <option value="1" data-filter="1">1</option>
-                                        <option value="2" data-filter="2">2</option>
-                                    </select>
                                     <div>
-                                        <div class="btn-group w-100 mb-2">
-                                            <a class="btn btn-info active" href="javascript:void(0)" data-filter="all">
-                                                All items </a>
-                                            <a class="btn btn-info" href="javascript:void(0)" data-filter="1"> Category
-                                                1 (WHITE) </a>
-                                            <a class="btn btn-info" href="javascript:void(0)" data-filter="2"> Category
-                                                2 (BLACK) </a>
-                                            <a class="btn btn-info" href="javascript:void(0)" data-filter="3"> Category
-                                                3 (COLORED) </a>
-                                            <a class="btn btn-info" href="javascript:void(0)" data-filter="4"> Category
-                                                4 (COLORED, BLACK) </a>
-                                        </div>
                                         <div class="mb-2">
                                             <a class="btn btn-secondary" href="javascript:void(0)" data-shuffle> Shuffle
                                                 items </a>
                                             <div class="float-right">
+                                                <select id="selectItem" class="custom-select" style="width: auto;"
+                                                    data-filter="all">
+                                                    <option value="all" selected> All </option>
+                                                    <option value="1"> 1 </option>
+                                                    <option value="2"> 2 </option>
+                                                    <option value="3"> 3 </option>
+                                                    <option value="4"> 4 </option>
+                                                </select>
                                                 <select class="custom-select" style="width: auto;" data-sortOrder>
-                                                    <option value="index"> Sort by Position </option>
-                                                    <option value="sortData"> Sort by Custom Data </option>
+                                                    <option value="index"> Index </option>
+                                                    <option value="sortData"> Description </option>
                                                 </select>
                                                 <div class="btn-group">
                                                     <a class="btn btn-default" href="javascript:void(0)" data-sortAsc>
@@ -230,6 +222,138 @@
                                     <div>
                                         <div class="filter-container p-0 row">
                                             <div class="filtr-item col-sm-3" data-category="1" data-sort="white sample">
+                                                <div class="post clearfix">
+                                                    <div class="user-block">
+                                                        <img class="img-circle img-bordered-sm"
+                                                            src="../dist/img/testimony/artis.jpg" alt="User Image">
+                                                        <span class="username">
+                                                            <a href="#">Chintya Gabriella</a>
+                                                        </span>
+                                                        <span class="description"><i
+                                                                class="fas fa-star text-warning"></i>
+                                                            <i class="fas fa-star text-warning"></i>
+                                                            <i class="fas fa-star text-warning"></i>
+                                                            <i class="fas fa-star text-warning"></i>
+                                                            <i class="fas fa-star-half-alt text-warning"></i></span>
+                                                    </div>
+                                                    <p class="ulasan">
+                                                        Dari sekian banyak bingsu yang pernah saya coba. Disini paling
+                                                        enak. Udah beberapa kali kesini. Fruit bingsunyaa enak banget.
+                                                        Porsinya banyak juga
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <!-- <div class="filtr-item col-sm-3" data-category="1" data-sort="white sample">
+                                                <div class="post clearfix">
+                                                    <div class="user-block">
+                                                        <img class="img-circle img-bordered-sm"
+                                                            src="../dist/img/testimony/artis.jpg" alt="User Image">
+                                                        <span class="username">
+                                                            <a href="#">Chintya Gabriella</a>
+                                                        </span>
+                                                        <span class="description"><i
+                                                                class="fas fa-star text-warning"></i>
+                                                            <i class="fas fa-star text-warning"></i>
+                                                            <i class="fas fa-star text-warning"></i>
+                                                            <i class="fas fa-star text-warning"></i>
+                                                            <i class="fas fa-star-half-alt text-warning"></i></span>
+                                                    </div>
+                                                    <p>
+                                                        Dari sekian banyak bingsu yang pernah saya coba. Disini paling
+                                                        enak. Udah beberapa kali kesini. Fruit bingsunyaa enak banget.
+                                                        Porsinya banyak juga
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="filtr-item col-sm-3" data-category="1" data-sort="white sample">
+                                                <div class="post clearfix">
+                                                    <div class="user-block">
+                                                        <img class="img-circle img-bordered-sm"
+                                                            src="../dist/img/testimony/artis.jpg" alt="User Image">
+                                                        <span class="username">
+                                                            <a href="#">Chintya Gabriella</a>
+                                                        </span>
+                                                        <span class="description"><i
+                                                                class="fas fa-star text-warning"></i>
+                                                            <i class="fas fa-star text-warning"></i>
+                                                            <i class="fas fa-star text-warning"></i>
+                                                            <i class="fas fa-star text-warning"></i>
+                                                            <i class="fas fa-star-half-alt text-warning"></i></span>
+                                                    </div>
+                                                    <p>
+                                                        Dari sekian banyak bingsu yang pernah saya coba. Disini paling
+                                                        enak. Udah beberapa kali kesini. Fruit bingsunyaa enak banget.
+                                                        Porsinya banyak juga
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="filtr-item col-sm-3" data-category="1" data-sort="white sample">
+                                                <div class="post clearfix">
+                                                    <div class="user-block">
+                                                        <img class="img-circle img-bordered-sm"
+                                                            src="../dist/img/testimony/artis.jpg" alt="User Image">
+                                                        <span class="username">
+                                                            <a href="#">Chintya Gabriella</a>
+                                                        </span>
+                                                        <span class="description"><i
+                                                                class="fas fa-star text-warning"></i>
+                                                            <i class="fas fa-star text-warning"></i>
+                                                            <i class="fas fa-star text-warning"></i>
+                                                            <i class="fas fa-star text-warning"></i>
+                                                            <i class="fas fa-star-half-alt text-warning"></i></span>
+                                                    </div>
+                                                    <p>
+                                                        Dari sekian banyak bingsu yang pernah saya coba. Disini paling
+                                                        enak. Udah beberapa kali kesini. Fruit bingsunyaa enak banget.
+                                                        Porsinya banyak juga
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="filtr-item col-sm-3" data-category="1" data-sort="white sample">
+                                                <div class="post clearfix">
+                                                    <div class="user-block">
+                                                        <img class="img-circle img-bordered-sm"
+                                                            src="../dist/img/testimony/artis.jpg" alt="User Image">
+                                                        <span class="username">
+                                                            <a href="#">Chintya Gabriella</a>
+                                                        </span>
+                                                        <span class="description"><i
+                                                                class="fas fa-star text-warning"></i>
+                                                            <i class="fas fa-star text-warning"></i>
+                                                            <i class="fas fa-star text-warning"></i>
+                                                            <i class="fas fa-star text-warning"></i>
+                                                            <i class="fas fa-star-half-alt text-warning"></i></span>
+                                                    </div>
+                                                    <p>
+                                                        Dari sekian banyak bingsu yang pernah saya coba. Disini paling
+                                                        enak. Udah beberapa kali kesini. Fruit bingsunyaa enak banget.
+                                                        Porsinya banyak juga
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="filtr-item col-sm-3" data-category="1" data-sort="white sample">
+                                                <div class="post clearfix">
+                                                    <div class="user-block">
+                                                        <img class="img-circle img-bordered-sm"
+                                                            src="../dist/img/testimony/artis.jpg" alt="User Image">
+                                                        <span class="username">
+                                                            <a href="#">Chintya Gabriella</a>
+                                                        </span>
+                                                        <span class="description"><i
+                                                                class="fas fa-star text-warning"></i>
+                                                            <i class="fas fa-star text-warning"></i>
+                                                            <i class="fas fa-star text-warning"></i>
+                                                            <i class="fas fa-star text-warning"></i>
+                                                            <i class="fas fa-star-half-alt text-warning"></i></span>
+                                                    </div>
+                                                    <p>
+                                                        Dari sekian banyak bingsu yang pernah saya coba. Disini paling
+                                                        enak. Udah beberapa kali kesini. Fruit bingsunyaa enak banget.
+                                                        Porsinya banyak juga
+                                                    </p>
+                                                </div>
+                                            </div> -->
+                                            <!-- <div class="filtr-item col-sm-3" data-category="1" data-sort="white sample">
                                                 <a href="https://via.placeholder.com/1200/FFFFFF.png?text=1"
                                                     data-toggle="lightbox" data-title="sample 1 - white">
                                                     <img src="https://via.placeholder.com/300/FFFFFF?text=1"
@@ -319,7 +443,7 @@
                                                     <img src="https://via.placeholder.com/300/000000?text=12"
                                                         class="img-fluid mb-2" alt="black sample" />
                                                 </a>
-                                            </div>
+                                            </div> -->
                                         </div>
                                     </div>
                                     <div class="card-footer">
@@ -368,7 +492,8 @@
             </div>
         </div>
     </div>
-    <script src="../plugins/jquery/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <!-- <script src="../plugins/jquery/jquery.min.js"></script> -->
     <script src="../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="../plugins/datatables/jquery.dataTables.min.js"></script>
     <script src="../plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
@@ -380,10 +505,12 @@
     <script src="../plugins/jquery-validation/localization/messages_id.min.js"></script>
     <script src="../plugins/sweetalert2/sweetalert2.min.js"></script>
     <script src="../plugins/ekko-lightbox/ekko-lightbox.min.js"></script>
+    <script src="../plugins/filterizr/filterizr.min.js"></script>
     <script src="../plugins/filterizr/jquery.filterizr.min.js"></script>
     <script src="../dist/js/adminlte.min.js"></script>
     <script src="../dist/js/demo.js"></script>
     <script src="../dist/js/style.js"></script>
+    <script src="../plugins/readmore/readmore.min.js"></script>
     <script>
         $(function () {
             $('.filter-container').filterizr({ gutterPixels: 3 });
@@ -392,6 +519,17 @@
                 $(this).addClass('active');
             });
         })
+        $('#selectItem').bind("change keyup", function (event) {
+            console.log(this.value);
+            $(this).prop("data-filter", 'all');
+            $(this).attr("data-filter", this.value);
+            jQuery('#selectItem').click();
+        });
+        $('.ulasan').readmore({
+            speed: 500,
+            collapsedHeight: 60,
+
+        });
     </script>
 </body>
 
