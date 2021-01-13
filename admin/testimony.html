@@ -165,7 +165,7 @@
                         </div>
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
-                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
                                 <li class="breadcrumb-item"><a href="#">Pengelolaan Pencatatan</a></li>
                                 <li class="breadcrumb-item active">Testimony Tempat Wisata</li>
                             </ol>
@@ -193,35 +193,23 @@
                                     </div>
                                 </div>
                                 <div class="card-body">
-                                    <div>
-                                        <div class="mb-2">
-                                            <a class="btn btn-secondary" href="javascript:void(0)" data-shuffle> Shuffle
-                                                items </a>
-                                            <div class="float-right">
-                                                <select id="selectItem" class="custom-select" style="width: auto;"
-                                                    data-filter="all">
-                                                    <option value="all" selected> All </option>
-                                                    <option value="1"> 1 </option>
-                                                    <option value="2"> 2 </option>
-                                                    <option value="3"> 3 </option>
-                                                    <option value="4"> 4 </option>
-                                                </select>
-                                                <select class="custom-select" style="width: auto;" data-sortOrder>
-                                                    <option value="index"> Index </option>
-                                                    <option value="sortData"> Description </option>
-                                                </select>
-                                                <div class="btn-group">
-                                                    <a class="btn btn-default" href="javascript:void(0)" data-sortAsc>
-                                                        Ascending </a>
-                                                    <a class="btn btn-default" href="javascript:void(0)" data-sortDesc>
-                                                        Descending </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div class="filter-container p-0 row">
-                                            <div class="filtr-item col-sm-3" data-category="1" data-sort="white sample">
+                                    <table id="datatable" class="table table-bordered table-hover">
+                                        <thead>
+                                          <tr>
+                                            <th>No</th>
+                                            <th>Nama</th>
+                                            <th>Testimoni 1</th>
+                                            <th>Testimoni 2</th>
+                                            <th>Testimoni 3</th>
+                                            <th>Action</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr>
+                                            <td>1</td>
+                                            <td>Cafe Hello Bingsu
+                                            </td>
+                                            <td>
                                                 <div class="post clearfix">
                                                     <div class="user-block">
                                                         <img class="img-circle img-bordered-sm"
@@ -236,14 +224,52 @@
                                                             <i class="fas fa-star text-warning"></i>
                                                             <i class="fas fa-star-half-alt text-warning"></i></span>
                                                     </div>
-                                                    <p class="ulasan">
-                                                        Dari sekian banyak bingsu yang pernah saya coba. Disini paling
-                                                        enak. Udah beberapa kali kesini. Fruit bingsunyaa enak banget.
-                                                        Porsinya banyak juga
-                                                    </p>
                                                 </div>
-                                            </div>
-                                            <!-- <div class="filtr-item col-sm-3" data-category="1" data-sort="white sample">
+                                            </td>
+                                            <td>
+                                                <div class="post clearfix">
+                                                    <div class="user-block">
+                                                        <img class="img-circle img-bordered-sm"
+                                                            src="../dist/img/testimony/penjabat.jpeg" alt="User Image">
+                                                        <span class="username">
+                                                            <a href="#">Mochamad Ridwan Kamil</a>
+                                                        </span>
+                                                        <span class="description"><i
+                                                                class="fas fa-star text-warning"></i>
+                                                            <i class="fas fa-star text-warning"></i>
+                                                            <i class="fas fa-star text-warning"></i>
+                                                            <i class="fas fa-star text-warning"></i>
+                                                            <i class="fas fa-star text-warning"></i></span>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="post clearfix">
+                                                    <div class="user-block">
+                                                        <img class="img-circle img-bordered-sm"
+                                                            src="../dist/img/testimony/warga.jpg" alt="User Image">
+                                                        <span class="username">
+                                                            <a href="#">Rich Brian Ben</a>
+                                                        </span>
+                                                        <span class="description"><i
+                                                                class="fas fa-star text-warning"></i>
+                                                            <i class="fas fa-star text-warning"></i>
+                                                            <i class="fas fa-star text-warning"></i>
+                                                            <i
+                                                                class="fas fa-star-half-alt text-warning"></i>
+                                                            <i class="far fa-star text-warning"></i></span>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                              <a href="testimony_detail.html" class="btn btn-block btn-primary btn-xs">Show All</a>
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td>2</td>
+                                            <td>Kopi Store
+                                            </td>
+                                            <td>
                                                 <div class="post clearfix">
                                                     <div class="user-block">
                                                         <img class="img-circle img-bordered-sm"
@@ -258,14 +284,52 @@
                                                             <i class="fas fa-star text-warning"></i>
                                                             <i class="fas fa-star-half-alt text-warning"></i></span>
                                                     </div>
-                                                    <p>
-                                                        Dari sekian banyak bingsu yang pernah saya coba. Disini paling
-                                                        enak. Udah beberapa kali kesini. Fruit bingsunyaa enak banget.
-                                                        Porsinya banyak juga
-                                                    </p>
                                                 </div>
-                                            </div>
-                                            <div class="filtr-item col-sm-3" data-category="1" data-sort="white sample">
+                                            </td>
+                                            <td>
+                                                <div class="post clearfix">
+                                                    <div class="user-block">
+                                                        <img class="img-circle img-bordered-sm"
+                                                            src="../dist/img/testimony/penjabat.jpeg" alt="User Image">
+                                                        <span class="username">
+                                                            <a href="#">Mochamad Ridwan Kamil</a>
+                                                        </span>
+                                                        <span class="description"><i
+                                                                class="fas fa-star text-warning"></i>
+                                                            <i class="fas fa-star text-warning"></i>
+                                                            <i class="fas fa-star text-warning"></i>
+                                                            <i class="fas fa-star text-warning"></i>
+                                                            <i class="fas fa-star text-warning"></i></span>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="post clearfix">
+                                                    <div class="user-block">
+                                                        <img class="img-circle img-bordered-sm"
+                                                            src="../dist/img/testimony/warga.jpg" alt="User Image">
+                                                        <span class="username">
+                                                            <a href="#">Rich Brian Ben</a>
+                                                        </span>
+                                                        <span class="description"><i
+                                                                class="fas fa-star text-warning"></i>
+                                                            <i class="fas fa-star text-warning"></i>
+                                                            <i class="fas fa-star text-warning"></i>
+                                                            <i
+                                                                class="fas fa-star-half-alt text-warning"></i>
+                                                            <i class="far fa-star text-warning"></i></span>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                              <a href="testimony_detail.html" class="btn btn-block btn-primary btn-xs">Show All</a>
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td>3</td>
+                                            <td>Mang Fikri
+                                            </td>
+                                            <td>
                                                 <div class="post clearfix">
                                                     <div class="user-block">
                                                         <img class="img-circle img-bordered-sm"
@@ -280,14 +344,52 @@
                                                             <i class="fas fa-star text-warning"></i>
                                                             <i class="fas fa-star-half-alt text-warning"></i></span>
                                                     </div>
-                                                    <p>
-                                                        Dari sekian banyak bingsu yang pernah saya coba. Disini paling
-                                                        enak. Udah beberapa kali kesini. Fruit bingsunyaa enak banget.
-                                                        Porsinya banyak juga
-                                                    </p>
                                                 </div>
-                                            </div>
-                                            <div class="filtr-item col-sm-3" data-category="1" data-sort="white sample">
+                                            </td>
+                                            <td>
+                                                <div class="post clearfix">
+                                                    <div class="user-block">
+                                                        <img class="img-circle img-bordered-sm"
+                                                            src="../dist/img/testimony/penjabat.jpeg" alt="User Image">
+                                                        <span class="username">
+                                                            <a href="#">Mochamad Ridwan Kamil</a>
+                                                        </span>
+                                                        <span class="description"><i
+                                                                class="fas fa-star text-warning"></i>
+                                                            <i class="fas fa-star text-warning"></i>
+                                                            <i class="fas fa-star text-warning"></i>
+                                                            <i class="fas fa-star text-warning"></i>
+                                                            <i class="fas fa-star text-warning"></i></span>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="post clearfix">
+                                                    <div class="user-block">
+                                                        <img class="img-circle img-bordered-sm"
+                                                            src="../dist/img/testimony/warga.jpg" alt="User Image">
+                                                        <span class="username">
+                                                            <a href="#">Rich Brian Ben</a>
+                                                        </span>
+                                                        <span class="description"><i
+                                                                class="fas fa-star text-warning"></i>
+                                                            <i class="fas fa-star text-warning"></i>
+                                                            <i class="fas fa-star text-warning"></i>
+                                                            <i
+                                                                class="fas fa-star-half-alt text-warning"></i>
+                                                            <i class="far fa-star text-warning"></i></span>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                              <a href="testimony_detail.html" class="btn btn-block btn-primary btn-xs">Show All</a>
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td>4</td>
+                                            <td>Whats Up
+                                            </td>
+                                            <td>
                                                 <div class="post clearfix">
                                                     <div class="user-block">
                                                         <img class="img-circle img-bordered-sm"
@@ -302,153 +404,49 @@
                                                             <i class="fas fa-star text-warning"></i>
                                                             <i class="fas fa-star-half-alt text-warning"></i></span>
                                                     </div>
-                                                    <p>
-                                                        Dari sekian banyak bingsu yang pernah saya coba. Disini paling
-                                                        enak. Udah beberapa kali kesini. Fruit bingsunyaa enak banget.
-                                                        Porsinya banyak juga
-                                                    </p>
                                                 </div>
-                                            </div>
-                                            <div class="filtr-item col-sm-3" data-category="1" data-sort="white sample">
+                                            </td>
+                                            <td>
                                                 <div class="post clearfix">
                                                     <div class="user-block">
                                                         <img class="img-circle img-bordered-sm"
-                                                            src="../dist/img/testimony/artis.jpg" alt="User Image">
+                                                            src="../dist/img/testimony/penjabat.jpeg" alt="User Image">
                                                         <span class="username">
-                                                            <a href="#">Chintya Gabriella</a>
+                                                            <a href="#">Mochamad Ridwan Kamil</a>
                                                         </span>
                                                         <span class="description"><i
                                                                 class="fas fa-star text-warning"></i>
                                                             <i class="fas fa-star text-warning"></i>
                                                             <i class="fas fa-star text-warning"></i>
                                                             <i class="fas fa-star text-warning"></i>
-                                                            <i class="fas fa-star-half-alt text-warning"></i></span>
+                                                            <i class="fas fa-star text-warning"></i></span>
                                                     </div>
-                                                    <p>
-                                                        Dari sekian banyak bingsu yang pernah saya coba. Disini paling
-                                                        enak. Udah beberapa kali kesini. Fruit bingsunyaa enak banget.
-                                                        Porsinya banyak juga
-                                                    </p>
                                                 </div>
-                                            </div>
-                                            <div class="filtr-item col-sm-3" data-category="1" data-sort="white sample">
+                                            </td>
+                                            <td>
                                                 <div class="post clearfix">
                                                     <div class="user-block">
                                                         <img class="img-circle img-bordered-sm"
-                                                            src="../dist/img/testimony/artis.jpg" alt="User Image">
+                                                            src="../dist/img/testimony/warga.jpg" alt="User Image">
                                                         <span class="username">
-                                                            <a href="#">Chintya Gabriella</a>
+                                                            <a href="#">Rich Brian Ben</a>
                                                         </span>
                                                         <span class="description"><i
                                                                 class="fas fa-star text-warning"></i>
                                                             <i class="fas fa-star text-warning"></i>
                                                             <i class="fas fa-star text-warning"></i>
-                                                            <i class="fas fa-star text-warning"></i>
-                                                            <i class="fas fa-star-half-alt text-warning"></i></span>
+                                                            <i
+                                                                class="fas fa-star-half-alt text-warning"></i>
+                                                            <i class="far fa-star text-warning"></i></span>
                                                     </div>
-                                                    <p>
-                                                        Dari sekian banyak bingsu yang pernah saya coba. Disini paling
-                                                        enak. Udah beberapa kali kesini. Fruit bingsunyaa enak banget.
-                                                        Porsinya banyak juga
-                                                    </p>
                                                 </div>
-                                            </div> -->
-                                            <!-- <div class="filtr-item col-sm-3" data-category="1" data-sort="white sample">
-                                                <a href="https://via.placeholder.com/1200/FFFFFF.png?text=1"
-                                                    data-toggle="lightbox" data-title="sample 1 - white">
-                                                    <img src="https://via.placeholder.com/300/FFFFFF?text=1"
-                                                        class="img-fluid mb-2" alt="white sample" />
-                                                </a>
-                                            </div>
-                                            <div class="filtr-item col-sm-3" data-category="2, 4"
-                                                data-sort="black sample">
-                                                <a href="https://via.placeholder.com/1200/000000.png?text=2"
-                                                    data-toggle="lightbox" data-title="sample 2 - black">
-                                                    <img src="https://via.placeholder.com/300/000000?text=2"
-                                                        class="img-fluid mb-2" alt="black sample" />
-                                                </a>
-                                            </div>
-                                            <div class="filtr-item col-sm-3" data-category="3, 4"
-                                                data-sort="red sample">
-                                                <a href="https://via.placeholder.com/1200/FF0000/FFFFFF.png?text=3"
-                                                    data-toggle="lightbox" data-title="sample 3 - red">
-                                                    <img src="https://via.placeholder.com/300/FF0000/FFFFFF?text=3"
-                                                        class="img-fluid mb-2" alt="red sample" />
-                                                </a>
-                                            </div>
-                                            <div class="filtr-item col-sm-3" data-category="3, 4"
-                                                data-sort="red sample">
-                                                <a href="https://via.placeholder.com/1200/FF0000/FFFFFF.png?text=4"
-                                                    data-toggle="lightbox" data-title="sample 4 - red">
-                                                    <img src="https://via.placeholder.com/300/FF0000/FFFFFF?text=4"
-                                                        class="img-fluid mb-2" alt="red sample" />
-                                                </a>
-                                            </div>
-                                            <div class="filtr-item col-sm-3" data-category="2, 4"
-                                                data-sort="black sample">
-                                                <a href="https://via.placeholder.com/1200/000000.png?text=5"
-                                                    data-toggle="lightbox" data-title="sample 5 - black">
-                                                    <img src="https://via.placeholder.com/300/000000?text=5"
-                                                        class="img-fluid mb-2" alt="black sample" />
-                                                </a>
-                                            </div>
-                                            <div class="filtr-item col-sm-3" data-category="1" data-sort="white sample">
-                                                <a href="https://via.placeholder.com/1200/FFFFFF.png?text=6"
-                                                    data-toggle="lightbox" data-title="sample 6 - white">
-                                                    <img src="https://via.placeholder.com/300/FFFFFF?text=6"
-                                                        class="img-fluid mb-2" alt="white sample" />
-                                                </a>
-                                            </div>
-                                            <div class="filtr-item col-sm-3" data-category="1" data-sort="white sample">
-                                                <a href="https://via.placeholder.com/1200/FFFFFF.png?text=7"
-                                                    data-toggle="lightbox" data-title="sample 7 - white">
-                                                    <img src="https://via.placeholder.com/300/FFFFFF?text=7"
-                                                        class="img-fluid mb-2" alt="white sample" />
-                                                </a>
-                                            </div>
-                                            <div class="filtr-item col-sm-3" data-category="2, 4"
-                                                data-sort="black sample">
-                                                <a href="https://via.placeholder.com/1200/000000.png?text=8"
-                                                    data-toggle="lightbox" data-title="sample 8 - black">
-                                                    <img src="https://via.placeholder.com/300/000000?text=8"
-                                                        class="img-fluid mb-2" alt="black sample" />
-                                                </a>
-                                            </div>
-                                            <div class="filtr-item col-sm-3" data-category="3, 4"
-                                                data-sort="red sample">
-                                                <a href="https://via.placeholder.com/1200/FF0000/FFFFFF.png?text=9"
-                                                    data-toggle="lightbox" data-title="sample 9 - red">
-                                                    <img src="https://via.placeholder.com/300/FF0000/FFFFFF?text=9"
-                                                        class="img-fluid mb-2" alt="red sample" />
-                                                </a>
-                                            </div>
-                                            <div class="filtr-item col-sm-3" data-category="1" data-sort="white sample">
-                                                <a href="https://via.placeholder.com/1200/FFFFFF.png?text=10"
-                                                    data-toggle="lightbox" data-title="sample 10 - white">
-                                                    <img src="https://via.placeholder.com/300/FFFFFF?text=10"
-                                                        class="img-fluid mb-2" alt="white sample" />
-                                                </a>
-                                            </div>
-                                            <div class="filtr-item col-sm-3" data-category="1" data-sort="white sample">
-                                                <a href="https://via.placeholder.com/1200/FFFFFF.png?text=11"
-                                                    data-toggle="lightbox" data-title="sample 11 - white">
-                                                    <img src="https://via.placeholder.com/300/FFFFFF?text=11"
-                                                        class="img-fluid mb-2" alt="white sample" />
-                                                </a>
-                                            </div>
-                                            <div class="filtr-item col-sm-3" data-category="2, 4"
-                                                data-sort="black sample">
-                                                <a href="https://via.placeholder.com/1200/000000.png?text=12"
-                                                    data-toggle="lightbox" data-title="sample 12 - black">
-                                                    <img src="https://via.placeholder.com/300/000000?text=12"
-                                                        class="img-fluid mb-2" alt="black sample" />
-                                                </a>
-                                            </div> -->
-                                        </div>
-                                    </div>
-                                    <div class="card-footer">
-                                        Sistem Informasi Wisata Kota Depok
-                                    </div>
+                                            </td>
+                                            <td>
+                                              <a href="testimony_detail.html" class="btn btn-block btn-primary btn-xs">Show All</a>
+                                            </td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
                                 </div>
                             </div>
                         </div>
@@ -467,30 +465,6 @@
 
         <aside class="control-sidebar control-sidebar-dark">
         </aside>
-        <!-- Modal hapus -->
-        <div class="modal fade" id="modalHapus" tabindex="-1" role="dialog" aria-labelledby="modalHapusLabel"
-            aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title text-danger" id="modalHapusLabel"><i class="fas fa-info"></i> Hapus
-                            Data</h5>
-                        </h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        Apakah anda yakin ingin menghapus data ini ?
-                    </div>
-                    <div class="modal-footer justify-content-between">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-danger swalSuccesDelete" data-dismiss="modal">Hapus
-                            Data</button>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <!-- <script src="../plugins/jquery/jquery.min.js"></script> -->
@@ -512,19 +486,6 @@
     <script src="../dist/js/style.js"></script>
     <script src="../plugins/readmore/readmore.min.js"></script>
     <script>
-        $(function () {
-            $('.filter-container').filterizr({ gutterPixels: 3 });
-            $('.btn[data-filter]').on('click', function () {
-                $('.btn[data-filter]').removeClass('active');
-                $(this).addClass('active');
-            });
-        })
-        $('#selectItem').bind("change keyup", function (event) {
-            console.log(this.value);
-            $(this).prop("data-filter", 'all');
-            $(this).attr("data-filter", this.value);
-            jQuery('#selectItem').click();
-        });
         $('.ulasan').readmore({
             speed: 500,
             collapsedHeight: 60,
