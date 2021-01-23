@@ -11,6 +11,6 @@ STT Terpadu Nurul Fikri
 ```
 
 ## Screenshots
-![picture](dist/img/ss/ss1.png) \ 
+![picture](dist/img/ss/ss1.png)  
  \
-![picture](dist/img/ss/ss2.png)
+![picture](dist/img/ss/ss1.png)
