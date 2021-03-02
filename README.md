@@ -6,8 +6,8 @@ STT Terpadu Nurul Fikri
 
 ```bash
 0110220212 - Ahmad Zulfikor
-0110220045 - Muhammad Zulfikar
-0110220034 - IQBAL SAPUTRA
+0110220045 - Evry Nazyli Ciptanto
+0110220034 - Muhammad Zulfikar
 ```
 
 ## Screenshots
