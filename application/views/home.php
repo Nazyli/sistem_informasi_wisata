@@ -6,8 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SIWIKODE | Sistem Informasi Wisata Kota Depok</title>
   <link rel="shortcut icon" type="image/x-icon" href="<?php echo base_url(); ?>/assetsdist/img/logo.png">
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <link rel="stylesheet" href="<?php echo base_url(); ?>/assets/plugins/fontawesome-free/css/all.min.css">
   <link rel="stylesheet" href="<?php echo base_url(); ?>/assets/plugins/ekko-lightbox/ekko-lightbox.css">
   <link rel="stylesheet" href="<?php echo base_url(); ?>/assets/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
@@ -23,13 +22,11 @@
     <nav class="main-header navbar navbar-expand-md navbar-dark navbar-primary text-sm border-bottom-0">
       <div class="container">
         <a href="<?php echo base_url(); ?>/assetsindex.html" class="navbar-brand">
-          <img src="<?php echo base_url(); ?>/assets/dist/img/logo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
-            style="opacity: .8">
+          <img src="<?php echo base_url(); ?>/assets/dist/img/logo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
           <span class="brand-text font-weight-light">S I W I K O D E</span>
         </a>
 
-        <button class="navbar-toggler order-1" type="button" data-toggle="collapse" data-target="#navbarCollapse"
-          aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler order-1" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
 
@@ -45,8 +42,7 @@
               <a href="<?php echo base_url(); ?>/assetskuliner.html" class="nav-link">Wisata Kuliner</a>
             </li>
             <li class="nav-item dropdown">
-              <a id="dropdownSubMenu1" href="<?php echo base_url(); ?>/assets#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-                class="nav-link dropdown-toggle">Registrasi</a>
+              <a id="dropdownSubMenu1" href="<?php echo base_url(); ?>/assets#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">Registrasi</a>
               <ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow">
                 <li><a href="<?php echo base_url(); ?>/assetsrekreasi_tambah.html" class="dropdown-item">Registrasi Wisata Rekreasi</a></li>
                 <li class="dropdown-divider"></li>
@@ -110,10 +106,7 @@
             </p>
           </div>
         </div>
-      </div> <a class="carousel-control-prev" href="<?php echo base_url(); ?>/assets#carousel-711235" data-slide="prev"><span
-          class="carousel-control-prev-icon"></span> <span class="sr-only">Previous</span></a> <a
-        class="carousel-control-next" href="<?php echo base_url(); ?>/assets#carousel-711235" data-slide="next"><span
-          class="carousel-control-next-icon"></span> <span class="sr-only">Next</span></a>
+      </div> <a class="carousel-control-prev" href="<?php echo base_url(); ?>/assets#carousel-711235" data-slide="prev"><span class="carousel-control-prev-icon"></span> <span class="sr-only">Previous</span></a> <a class="carousel-control-next" href="<?php echo base_url(); ?>/assets#carousel-711235" data-slide="next"><span class="carousel-control-next-icon"></span> <span class="sr-only">Next</span></a>
     </div>
     <div class="content-wrapper">
       <div class="content-header">
@@ -128,116 +121,54 @@
       <div class="content">
         <div class="container">
           <div class="row">
-            <div class="col-lg-4">
-              <div class="card" style="min-height: 340px;">
-                <div class="card-body">
-                  <h5 class="card-title">Pasir Putih Depok</h5>
-                  <p class="card-text">
-                  <div class="row">
-                    <div class="col-md-4">
-                      <img src="<?php echo base_url(); ?>/assets/dist/img/rekreasi/1.jpg" class="img-fluid mb-2" alt="Gambar" />
+            <!-- RANDOM 3 STAR 5 -->
+            <?php foreach ($randFive->result() as $i) { ?>
+              <div class="col-lg-4">
+                <div class="card" style="min-height: 340px;">
+                  <div class="card-body">
+                    <h5 class="card-title"><?php echo ($i->nama); ?></h5>
+                    <p class="card-text">
+                    <div class="row">
+                      <div class="col-md-4">
+                        <img src="https://placeimg.com/480/480/nature" class="img-fluid mb-2" alt="Gambar" />
+                      </div>
+                      <div class="col-md-8">
+                        <p class="text-secondary">
+                        <?php echo ($i->deskripsi); ?>
+                        </p>
+                        <a href="<?php echo base_url(); ?>/assetsrekreasi_detail.html" class="card-link">Detail</a>
+                      </div>
                     </div>
-                    <div class="col-md-8">
-                      <p class="text-secondary">
-                        Jika ingin mencari tempat wisata untuk keluarga maka yang paling pas
-                        adalah Pasir Putih Depok. Taman Pasir Putih ini cocok untuk
-                        anak-anak karena bisa bermain tong tumpah, seluncur, air mancur dan
-                        masih banyak lagi. Wahana ini memang berada cukup jauh dari
-                        keramaian tetapi pengunjungnya selalu datang beramai-ramai.
-                      </p>
-                      <a href="<?php echo base_url(); ?>/assetsrekreasi_detail.html" class="card-link">Detail</a>
-                    </div>
+                    </p>
                   </div>
-                  </p>
                 </div>
               </div>
-            </div>
-            <div class="col-lg-4">
-              <div class="card" style="min-height: 340px;">
-                <div class="card-body">
-                  <h5 class="card-title">D’Kandang Amazing Farm Depok</h5>
-                  <p class="card-text">
-                  <div class="row">
-                    <div class="col-md-4">
-                      <img src="<?php echo base_url(); ?>/assets/dist/img/rekreasi/7.jpg" class="img-fluid mb-2" alt="Gambar" />
-                    </div>
-                    <div class="col-md-8">
-                      <p class="text-secondary">
-                        D'KANDANG AMAZING FARM mengajak sahabat semua untuk mengenal dan merasakan dunia Peternakan,
-                        Pertanian serta Permainan dan Tantangan yang berada di dalamnya,
-                        Lokasi wisata yang satu ini memiliki banyak sekali tanaman hijau sehingga nyaman untuk dikunjungi.
-                      </p>
-                      <a href="<?php echo base_url(); ?>/assetsrekreasi_detail.html" class="card-link">Detail</a>
-                    </div>
-                  </div>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4">
-              <div class="card" style="min-height: 340px;">
-                <div class="card-body">
-                  <h5 class="card-title">Cafe Hello Bingsu</h5>
-                  <p class="card-text">
-                  <div class="row">
-                    <div class="col-md-4">
-                      <img src="<?php echo base_url(); ?>/assets/dist/img/kuliner/2.jpg" class="img-fluid mb-2" alt="Gambar" />
-                    </div>
-                    <div class="col-md-8">
-                      <p class="text-secondary">
-                        Bingsu alias es serut Korea. Fruit Bingsu menu paling favorit. Selain karena ukurannya besar,
-                        isi buahnya macem-macem. Ada juga Durian Bingsu yang wanginya durian. Dengan ada tambahan es
-                        krim durian dan pancake durian di dalamnya
-                      </p>
-                      <a href="<?php echo base_url(); ?>/assetskuliner_detail_1.html" class="card-link">Detail</a>
-                    </div>
-                  </div>
-                  </p>
-                </div>
-              </div>
-            </div>
+            <?php } ?>
           </div>
           <div class="row">
+            <!-- RANDOM 4 STAR 4 -->
+            <?php foreach ($randFour->result() as $randFour) { ?>
             <div class="col-md-6">
               <div class="card">
                 <div class="card-body">
-                  <h5 class="card-title">Semoet Coffee & Eatery</h5>
+                  <h5 class="card-title"><?php echo ($randFour->nama); ?></h5>
                   <p class="card-text">
-                    <div class="row">
-                      <div class="col-md-4">
-                        <img src="<?php echo base_url(); ?>/assets/dist/img/kuliner/semoet.png"
-                        class="img-fluid mb-2" alt="Gambar" /></div>
-                      <div class="col-md-8">
-                        <p class="text-secondary">
-                          Jika anda ingin mencari tempat nongkrong atau hang out bersama kolega atau saudara, Tempat wisata kuliner ini cocok untuk anda.
-                        </p>
-                        <a href="<?php echo base_url(); ?>/assetskuliner_detail_2.html" class="card-link">Detail</a>
-                      </div>
+                  <div class="row">
+                    <div class="col-md-4">
+                      <img src="https://placeimg.com/480/480/arch" class="img-fluid mb-2" alt="Gambar" />
                     </div>
+                    <div class="col-md-8">
+                      <p class="text-secondary">
+                      <?php echo ($randFour->deskripsi); ?>
+                      </p>
+                      <a href="<?php echo base_url(); ?>/assetskuliner_detail_2.html" class="card-link">Detail</a>
+                    </div>
+                  </div>
                   </p>
                 </div>
               </div>
             </div>
-            <div class="col-md-6">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">Mujigae</h5>
-                  <p class="card-text">
-                    <div class="row">
-                      <div class="col-md-4">
-                        <img src="<?php echo base_url(); ?>/assets/dist/img/kuliner/Mujigaee.PNG"
-                        class="img-fluid mb-2" alt="Gambar" /></div>
-                      <div class="col-md-8">
-                        <p class="text-secondary">
-                          Siapa bilang kamu harus mengeluarkan banyak bujet untuk bisa menikmati kuliner khas Korea? Di Mujigae, hanya dengan mengeluarkan bujet sekitar Rp120.000 untuk dua orang kamu sudah bisa mencoba berbagai makanan ala Korea.
-                        </p>
-                        <a href="<?php echo base_url(); ?>/assetskuliner_detail_3.html" class="card-link">Detail</a>
-                      </div>
-                    </div>
-                  </p>
-                </div>
-              </div>
-            </div>
+            <?php }?>
           </div>
         </div>
       </div>
@@ -255,7 +186,9 @@
         <b>Version</b> 1.0
       </div>
       <strong>Develop By <a href="<?php echo base_url(); ?>/assetsadmin/about.html">Mahasiswa</a> &copy; STT NF
-        <script> document.write(new Date().getFullYear()); </script> ~ Sistem Informasi Wisata Kota Depok.
+        <script>
+          document.write(new Date().getFullYear());
+        </script> ~ Sistem Informasi Wisata Kota Depok.
       </strong>
     </footer>
   </div>
