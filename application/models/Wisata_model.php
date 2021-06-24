@@ -23,13 +23,21 @@ class Wisata_model extends CI_Model
         return $query->row();
     }
 
-    public function randFive(){
-        $query = $this->db->query('SELECT * FROM wisata WHERE bintang = 5 ORDER BY RAND() LIMIT 3');
+    public function randRekreasi($limit){
+        $sql = 'SELECT * FROM wisata WHERE bintang = 5 AND jenis_wisata_id IS NOT NULL ORDER BY RAND() LIMIT ?';
+        $query = $this->db->query($sql, array($limit));
         return $query;
     }
 
-    public function randFour(){
-        $query = $this->db->query('SELECT * FROM wisata WHERE bintang = 4 ORDER BY RAND() LIMIT 4');
+    public function randKuliner($limit){
+        $sql = 'SELECT * FROM wisata WHERE bintang = 5 AND jenis_kuliner_id IS NOT NULL ORDER BY RAND() LIMIT ?';
+        $query = $this->db->query($sql, array($limit));
+        return $query;
+    }
+
+    public function getAllRekreasiNotInId($id){
+        $sql = 'SELECT * FROM wisata WHERE jenis_wisata_id IS NOT NULL AND id != ?';
+        $query = $this->db->query($sql, array($id));
         return $query;
     }
 
