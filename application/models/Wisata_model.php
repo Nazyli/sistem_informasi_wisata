@@ -41,4 +41,12 @@ class Wisata_model extends CI_Model
         return $query;
     }
 
+    public function getAllKulinerNotInId($id){
+        $sql = 'SELECT * FROM wisata WHERE jenis_kuliner_id IS NOT NULL AND id != ?';
+        $query = $this->db->query($sql, array($id));
+        return $query;
+    }
+
+
+
 }

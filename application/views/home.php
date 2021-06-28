@@ -26,7 +26,7 @@
                     <p class="text-secondary">
                       <?php echo ($i->deskripsi); ?>
                     </p>
-                    <a href="<?php echo base_url(); ?>assetsrekreasi_detail.html" class="card-link">Detail</a>
+                    <a href="<?php echo base_url(); ?>wisata/detail/<?php echo ($i->id); ?>" class="card-link">Detail</a>
                   </div>
                 </div>
                 </p>
@@ -51,7 +51,7 @@
                     <p class="text-secondary">
                       <?php echo ($i->deskripsi); ?>
                     </p>
-                    <a href="<?php echo base_url(); ?>assetskuliner_detail_2.html" class="card-link">Detail</a>
+                    <a href="<?php echo base_url(); ?>wisata/detail/<?php echo ($i->id); ?>" class="card-link">Detail</a>
                   </div>
                 </div>
                 </p>

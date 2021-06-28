@@ -21,9 +21,9 @@
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="index.html">Home</a></li>
                         <?php if ($rekreasi->jenis_wisata_id != null) { ?>
-                            <li class="breadcrumb-item"><a href="<?php echo base_url(); ?>rekreasi">Wisata Rekreasi</a></li>
+                            <li class="breadcrumb-item"><a href="<?php echo base_url(); ?>wisata/rekreasi">Wisata Rekreasi</a></li>
                         <?php } else { ?>
-                            <li class="breadcrumb-item"><a href="<?php echo base_url(); ?>kuliner">Wisata Kuliner</a></li>
+                            <li class="breadcrumb-item"><a href="<?php echo base_url(); ?>wisata/kuliner">Wisata Kuliner</a></li>
                         <?php } ?>
                         <li class="breadcrumb-item active"><?php echo $rekreasi->nama; ?></li>
                     </ol>

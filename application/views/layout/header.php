@@ -22,7 +22,7 @@
     <div class="wrapper">
         <nav class="main-header navbar navbar-expand-md navbar-dark navbar-primary text-sm border-bottom-0">
             <div class="container">
-                <a href="<?php echo base_url(); ?>assetsindex.html" class="navbar-brand">
+                <a href="<?php echo base_url(); ?>" class="navbar-brand">
                     <img src="<?php echo base_url(); ?>assets/dist/img/logo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
                     <span class="brand-text font-weight-light">S I W I K O D E</span>
                 </a>
@@ -37,10 +37,10 @@
                             <a href="<?php echo base_url(); ?>" class="nav-link">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a href="<?php echo base_url(); ?>rekreasi" class="nav-link">Wisata Rekreasi</a>
+                            <a href="<?php echo base_url(); ?>wisata/rekreasi" class="nav-link">Wisata Rekreasi</a>
                         </li>
                         <li class="nav-item">
-                            <a href="<?php echo base_url(); ?>assetskuliner.html" class="nav-link">Wisata Kuliner</a>
+                            <a href="<?php echo base_url(); ?>wisata/kuliner" class="nav-link">Wisata Kuliner</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a id="dropdownSubMenu1" href="<?php echo base_url(); ?>assets#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">Registrasi</a>
