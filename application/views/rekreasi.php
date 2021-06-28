@@ -31,7 +31,7 @@
                   <p class="text-secondary">
                     <?php echo $getOne->deskripsi; ?>
                   </p>
-                  <a href="rekreasi_detail.html" class="card-link">Detail</a>
+                  <a href="<?php echo base_url(); ?>rekreasi/detail/<?php echo ($getOne->id); ?>" class="card-link">Detail</a>
                 </div>
               </div>
               </p>
@@ -55,7 +55,7 @@
                     <p class="text-secondary">
                       <?php echo ($i->deskripsi); ?>
                     </p>
-                    <a href="rekreasi_detail.html" class="card-link">Detail</a>
+                    <a href="<?php echo base_url(); ?>rekreasi/detail/<?php echo ($i->id); ?>" class="card-link">Detail</a>
                   </div>
                 </div>
                 </p>

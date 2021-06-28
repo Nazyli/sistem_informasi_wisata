@@ -1,3 +1,4 @@
+<?php $this->load->view('function/function'); ?>
 <!DOCTYPE html>
 <html lang="en">
 
