@@ -10,7 +10,7 @@ class Home extends CI_Controller
 
 		$this->load->view("layout/header");
 		$this->load->view("layout/carousel");
-		$this->load->view("home", $data);
+		$this->load->view("dashboard", $data);
 		$this->load->view("layout/footer");
 	}
 }

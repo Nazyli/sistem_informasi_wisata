@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>SIWIKODE | Sistem Informasi Wisata Kota Depok</title>
-    <link rel="shortcut icon" type="image/x-icon" href="<?php echo base_url(); ?>assetsdist/img/logo.png">
+    <link rel="shortcut icon" type="image/x-icon" href="<?php echo base_url(); ?>assets/dist/img/logo.png">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/plugins/fontawesome-free/css/all.min.css">
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/plugins/ekko-lightbox/ekko-lightbox.css">
@@ -57,7 +57,7 @@
                 </div>
                 <ul class="order-1 order-md-3 navbar-nav navbar-no-expand ml-auto">
                     <li class=" user user-menu">
-                        <a href="<?php echo base_url(); ?>assetslogin.html" class="nav-link">Login</a>
+                        <a href="<?php echo base_url(); ?>login" class="nav-link">Login</a>
                     </li>
                 </ul>
             </div>

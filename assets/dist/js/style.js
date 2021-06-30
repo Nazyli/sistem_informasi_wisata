@@ -61,11 +61,11 @@ $('#addRekreasi').validate({
 });
 
 
-$.validator.addMethod('cekEmail', function(value, element) {
+$.validator.addMethod('cekEmail', function (value, element) {
   return value == 'admin@gmail.com'
 }, 'Email yang anda masukkan tidak terdaftar!');
 
-$.validator.addMethod('cekPass', function(value, element) {
+$.validator.addMethod('cekPass', function (value, element) {
   return value == 'admin'
 }, 'Password yang anda masukkan salah!');
 
@@ -73,10 +73,10 @@ $('#login').validate({
   onkeyup: function (element) { $(element).valid() },
   onclick: function (element) { $(element).valid() },
   rules: {
-    email: { required: true, email: true, cekEmail:true},
+    email: { required: true, email: true, /*cekEmail:true*/ },
     password: {
       required: true,
-      cekPass: true,
+      /*cekPass: true,*/
     },
   },
   messages: {},
@@ -103,6 +103,7 @@ $(function () {
     showConfirmButton: false,
     timer: 3000
   });
+
   $('.swalSuccesDelete').click(function () {
     Toast.fire({
       icon: 'success',
@@ -110,3 +111,24 @@ $(function () {
     })
   });
 });
+function showNotif(status, message) {
+  toastr.options = {
+    "closeButton": true,
+    "debug": false,
+    "newestOnTop": true,
+    "progressBar": true,
+    "positionClass": "toast-top-right",
+    "preventDuplicates": true,
+    "onclick": null,
+    "showDuration": "300",
+    "hideDuration": "1000",
+    "timeOut": "5000",
+    "extendedTimeOut": "1000",
+    "showEasing": "swing",
+    "hideEasing": "linear",
+    "showMethod": "fadeIn",
+    "hideMethod": "fadeOut"
+  }
+  // toastr.error('Lorem ipsum dolor sit amet, consetetur sadipscing elitr.')
+  toastr[status](message);
+}
