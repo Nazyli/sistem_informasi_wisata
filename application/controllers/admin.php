@@ -29,7 +29,7 @@ class Admin extends CI_Controller
 
 	public function index()
 	{
-		if ($this->session->userdata('level') === 'admin') {
+		if ($this->session->userdata('role') === 'admin') {
 			$this->load->view("admin/layout/header");
 			$this->load->view("admin/dashboard");
 			$this->load->view("admin/layout/footer");
@@ -38,4 +38,16 @@ class Admin extends CI_Controller
 			$this->load->view("errors/error_app", $data);
 		}
 	}
+
+	function member(){
+		//Allowing akses to member only
+		if($this->session->userdata('role')==='member'){
+			$this->load->view("admin/layout/header");
+			$this->load->view("admin/member");
+			$this->load->view("admin/layout/footer");
+		}else{
+			$data['err'] = array('403', '403 Forbidden');
+			$this->load->view("errors/error_app", $data);
+		}
+	  }
 }

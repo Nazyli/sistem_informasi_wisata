@@ -4,7 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>AdminLTE 3 | 500 Error</title>
+    <title>SIWIKODE | Sistem Informasi Wisata Kota Depok</title>
+    <link rel="shortcut icon" type="image/x-icon" href="<?php echo base_url(); ?>assets/dist/img/logo.png">
 
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -38,8 +39,6 @@
                     <h3><i class="fas fa-exclamation-triangle text-danger"></i> Oops! Something went wrong.</h3>
 
                     <p>
-                        <?php
-                        ?>
                         We will work on fixing that right away.
                         Meanwhile, you may <a href="<?php echo base_url(); ?>">return to dashboard</a> or try using the search form.
                     </p>
