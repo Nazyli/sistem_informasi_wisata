@@ -3,13 +3,13 @@
     <div class="container-fluid">
       <div class="row mb-2">
         <div class="col-sm-6">
-          <h1>Selamat Datang</h1>
-          <h6 class="mt-2 text-primary"> <i class="fas fa-minus mr-2"></i> Sistem Informasi Kota Depok</h6>
+          <h1>Wisata <?= $judul ?></h1>
         </div>
         <div class="col-sm-6">
           <ol class="breadcrumb float-sm-right">
-            <li class="breadcrumb-item"><a href="#">Home</a></li>
-            <li class="breadcrumb-item active"><a href="#">Admin</a></li>
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item"><a href="#">Admin</a></li>
+            <li class="breadcrumb-item active">Kelola Wisata Wisata <?= $judul ?></li>
           </ol>
         </div>
       </div>
@@ -19,186 +19,56 @@
   <section class="content">
     <div class="container-fluid">
       <div class="row">
-        <div class="col-md-3 col-sm-6 col-12">
-          <div class="info-box bg-primary disabled">
-            <span class="info-box-icon"><i class="fas fa-map-marked-alt"></i></span>
-
-            <div class="info-box-content">
-              <span class="info-box-text">Wisata Rekreasi</span>
-              <span class="info-box-number"><?php echo count($rekreasi->result()); ?> Wisata</span>
-
-              <div class="progress">
-                <div class="progress-bar" style="width: 100%"></div>
-              </div>
-              <span class="progress-description">
-                <a href="rekreasi.html" class="text-light">
-                  More info <i class="fas fa-arrow-circle-right"></i>
-                </a>
-              </span>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6 col-12">
-          <div class="info-box bg-teal">
-            <span class="info-box-icon"><i class="fas fa-drumstick-bite"></i></span>
-            <div class="info-box-content">
-              <span class="info-box-text">Wisata Kuliner</span>
-              <span class="info-box-number"><?php echo count($kuliner->result()); ?> Kuliner</span>
-
-              <div class="progress">
-                <div class="progress-bar" style="width: 100%"></div>
-              </div>
-              <a href="kuliner.html" class="text-light">
-                More info <i class="fas fa-arrow-circle-right"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6 col-12">
-          <div class="info-box bg-indigo">
-            <span class="info-box-icon"><i class="fas fa-comments"></i></span>
-
-            <div class="info-box-content">
-              <span class="info-box-text">Testimony</span>
-              <span class="info-box-number"><?php echo count($testimoni->result()); ?> Komentar</span>
-
-              <div class="progress">
-                <div class="progress-bar" style="width: 100%"></div>
-              </div>
-              <a href="testimony.html" class="text-light">
-                More info <i class="fas fa-arrow-circle-right"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-        <!-- /.col -->
-        <div class="col-md-3 col-sm-6 col-12">
-          <div class="info-box bg-maroon">
-            <span class="info-box-icon"><i class="far fa-images"></i></span>
-            <div class="info-box-content">
-              <span class="info-box-text">Gallery Foto</span>
-              <span class="info-box-number">123 Foto</span>
-
-              <div class="progress">
-                <div class="progress-bar" style="width: 100%"></div>
-              </div>
-              <span class="progress-description">
-                70% Increase in 30 Days
-              </span>
-            </div>
-            <!-- /.info-box-content -->
-          </div>
-          <!-- /.info-box -->
-        </div>
-        <!-- /.col -->
-      </div>
-
-
-      <div class="row">
-        <div class="col-md-6">
-          <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img class="d-block w-100" src="<?php echo base_url(); ?>assets/dist/img/slide/1.jpg" alt="First slide">
-                <div class="carousel-caption">
-                  <h4>
-                    Wisata Rekreasi & Kuliner Unggulan Kota Depok
-                  </h4>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <img class="d-block w-100" src="<?php echo base_url(); ?>assets/dist/img/slide/2.jpg" alt="Second slide">
-                <div class="carousel-caption">
-                  <h4>
-                    Daftar Wisata Rekreasi Kota Depok
-                  </h4>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <img class="d-block w-100" src="<?php echo base_url(); ?>assets/dist/img/slide/3.jpg" alt="Third slide">
-                <div class="carousel-caption">
-                  <h4>
-                    Daftar Wisata Kuliner Kota Depok
-                  </h4>
-                </div>
+        <div class="col-12">
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">Kelola Data Wisata <?= $judul ?></h3>
+              <div class="card-tools">
+                <a href="../admin/rekreasi_tambah.html" class="btn btn-primary btn-sm"> Add Data </a>
+                <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
+                  <i class="fas fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-tool" data-card-widget="remove" title="Remove">
+                  <i class="fas fa-times"></i>
+                </button>
               </div>
             </div>
-            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-              <span class="carousel-control-custom-icon" aria-hidden="true">
-                <i class="fas fa-chevron-left"></i>
-              </span>
-              <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-              <span class="carousel-control-custom-icon" aria-hidden="true">
-                <i class="fas fa-chevron-right"></i>
-              </span>
-              <span class="sr-only">Next</span>
-            </a>
-          </div>
-
-          <div class="position-relative p-3 bg-navy mt-2">
-            <div class="ribbon-wrapper ribbon-lg">
-              <div class="ribbon bg-primary">
-                Information
-              </div>
+            <div class="card-body">
+              <table id="datatable" class="table table-bordered table-hover">
+                <thead>
+                  <tr>
+                    <th>No</th>
+                    <th>Nama</th>
+                    <th>Jenis Wisata</th>
+                    <th>Rating</th>
+                    <th>Kontak Person</th>
+                    <th>Upload Foto</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <?php foreach ($wisata->result() as $i) { ?>
+                    <tr>
+                      <td><?= $i->id; ?></td>
+                      <td><?= $i->nama; ?></td>
+                      <td><?= $i->wisata; ?></td>
+                      <td><?= createStar($i->bintang); ?></td>
+                      <td><?= $i->kontak; ?></td>
+                      <td> <a href="https://drive.google.com/">Google Drive</a></td>
+                      <td>
+                        <a href="../admin/rekreasi_detail.html" class="btn btn-outline-info btn-sm"><i class="fas fa-info-circle fa-xl"></i></a>
+                        <a href="../admin/rekreasi_edit.html" class="btn btn-outline-primary btn-sm"><i class="fas fa-pencil-alt fa-xl"></i></a>
+                        <a href="#" class="btn btn-outline-danger btn-sm" data-toggle="modal" data-target="#modalHapus"><i class="fas fa-trash fa-xl"></i></a>
+                      </td>
+                    </tr>
+                  <?php } ?>
+                </tbody>
+              </table>
             </div>
-            <blockquote class="bg-navy">
-              <h5 class="quote-primary text-light"><i class="fas fa-info"></i> SIWIKODE</h5>
-              <p>Aplikasi Sistem Informasi Kota Depok menyajikan berbagai informasi seputar wisata rekreasi &
-                kuliner unggulan kota Depok </p>
-              <small>Sistem Informasi Kota Depok <cite title="Source Title">SIWIKODE</cite></small>
-            </blockquote>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="card card-primary card-outline"">
-                <div class=" card-header p-3">
-            <h3 class="card-title">Testimony Komentar Terbaru</h3>
-            <div class="card-tools">
-              <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
-                <i class="fas fa-minus"></i>
-              </button>
-              <button type="button" class="btn btn-tool" data-card-widget="remove" title="Remove">
-                <i class="fas fa-times"></i>
-              </button>
+            <div class="card-footer">
+              Sistem Informasi Wisata Kota Depok
             </div>
           </div>
-          <div class="card-body">
-            <div class="tab-content">
-              <div class="active tab-pane" id="activity">
-                <?php foreach ($new_testimoni->result() as $i) { ?>
-                  <div class="post">
-                    <div class="user-block">
-                      <img class="img-circle img-bordered-sm" src="<?php echo base_url(); ?>assets/dist/img/testimony/artis.jpg" alt="user image">
-                      <span class="username">
-                        <a href="#"><?= $i->nama; ?></a>
-                        <a href="#" class="float-right btn-tool">
-                          <?php createStar($i->rating); ?>
-
-                        </a>
-                      </span>
-                      <span class="description">At <?= $i->wisata; ?> - <?= $i->created_at; ?></span>
-                    </div>
-                    <p class="ulasan">
-                      <?= $i->komentar; ?>
-                    </p>
-                    <p class="mt-2">
-                      <a href="#" class="link-black text-sm mr-2"><i class="fas fa-share mr-1"></i> Share</a>
-                      <a href="#" class="link-black text-sm"><i class="far fa-thumbs-up mr-1"></i> Like</a>
-
-                  </div>
-                <?php } ?>
-
-              </div>
-            </div>
-          </div>
-
         </div>
       </div>
     </div>

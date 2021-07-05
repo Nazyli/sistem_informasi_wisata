@@ -103,7 +103,7 @@
         <nav class="mt-2">
           <ul class="nav nav-pills nav-sidebar flex-column nav-flat nav-compact nav-child-indent" data-widget="treeview" role="menu" data-accordion="false">
             <li class="nav-item">
-              <a href="index.html" class="nav-link active">
+              <a href="<?php echo base_url(); ?>/admin" class="nav-link active">
                 <i class="nav-icon fas fa-tachometer-alt"></i>
                 <p>
                   Dashboard
@@ -118,7 +118,7 @@
                 </p>
               </a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item nav-item menu-is-opening menu-open">
               <a href="#" class="nav-link">
                 <i class="nav-icon fas fa-copy"></i>
                 <p>
@@ -126,15 +126,15 @@
                   <i class="fas fa-angle-left right"></i>
                 </p>
               </a>
-              <ul class="nav nav-treeview">
+              <ul class="nav nav-treeview" style="display: block;">
                 <li class="nav-item">
-                  <a href="<?php echo base_url(); ?>assets/admin/rekreasi.html" class="nav-link">
+                  <a href="<?php echo base_url(); ?>admin/wisata/rekreasi" class="nav-link">
                     <i class="far fa-circle nav-icon text-info"></i>
                     <p>Wisata Rekreasi</p>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="<?php echo base_url(); ?>assets/admin/kuliner.html" class="nav-link">
+                  <a href="<?php echo base_url(); ?>admin/wisata/kuliner" class="nav-link">
                     <i class="far fa-circle nav-icon text-info"></i>
                     <p class="">Wisata Kuliner</p>
                   </a>

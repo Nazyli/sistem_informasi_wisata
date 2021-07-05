@@ -31,9 +31,8 @@ class Wisata extends CI_Controller
 	}
 	public function rekreasi()
 	{
-		$data['wisata'] = 'Wisata Rekreasi';
-		$data['getOne'] = $this->wisata_model->randRekreasi(1)->row();
-		$data['data'] = $this->wisata_model->getAllRekreasiNotInId($data['getOne']->id);
+		$data['judul'] = 'Rekreasi';
+		$data['wisata'] = $this->wisata_model->getAllRekreasi();
 
 		$this->load->view("admin/layout/header");
 		$this->load->view("admin/wisata", $data);
@@ -41,9 +40,8 @@ class Wisata extends CI_Controller
 	}
 	public function kuliner()
 	{
-		$data['wisata'] = 'Wisata Kuliner';
-		$data['getOne'] = $this->wisata_model->randKuliner(1)->row();
-		$data['data'] = $this->wisata_model->getAllKulinerNotInId($data['getOne']->id);
+		$data['judul'] = 'Kuliner';
+		$data['wisata'] = $this->wisata_model->getAllKuliner();
 
 		$this->load->view("admin/layout/header");
 		$this->load->view("admin/wisata", $data);
@@ -56,8 +54,8 @@ class Wisata extends CI_Controller
 
 		$data['testimoni'] = $this->testimoni_model->findByWisataId($id);
 
-		$this->load->view("layout/header");
-		$this->load->view("wisata_detail", $data);
-		$this->load->view("layout/footer");
+		$this->load->view("admin/layout/header");
+		$this->load->view("admin/wisata_detail", $data);
+		$this->load->view("admin/layout/footer");
 	}
 }

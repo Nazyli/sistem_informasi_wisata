@@ -19,12 +19,12 @@ class Wisata_model extends CI_Model
         return $query;
     }
     public function getAllRekreasi(){
-        $sql = 'SELECT * FROM wisata WHERE jenis_wisata_id IS NOT NULL';
+        $sql = 'SELECT w.*, jw.nama AS wisata FROM wisata w JOIN jenis_wisata jw ON w.jenis_wisata_id = jw.id WHERE jenis_wisata_id IS NOT NULL';
         $query = $this->db->query($sql);
         return $query;
     }
     public function getAllKuliner(){
-        $sql = 'SELECT * FROM wisata WHERE jenis_kuliner_id IS NOT NULL';
+        $sql = 'SELECT w.*, jk.nama AS wisata FROM wisata w JOIN jenis_kuliner jk ON w.jenis_kuliner_id = jk.id WHERE jenis_kuliner_id IS NOT NULL';
         $query = $this->db->query($sql);
         return $query;
     }
