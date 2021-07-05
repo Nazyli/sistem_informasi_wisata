@@ -18,18 +18,36 @@
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/dist/css/style.css">
 </head>
 
-<body class="hold-transition login-page">
-    <div class="login-box">
-        <!-- /.login-logo -->
+<body class="hold-transition register-page">
+    <div class="register-box">
         <div class="card card-outline card-primary">
             <div class="card-header text-center">
                 <a href="<?php echo base_url(); ?>" class="h1"><b>SIWIKODE</b> </a>
             </div>
             <div class="card-body">
-                <p class="login-box-msg">Sistem Informasi Wisata Kota Depok <small>(v 2.0)</small> </p>
-                <form action="<?php echo base_url(); ?>/login/auth" method="post" id="login">
+                <p class="login-box-msg">Register a new membership</p>
+
+                <form action="<?php echo base_url(); ?>/login/register_save" method="post" id="register">
                     <div class="input-group mb-3">
-                        <input type="email" class="form-control" placeholder="Email (admin@gmail.com)" name="email">
+                        <input type="text" class="form-control" placeholder="Full name" name="nama">
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fas fa-user"></span>
+                            </div>
+                        </div>
+                        <label id="email-error" class="invalid-feedback" for="nama"></label>
+                    </div>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Username" name="username" >
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fas fa-user"></span>
+                            </div>
+                        </div>
+                        <label id="email-error" class="invalid-feedback" for="username"></label>
+                    </div>
+                    <div class="input-group mb-3">
+                        <input type="email" class="form-control" placeholder="Email" name="email">
                         <div class="input-group-append">
                             <div class="input-group-text">
                                 <span class="fas fa-envelope"></span>
@@ -38,26 +56,39 @@
                         <label id="email-error" class="invalid-feedback" for="email"></label>
                     </div>
                     <div class="input-group mb-3">
-                        <input type="password" class="form-control" placeholder="Password (admin)" name="password">
+                        <input type="password" class="form-control" placeholder="Password" name="password" id="password">
                         <div class="input-group-append">
                             <div class="input-group-text">
                                 <span class="fas fa-lock"></span>
                             </div>
                         </div>
-                        <label id="password-error" class="invalid-feedback" for="password"></label>
+                        <label id="email-error" class="invalid-feedback" for="password"></label>
+                    </div>
+                    <div class="input-group mb-3">
+                        <input type="password" class="form-control" placeholder="Retype password" name="retype">
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fas fa-lock"></span>
+                            </div>
+                        </div>
+                        <label id="email-error" class="invalid-feedback" for="retype"></label>
                     </div>
                     <div class="row">
                         <div class="col-8">
-                            <a href="<?php echo base_url(); ?>/login/register" class="text-center">Register a new membership</a>
                         </div>
+                        <!-- /.col -->
                         <div class="col-4">
-                            <button type="submit" class="btn btn-primary btn-block swallShow" id="kliklogin">Log In</button>
+                            <button type="submit" class="btn btn-primary btn-block">Register</button>
                         </div>
+                        <!-- /.col -->
                     </div>
-                    <?php echo form_close(); ?>
+                </form>
+                <a href="<?php echo base_url(); ?>/login" class="text-center">I already have a membership</a>
             </div>
-        </div>
+            <!-- /.form-box -->
+        </div><!-- /.card -->
     </div>
+    <!-- /.register-box -->
 
     <script src="<?php echo base_url(); ?>assets/plugins/jquery/jquery.min.js"></script>
     <script src="<?php echo base_url(); ?>assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>

@@ -57,7 +57,12 @@
                 </div>
                 <ul class="order-1 order-md-3 navbar-nav navbar-no-expand ml-auto">
                     <li class=" user user-menu">
-                        <a href="<?php echo base_url(); ?>login" class="nav-link">Login</a>
+                        <?php
+                        if ($this->session->userdata('logged_in') == TRUE) { ?>
+                            <a href="<?php echo base_url(); ?>/login/logout" class="nav-link">Logout, <?php echo $this->session->userdata('username') ?></a>
+                        <?php } else { ?>
+                            <a href="<?php echo base_url(); ?>login" class="nav-link">Login</a>
+                        <?php } ?>
                     </li>
                 </ul>
             </div>

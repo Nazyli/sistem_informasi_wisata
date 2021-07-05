@@ -65,7 +65,7 @@
                 <a href="#" class="btn btn-primary btn-sm">Profile</a>
               </div>
               <div class="float-right">
-                <a href="<?php echo base_url(); ?>login/logout" class="btn btn-danger btn-sm">Sign out</a>
+                <a href="<?php echo base_url(); ?>login/logout" class="btn btn-danger btn-sm">Log out</a>
               </div>
             </li>
           </ul>

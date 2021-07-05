@@ -90,6 +90,31 @@ $('#login').validate({
     $(element).removeClass('is-invalid').addClass('is-valid');
   },
 });
+
+$('#register').validate({
+  onkeyup: function (element) { $(element).valid() },
+  onclick: function (element) { $(element).valid() },
+  rules: {
+    nama: { required: true },
+    email: { required: true, email: true, /*cekEmail:true*/ },
+    username: { required: true, },
+    password: { required: true, },
+    retype: {
+      required: true,
+      equalTo: "#password"
+    },
+  },
+  messages: {},
+  errorClass: "invalid-feedback",
+  // errorElement: 'div',
+  highlight: function (element, errorClass, validClass) {
+
+    $(element).removeClass('is-valid').addClass('is-invalid');
+  },
+  unhighlight: function (element, errorClass, validClass) {
+    $(element).removeClass('is-invalid').addClass('is-valid');
+  },
+});
 $(function () {
   $(document).on('click', '[data-toggle="lightbox"]', function (event) {
     event.preventDefault();

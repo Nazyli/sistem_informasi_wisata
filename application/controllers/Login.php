@@ -30,6 +30,26 @@ class Login extends CI_Controller
 		$this->load->view('login');
 	}
 
+	public function register()
+	{
+		$this->load->view('register');
+	}
+	public function register_save()
+	{
+		$nama    = $this->input->post('nama', TRUE);
+		$username    = $this->input->post('username', TRUE);
+		$email    = $this->input->post('email', TRUE);
+		$password = md5($this->input->post('password', TRUE));
+		$role = $this->input->post('role', TRUE);;
+		if (!isset($role)) {
+			$role = 'member';
+		}
+		$data = [$nama, $username, $email, $password, $role];
+		$res = $this->user_model->save($data);
+		echo $this->session->set_flashdata('msg', array('success', 'User berhasil ditambahkan, silakan login!'));
+		redirect('login');
+	}
+
 	public function auth()
 	{
 		$email    = $this->input->post('email', TRUE);
@@ -47,6 +67,8 @@ class Login extends CI_Controller
 				'logged_in' => TRUE
 			);
 			$this->session->set_userdata($sesdata);
+			$data['last_login'] = date("Y-m-d H:i:s");
+			$res = $this->user_model->update($data);
 			// access login for admin
 			if ($role === 'admin') {
 				redirect('admin');
@@ -55,9 +77,8 @@ class Login extends CI_Controller
 				redirect('admin/member');
 			}
 		} else {
-			echo $this->session->set_flashdata('msg',array('error','Username / Password Salahh'));
+			echo $this->session->set_flashdata('msg', array('error', 'Username / Password Salahh'));
 			redirect('login');
-
 		}
 	}
 
