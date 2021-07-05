@@ -7,7 +7,7 @@ class Wisata extends CI_Controller
 		$this->load->model('wisata_model');
 		$data['wisata'] = 'Wisata Rekreasi';
 		$data['getOne'] = $this->wisata_model->randRekreasi(1)->row();
-		$data['data'] = $this->wisata_model->getAllRekreasiNotInId("jenis_wisata_id", $data['getOne']->id);
+		$data['data'] = $this->wisata_model->getAllRekreasiNotInId($data['getOne']->id);
 
 		$this->load->view("layout/header");
 		$this->load->view("wisata", $data);

@@ -1,3 +1,4 @@
+<?php $this->load->view('function/function'); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,6 +14,7 @@
   <link rel="stylesheet" href="<?php echo base_url(); ?>assets/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
   <link rel="stylesheet" href="<?php echo base_url(); ?>assets/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
   <link rel="stylesheet" href="<?php echo base_url(); ?>assets/plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css">
+  <link rel="stylesheet" href="<?php echo base_url(); ?>assets/plugins/toastr/toastr.min.css">
   <link rel="stylesheet" href="<?php echo base_url(); ?>assets/dist/css/adminlte.min.css">
   <link rel="stylesheet" href="<?php echo base_url(); ?>assets/dist/css/style.css">
 </head>
@@ -83,7 +85,7 @@
       </ul>
     </nav>
     <aside class="main-sidebar main-sidebar-custom sidebar-light-primary elevation-4">
-      <a href="<?php echo base_url(); ?>assets/index.html" class="brand-link text-sm navbar-primary">
+      <a href="<?php echo base_url(); ?>" class="brand-link text-sm navbar-primary">
         <img src="<?php echo base_url(); ?>assets/dist/img/logo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
         <span class="brand-text font-weight-light text-light">S I W I K O D E</span>
       </a>

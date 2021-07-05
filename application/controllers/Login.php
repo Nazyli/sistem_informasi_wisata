@@ -71,13 +71,14 @@ class Login extends CI_Controller
 			$res = $this->user_model->update($data);
 			// access login for admin
 			if ($role === 'admin') {
+				echo $this->session->set_flashdata('msg', array('success', 'Selamat datang, ' . $data['nama']));
 				redirect('admin');
 				// access login for member
 			} else {
-				redirect('admin/member');
+				redirect('home/member');
 			}
 		} else {
-			echo $this->session->set_flashdata('msg', array('error', 'Username / Password Salahh'));
+			echo $this->session->set_flashdata('msg', array('error', 'Username / Password Salah'));
 			redirect('login');
 		}
 	}

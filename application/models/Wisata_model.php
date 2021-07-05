@@ -18,6 +18,16 @@ class Wisata_model extends CI_Model
         $query = $this->db->get('wisata');
         return $query;
     }
+    public function getAllRekreasi(){
+        $sql = 'SELECT * FROM wisata WHERE jenis_wisata_id IS NOT NULL';
+        $query = $this->db->query($sql);
+        return $query;
+    }
+    public function getAllKuliner(){
+        $sql = 'SELECT * FROM wisata WHERE jenis_kuliner_id IS NOT NULL';
+        $query = $this->db->query($sql);
+        return $query;
+    }
     public function findById($id){
         $query = $this->db->get_where('wisata',['id'=>$id]);
         return $query->row();

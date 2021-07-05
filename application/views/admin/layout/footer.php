@@ -46,9 +46,18 @@
   <script src="<?php echo base_url(); ?>assets/plugins/jquery-validation/additional-methods.min.js"></script>
   <script src="<?php echo base_url(); ?>assets/plugins/jquery-validation/localization/messages_id.min.js"></script>
   <script src="<?php echo base_url(); ?>assets/plugins/sweetalert2/sweetalert2.min.js"></script>
+  <script src="<?php echo base_url(); ?>assets/plugins/toastr/toastr.min.js"></script>
   <script src="<?php echo base_url(); ?>assets/dist/js/adminlte.min.js"></script>
   <script src="<?php echo base_url(); ?>assets/dist/js/demo.js"></script>
   <script src="<?php echo base_url(); ?>assets/dist/js/style.js"></script>
+  <script>
+        <?php
+        if ($this->session->flashdata('msg')) {
+            $msg = $this->session->flashdata('msg');
+        ?>
+            $(document).ready(showNotif('<?php echo $msg[0]; ?>', '<?php echo $msg[1]; ?>'));
+        <?php } unset($_SESSION['msg']); ?>
+    </script>
 </body>
 
 </html>

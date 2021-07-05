@@ -78,7 +78,7 @@
             $msg = $this->session->flashdata('msg');
         ?>
             $(document).ready(showNotif('<?php echo $msg[0]; ?>', '<?php echo $msg[1]; ?>'));
-        <?php } ?>
+        <?php } unset($_SESSION['msg']); ?>
     </script>
 </body>
 

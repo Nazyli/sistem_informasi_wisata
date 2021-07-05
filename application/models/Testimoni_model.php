@@ -24,5 +24,11 @@ class Testimoni_model extends CI_Model
         $query = $this->db->query($sql, array($id));
         return $query;
     }
+    public function findAllLimit($limit){
+        // $query = $this->db->get_where('testimoni',['wisata_id'=>$id]);
+        $sql = "SELECT t.*, w.nama as wisata FROM testimoni t JOIN wisata w ON t.wisata_id = w.id ORDER BY t.created_at DESC LIMIT ?";
+        $query = $this->db->query($sql, array($limit));
+        return $query;
+    }
 
 }

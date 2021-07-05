@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Admin extends CI_Controller
+class Home extends CI_Controller
 {
 
 	/**
@@ -23,15 +23,22 @@ class Admin extends CI_Controller
 	{
 		parent::__construct();
 		if ($this->session->userdata('logged_in') !== TRUE) {
+			echo $this->session->set_flashdata('msg', array('warning', 'Anda tidak memiliki akses!, silakan login'));
 			redirect('login');
 		}
+		$this->load->model('wisata_model');
+		$this->load->model('testimoni_model');
 	}
 
 	public function index()
 	{
+		$data['rekreasi'] = $this->wisata_model->getAllRekreasi();
+		$data['kuliner'] = $this->wisata_model->getAllKuliner();
+		$data['testimoni'] = $this->testimoni_model->getAll();
+		$data['new_testimoni'] = $this->testimoni_model->findAllLimit(3);
 		if ($this->session->userdata('role') === 'admin') {
 			$this->load->view("admin/layout/header");
-			$this->load->view("admin/dashboard");
+			$this->load->view("admin/dashboard", $data);
 			$this->load->view("admin/layout/footer");
 		} else {
 			$data['err'] = array('403', '403 Forbidden');
