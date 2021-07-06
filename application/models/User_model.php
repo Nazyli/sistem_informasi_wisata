@@ -10,6 +10,12 @@ class User_model extends CI_Model
     public $created_at;
     public $last_login;
 
+    public function getAll()
+    {
+        $query = $this->db->order_by('nama', 'ASC')->get('users');
+        return $query;
+    }
+
     function validate($email, $password)
     {
         $this->db->where('email', $email);
