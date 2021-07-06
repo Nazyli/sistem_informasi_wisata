@@ -120,8 +120,8 @@ $uriString = $this->uri->uri_string();
                 </p>
               </a>
             </li>
-            <li class="nav-item <?php if (strpos($uriString, 'wisata')) {echo "menu-open";}?>">
-              <a href="#" class="nav-link <?= checkUri($uriString, 'wisata') ?>">
+            <li class="nav-item <?php if (strpos($uriString, 'wisata/')) {echo "menu-open";}?>">
+              <a href="#" class="nav-link <?= checkUri($uriString, 'wisata/') ?>">
                 <i class="nav-icon fas fa-copy"></i>
                 <p>
                   Wisata
@@ -144,7 +144,7 @@ $uriString = $this->uri->uri_string();
               </ul>
             </li>
             <li class="nav-item">
-              <a href="<?php echo base_url(); ?>admin/jenis_wisata" class="nav-link <?= checkUri($uriString, 'jenis-wisata') ?>">
+              <a href="<?php echo base_url(); ?>admin/jenis_wisata" class="nav-link <?= checkUri($uriString, 'jenis_wisata') ?>">
                 <i class="nav-icon fas fa-map-marked-alt"></i>
                 <p>
                   Jenis Wisata Rekreasi
@@ -152,7 +152,7 @@ $uriString = $this->uri->uri_string();
               </a>
             </li>
             <li class="nav-item">
-              <a href="<?php echo base_url(); ?>admin/jenis_kuliner" class="nav-link <?= checkUri($uriString, 'jenis-kuliner') ?>">
+              <a href="<?php echo base_url(); ?>admin/jenis_kuliner" class="nav-link <?= checkUri($uriString, 'jenis_kuliner') ?>">
                 <i class="nav-icon fas fa-drumstick-bite"></i>
                 <p>
                   Jenis Wisata Kuliner
