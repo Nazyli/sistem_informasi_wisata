@@ -21,13 +21,13 @@ class Wisata_model extends CI_Model
     }
     public function getAllRekreasi()
     {
-        $sql = 'SELECT w.*, jw.nama AS wisata FROM wisata w JOIN jenis_wisata jw ON w.jenis_wisata_id = jw.id WHERE jenis_wisata_id IS NOT NULL';
+        $sql = 'SELECT w.*, jw.nama AS wisata FROM wisata w JOIN jenis_wisata jw ON w.jenis_wisata_id = jw.id WHERE jenis_wisata_id IS NOT NULL ORDER BY nama';
         $query = $this->db->query($sql);
         return $query;
     }
     public function getAllKuliner()
     {
-        $sql = 'SELECT w.*, jk.nama AS wisata FROM wisata w JOIN jenis_kuliner jk ON w.jenis_kuliner_id = jk.id WHERE jenis_kuliner_id IS NOT NULL';
+        $sql = 'SELECT w.*, jk.nama AS wisata FROM wisata w JOIN jenis_kuliner jk ON w.jenis_kuliner_id = jk.id WHERE jenis_kuliner_id IS NOT NULL ORDER BY nama';
         $query = $this->db->query($sql);
         return $query;
     }
@@ -70,6 +70,29 @@ class Wisata_model extends CI_Model
         $sql = "INSERT INTO wisata(nama, deskripsi, jenis_wisata_id, fasilitas, bintang, kontak, alamat, latlong, email, web, jenis_kuliner_id) 
         VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
         $query = $this->db->query($sql, $data);
+        return $query;
+    }
+    function update($data)
+    {
+        $sql = "UPDATE wisata SET nama = ?, deskripsi = ?, jenis_wisata_id = ?, fasilitas = ?, bintang = ?, kontak = ?, alamat = ?, 
+        latlong = ?, email = ?, web = ?, jenis_kuliner_id = ? WHERE id = ?";
+        $query = $this->db->query(
+            $sql,
+            array(
+                $data->nama,
+                $data->deskripsi,
+                $data->jenis_wisata_id,
+                $data->fasilitas,
+                $data->bintang,
+                $data->kontak,
+                $data->alamat,
+                $data->latlong,
+                $data->email,
+                $data->web,
+                $data->jenis_kuliner_id,
+                $data->id
+            )
+        );
         return $query;
     }
 }

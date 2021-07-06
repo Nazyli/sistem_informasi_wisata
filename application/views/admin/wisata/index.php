@@ -47,9 +47,9 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <?php foreach ($wisata->result() as $i) { ?>
+                  <?php $no =1; foreach ($wisata->result() as $i) { ?>
                     <tr>
-                      <td><?= $i->id; ?></td>
+                      <td><?= $no++; ?></td>
                       <td><?= $i->nama; ?></td>
                       <td><?= $i->wisata; ?></td>
                       <td><?= createStar($i->bintang); ?></td>

@@ -107,12 +107,36 @@ class Wisata extends CI_Controller
 		}else{
 			$judul = "Kuliner";
 		}
-		$data['judul'] = $id;
+		$data['judul'] = $judul;
 		$data['rekreasi'] = $this->jenis_wisata_model->getAll();
 		$data['kuliner'] = $this->jenis_kuliner_model->getAll();
 
 		$this->load->view("admin/layout/header");
 		$this->load->view("admin/wisata/edit", $data);
 		$this->load->view("admin/layout/footer");
+	}
+
+	public function update($id)
+	{
+		$data = $this->wisata_model->findById($id);
+		$data->nama    = $this->input->post('namaWisata', TRUE);
+		$data->deskripsi    = $this->input->post('deskripsi', TRUE);
+		$data->jenis_wisata_id   = $this->input->post('jenisWisata', TRUE);
+		$data->fasilitas = $this->input->post('fasilitas', TRUE);
+		$data->bintang = $data->bintang;
+		$data->kontak = $this->input->post('noTelp', TRUE);
+		$data->alamat = $this->input->post('alamat', TRUE);
+		$data->latlong = $this->input->post('LatLot', TRUE);
+		$data->email = $this->input->post('email', TRUE);
+		$data->web = $this->input->post('alamatWeb', TRUE);
+		$data->jenis_kuliner_id    = $this->input->post('jenisKuliner', TRUE);
+		$res = $this->wisata_model->update($data);
+		if ($data->jenis_wisata_id  != NULL) {
+			echo $this->session->set_flashdata('msg', array('success', 'Wisata Rekreasi berhasil diperbarui!'));
+			redirect('admin/wisata/rekreasi');
+		} else {
+			echo $this->session->set_flashdata('msg', array('success', 'Wisata Kuliner berhasil diperbarui!'));
+			redirect('admin/wisata/kuliner');
+		}
 	}
 }
