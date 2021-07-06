@@ -65,6 +65,22 @@ class Wisata_model extends CI_Model
         return $query;
     }
 
+    public function getByJenisWisata($id)
+    {
+        $sql = 'SELECT * FROM wisata WHERE jenis_wisata_id = ?';
+        $query = $this->db->query($sql, array($id));
+        return $query;
+
+    }
+
+    public function getByJenisKuliner($id)
+    {
+        $sql = 'SELECT * FROM wisata WHERE jenis_kuliner_id = ?';
+        $query = $this->db->query($sql, array($id));
+        return $query;
+
+    }
+
     function save($data)
     {
         $sql = "INSERT INTO wisata(nama, deskripsi, jenis_wisata_id, fasilitas, bintang, kontak, alamat, latlong, email, web, jenis_kuliner_id) 

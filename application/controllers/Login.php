@@ -30,7 +30,7 @@ class Login extends CI_Controller
 		if ($this->session->userdata('logged_in') !== TRUE) {
 			$this->load->view('login');
 		}else {
-			redirect('admin');
+			redirect('admin/home');
 		}
 	}
 
@@ -76,7 +76,7 @@ class Login extends CI_Controller
 			// access login for admin
 			if ($role === 'admin') {
 				echo $this->session->set_flashdata('msg', array('success', 'Selamat datang, ' . $data['nama']));
-				redirect('admin');
+				redirect('admin/home');
 				// access login for member
 			} else {
 				redirect('home/member');

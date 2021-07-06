@@ -116,6 +116,23 @@ $('#register').validate({
     $(element).removeClass('is-invalid').addClass('is-valid');
   },
 });
+$('#addJenisWisata').validate({
+  onkeyup: function (element) { $(element).valid() },
+  onclick: function (element) { $(element).valid() },
+  rules: {
+    namaJenisWisata: { required: true },
+  },
+  messages: {},
+  errorClass: "invalid-feedback",
+  // errorElement: 'div',
+  highlight: function (element, errorClass, validClass) {
+
+    $(element).removeClass('is-valid').addClass('is-invalid');
+  },
+  unhighlight: function (element, errorClass, validClass) {
+    $(element).removeClass('is-invalid').addClass('is-valid');
+  },
+});
 $(function () {
   $(document).on('click', '[data-toggle="lightbox"]', function (event) {
     event.preventDefault();

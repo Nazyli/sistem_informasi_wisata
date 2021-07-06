@@ -11,7 +11,7 @@ $this->load->model('testimoni_model');
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                        <li class="breadcrumb-item"><a href="#">Pengelolaan Pencatatan</a></li>
+                        <li class="breadcrumb-item"><a href="<?php echo base_url(); ?>admin/testimoni">Pengelolaan Pencatatan</a></li>
                         <li class="breadcrumb-item active">Testimony Tempat Wisata</li>
                     </ol>
                 </div>

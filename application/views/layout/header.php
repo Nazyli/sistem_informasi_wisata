@@ -62,7 +62,7 @@
                     <li class="nav-item dropdown">
                         <a id="dropdownSubMenu1" href="<?php echo base_url(); ?>assets#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle"><?php echo $this->session->userdata('username') ?></a>
                         <ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow">
-                            <li><a href="<?php echo base_url(); ?>admin" class="dropdown-item">Admin</a></li>
+                            <li><a href="<?php echo base_url(); ?>admin/home" class="dropdown-item">Admin</a></li>
                             <li class="dropdown-divider"></li>
                             <li><a href="<?php echo base_url(); ?>/login/logout" class="dropdown-item">Logout </a></li>
                         </ul>

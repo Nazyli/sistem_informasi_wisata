@@ -38,13 +38,13 @@ $uriString = $this->uri->uri_string();
         <li class="dropdown user user-menu">
           <a class="nav-link" data-toggle="dropdown" href="#">
             <img src="<?php echo base_url(); ?>assets/dist/img/user.jpg" class="user-image-sm" alt="User Image">
-            <span class="hidden-xs">Administrator</span>
+            <span class="hidden-xs"><?php echo $this->session->userdata('username') ?></span>
           </a>
           <ul class="dropdown-menu">
             <li class="user-header">
               <img src="<?php echo base_url(); ?>assets/dist/img/user.jpg" class="img-circle" alt="User Image">
               <p>
-                Administrator - Web Developer
+                <?php echo $this->session->userdata('username') ?> - Web Developer
                 <small>Member since Jan. 2021</small>
               </p>
             </li>
@@ -98,7 +98,7 @@ $uriString = $this->uri->uri_string();
             <img src="<?php echo base_url(); ?>assets/dist/img/user.jpg" class="img-circle elevation-2" alt="User Image">
           </div>
           <div class="info">
-            <a href="<?php echo base_url(); ?>/admin" class="d-block">Administrator</a>
+            <a href="<?php echo base_url(); ?>admin/home" class="d-block">Administrator</a>
           </div>
         </div>
 
@@ -144,7 +144,7 @@ $uriString = $this->uri->uri_string();
               </ul>
             </li>
             <li class="nav-item">
-              <a href="<?php echo base_url(); ?>admin/jenis-wisata" class="nav-link <?= checkUri($uriString, 'jenis-wisata') ?>">
+              <a href="<?php echo base_url(); ?>admin/jenis_wisata" class="nav-link <?= checkUri($uriString, 'jenis-wisata') ?>">
                 <i class="nav-icon fas fa-map-marked-alt"></i>
                 <p>
                   Jenis Wisata Rekreasi
@@ -152,7 +152,7 @@ $uriString = $this->uri->uri_string();
               </a>
             </li>
             <li class="nav-item">
-              <a href="<?php echo base_url(); ?>admin/jenis-kuliner" class="nav-link <?= checkUri($uriString, 'jenis-kuliner') ?>">
+              <a href="<?php echo base_url(); ?>admin/jenis_kuliner" class="nav-link <?= checkUri($uriString, 'jenis-kuliner') ?>">
                 <i class="nav-icon fas fa-drumstick-bite"></i>
                 <p>
                   Jenis Wisata Kuliner
