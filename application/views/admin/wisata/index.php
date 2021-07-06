@@ -58,7 +58,7 @@
                       <td>
                         <a href="<?php echo base_url(); ?>admin/wisata/detail/<?= $i->id; ?>" class="btn btn-outline-info btn-sm"><i class="fas fa-info-circle fa-xl"></i></a>
                         <a href="<?php echo base_url(); ?>admin/wisata/edit/<?= $i->id; ?>" class="btn btn-outline-primary btn-sm"><i class="fas fa-pencil-alt fa-xl"></i></a>
-                        <a href="#" class="btn btn-outline-danger btn-sm" data-toggle="modal" data-target="#modalHapus"><i class="fas fa-trash fa-xl"></i></a>
+                        <a href="<?php echo base_url(); ?>admin/wisata/delete/<?= $i->id; ?>" class="btn btn-outline-danger btn-sm" onclick="swalSuccesDelete(event)"><i class="fas fa-trash fa-xl"></i></a>
                       </td>
                     </tr>
                   <?php } ?>

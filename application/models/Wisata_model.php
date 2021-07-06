@@ -95,4 +95,10 @@ class Wisata_model extends CI_Model
         );
         return $query;
     }
+    function delete($id)
+    {
+        $sql = "DELETE FROM wisata WHERE id = ?";
+        $query = $this->db->query($sql, array($id));
+        return $query;
+    }
 }

@@ -29,7 +29,7 @@
           </div>
           <div class="modal-footer justify-content-between">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-danger swalSuccesDelete" data-dismiss="modal">Hapus Data</button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Hapus Data</button>
           </div>
         </div>
       </div>

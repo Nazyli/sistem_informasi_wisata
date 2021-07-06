@@ -123,20 +123,24 @@ $(function () {
       alwaysShowClose: true
     });
   });
-  var Toast = Swal.mixin({
-    toast: true,
-    position: 'top-end',
-    showConfirmButton: false,
-    timer: 3000
-  });
-
-  $('.swalSuccesDelete').click(function () {
-    Toast.fire({
-      icon: 'success',
-      title: ' Data Berhasil Dihapus'
-    })
-  });
 });
+function swalSuccesDelete(ev) {
+  ev.preventDefault();
+  var urlToRedirect = ev.currentTarget.getAttribute('href');
+  Swal.fire({
+    title: ' Hapus Data!',
+    text: "Apakah anda yakin ingin menghapus data ini ?",
+    icon: 'warning',
+    showCancelButton: true,
+    confirmButtonColor: '#3085d6',
+    cancelButtonColor: '#d33',
+    confirmButtonText: 'Yes, delete it!'
+  }).then((result) => {
+    if (result.isConfirmed) {
+      window.location = urlToRedirect;
+    }
+  })
+}
 function showNotif(status, message) {
   toastr.options = {
     "closeButton": true,
