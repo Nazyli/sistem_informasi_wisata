@@ -50,4 +50,19 @@ class Testimoni extends CI_Controller
 		$this->load->view("admin/testimoni/detail", $data);
 		$this->load->view("admin/layout/footer");
 	}
+
+	public function delete($id)
+	{
+		$data = $this->testimoni_model->findById($id);
+		$res = $this->testimoni_model->delete($id);
+
+		// update star
+		$wisata = $this->wisata_model->findById($data->wisata_id);
+		$wisata->bintang = $this->testimoni_model->countStar($data->wisata_id);
+		var_dump($wisata->bintang);
+		$this->wisata_model->update($wisata);
+
+		echo $this->session->set_flashdata('msg', array('success', 'Testimoni berhasil dihapus!'));
+		redirect('admin/testimoni/detail/' . $data->wisata_id);
+	}
 }

@@ -29,8 +29,8 @@
                             </div>
 
                             <h3 class="profile-username text-center"><?= $wisata->nama ?></h3>
-
-                            <p class="text-muted text-center"><a href="<?= $wisata->web; ?><"><?= $wisata->web; ?></a></p>
+                            <p class="text-center"><a href="<?= $wisata->web; ?><"><?= $wisata->web; ?></a></p>
+                            <p class="text-center"><?= createStar($wisata->bintang); ?></p>
 
                             <ul class="list-group list-group-unbordered mb-3">
                                 <li class="list-group-item">

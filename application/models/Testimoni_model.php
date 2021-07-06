@@ -35,9 +35,16 @@ class Testimoni_model extends CI_Model
     }
 
     public function countStar($id){
-        $sql = "SELECT COALESCE(ROUND(AVG(rating),0),0) AS bintang  FROM testimoni WHERE wisata_id = 1";
+        $sql = "SELECT COALESCE(ROUND(AVG(rating),0),0) AS bintang  FROM testimoni WHERE wisata_id = ?";
         $query = $this->db->query($sql, array($id));
         return $query->row()->bintang;
+    }
+
+    function delete($id)
+    {
+        $sql = "DELETE FROM testimoni WHERE id = ?";
+        $query = $this->db->query($sql, array($id));
+        return $query;
     }
 
 }
