@@ -27,7 +27,11 @@ class Login extends CI_Controller
 
 	public function index()
 	{
-		$this->load->view('login');
+		if ($this->session->userdata('logged_in') !== TRUE) {
+			$this->load->view('login');
+		}else {
+			redirect('admin');
+		}
 	}
 
 	public function register()

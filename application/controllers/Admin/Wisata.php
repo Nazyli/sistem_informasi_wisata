@@ -29,13 +29,14 @@ class Wisata extends CI_Controller
 		$this->load->model('wisata_model');
 		$this->load->model('testimoni_model');
 	}
+	
 	public function rekreasi()
 	{
 		$data['judul'] = 'Rekreasi';
 		$data['wisata'] = $this->wisata_model->getAllRekreasi();
 
 		$this->load->view("admin/layout/header");
-		$this->load->view("admin/wisata", $data);
+		$this->load->view("admin/wisata/index", $data);
 		$this->load->view("admin/layout/footer");
 	}
 	public function kuliner()
@@ -44,18 +45,23 @@ class Wisata extends CI_Controller
 		$data['wisata'] = $this->wisata_model->getAllKuliner();
 
 		$this->load->view("admin/layout/header");
-		$this->load->view("admin/wisata", $data);
+		$this->load->view("admin/wisata/index", $data);
+		$this->load->view("admin/layout/footer");
 	}
 	public function detail($id)
 	{
-		$this->load->model('wisata_model');
-		$this->load->model('testimoni_model');
-		$data['rekreasi'] = $this->wisata_model->findById($id);
+		$data['wisata'] = $this->wisata_model->findById($id);
 
 		$data['testimoni'] = $this->testimoni_model->findByWisataId($id);
 
 		$this->load->view("admin/layout/header");
-		$this->load->view("admin/wisata_detail", $data);
+		$this->load->view("admin/wisata/detail", $data);
+		$this->load->view("admin/layout/footer");
+	}
+	public function create($id)
+	{
+		$this->load->view("admin/layout/header");
+		$this->load->view("admin/wisata/create", $id);
 		$this->load->view("admin/layout/footer");
 	}
 }

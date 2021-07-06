@@ -118,7 +118,7 @@
                 </p>
               </a>
             </li>
-            <li class="nav-item nav-item menu-is-opening menu-open">
+            <li class="nav-item nav-item menu-is-opening">
               <a href="#" class="nav-link">
                 <i class="nav-icon fas fa-copy"></i>
                 <p>

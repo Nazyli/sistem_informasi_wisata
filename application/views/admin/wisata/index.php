@@ -56,7 +56,7 @@
                       <td><?= $i->kontak; ?></td>
                       <td> <a href="https://drive.google.com/">Google Drive</a></td>
                       <td>
-                        <a href="../admin/rekreasi_detail.html" class="btn btn-outline-info btn-sm"><i class="fas fa-info-circle fa-xl"></i></a>
+                        <a href="<?php echo base_url(); ?>admin/wisata/detail/<?= $i->id; ?>" class="btn btn-outline-info btn-sm"><i class="fas fa-info-circle fa-xl"></i></a>
                         <a href="../admin/rekreasi_edit.html" class="btn btn-outline-primary btn-sm"><i class="fas fa-pencil-alt fa-xl"></i></a>
                         <a href="#" class="btn btn-outline-danger btn-sm" data-toggle="modal" data-target="#modalHapus"><i class="fas fa-trash fa-xl"></i></a>
                       </td>
