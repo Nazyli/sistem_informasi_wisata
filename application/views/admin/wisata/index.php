@@ -24,7 +24,7 @@
             <div class="card-header">
               <h3 class="card-title">Kelola Data Wisata <?= $judul ?></h3>
               <div class="card-tools">
-                <a href="../admin/rekreasi_tambah.html" class="btn btn-primary btn-sm"> Add Data </a>
+                <a href="<?php echo base_url(); ?>admin/wisata/create/<?= $judul; ?>" class="btn btn-primary btn-sm"> Add Data </a>
                 <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
                   <i class="fas fa-minus"></i>
                 </button>
@@ -57,7 +57,7 @@
                       <td> <a href="https://drive.google.com/">Google Drive</a></td>
                       <td>
                         <a href="<?php echo base_url(); ?>admin/wisata/detail/<?= $i->id; ?>" class="btn btn-outline-info btn-sm"><i class="fas fa-info-circle fa-xl"></i></a>
-                        <a href="../admin/rekreasi_edit.html" class="btn btn-outline-primary btn-sm"><i class="fas fa-pencil-alt fa-xl"></i></a>
+                        <a href="<?php echo base_url(); ?>admin/wisata/edit/<?= $i->id; ?>" class="btn btn-outline-primary btn-sm"><i class="fas fa-pencil-alt fa-xl"></i></a>
                         <a href="#" class="btn btn-outline-danger btn-sm" data-toggle="modal" data-target="#modalHapus"><i class="fas fa-trash fa-xl"></i></a>
                       </td>
                     </tr>

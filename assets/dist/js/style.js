@@ -33,14 +33,15 @@ $(function () {
 
 
 // Validation Form
-$('#addRekreasi').validate({
+$('#addWisata').validate({
   onkeyup: function (element) { $(element).valid() },
   onclick: function (element) { $(element).valid() },
   rules: {
     namaWisata: { required: true },
     jenisWisata: { required: true },
+    jenisKuliner: { required: true },
     deskripsi: { required: true },
-    cp: { required: true },
+    fasilitas: { required: true },
     noTelp: { required: true },
     email: { required: true, email: true },
     alamatWeb: { required: true },
