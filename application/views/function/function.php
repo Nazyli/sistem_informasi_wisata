@@ -11,3 +11,10 @@ function createStar($star){
      }
     }
 }
+
+function checkUri($uri, $url)
+{
+  if (strpos($uri, $url)) {
+    echo "active";
+  }
+}

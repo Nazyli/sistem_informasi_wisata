@@ -1,4 +1,6 @@
-<?php $this->load->view('function/function'); ?>
+<?php $this->load->view('function/function');
+$uriString = $this->uri->uri_string();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -96,14 +98,14 @@
             <img src="<?php echo base_url(); ?>assets/dist/img/user.jpg" class="img-circle elevation-2" alt="User Image">
           </div>
           <div class="info">
-            <a href="#" class="d-block">Administrator</a>
+            <a href="<?php echo base_url(); ?>/admin" class="d-block">Administrator</a>
           </div>
         </div>
 
         <nav class="mt-2">
           <ul class="nav nav-pills nav-sidebar flex-column nav-flat nav-compact nav-child-indent" data-widget="treeview" role="menu" data-accordion="false">
             <li class="nav-item">
-              <a href="<?php echo base_url(); ?>/admin" class="nav-link active">
+              <a href="<?php echo base_url(); ?>admin/home" class="nav-link <?= checkUri($uriString, 'home') ?>">
                 <i class="nav-icon fas fa-tachometer-alt"></i>
                 <p>
                   Dashboard
@@ -111,38 +113,62 @@
               </a>
             </li>
             <li class="nav-item">
-              <a href="<?php echo base_url(); ?>admin/testimoni" class="nav-link">
+              <a href="<?php echo base_url(); ?>admin/testimoni" class="nav-link <?= checkUri($uriString, 'testimoni') ?>">
                 <i class="nav-icon fas fa-comment"></i>
                 <p>
                   Testimony Wisata
                 </p>
               </a>
             </li>
-            <li class="nav-item nav-item menu-is-opening">
-              <a href="#" class="nav-link">
+            <li class="nav-item <?php if (strpos($uriString, 'wisata')) {echo "menu-open";}?>">
+              <a href="#" class="nav-link <?= checkUri($uriString, 'wisata') ?>">
                 <i class="nav-icon fas fa-copy"></i>
                 <p>
                   Wisata
                   <i class="fas fa-angle-left right"></i>
                 </p>
               </a>
-              <ul class="nav nav-treeview" style="display: block;">
+              <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="<?php echo base_url(); ?>admin/wisata/rekreasi" class="nav-link">
+                  <a href="<?php echo base_url(); ?>admin/wisata/rekreasi" class="nav-link <?= checkUri($uriString, 'rekreasi') ?>">
                     <i class="far fa-circle nav-icon text-info"></i>
                     <p>Wisata Rekreasi</p>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="<?php echo base_url(); ?>admin/wisata/kuliner" class="nav-link">
+                  <a href="<?php echo base_url(); ?>admin/wisata/kuliner" class="nav-link <?= checkUri($uriString, 'kuliner') ?>">
                     <i class="far fa-circle nav-icon text-info"></i>
                     <p class="">Wisata Kuliner</p>
                   </a>
                 </li>
               </ul>
             </li>
+            <li class="nav-item">
+              <a href="<?php echo base_url(); ?>admin/jenis-wisata" class="nav-link <?= checkUri($uriString, 'jenis-wisata') ?>">
+                <i class="nav-icon fas fa-map-marked-alt"></i>
+                <p>
+                  Jenis Wisata Rekreasi
+                </p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="<?php echo base_url(); ?>admin/jenis-kuliner" class="nav-link <?= checkUri($uriString, 'jenis-kuliner') ?>">
+                <i class="nav-icon fas fa-drumstick-bite"></i>
+                <p>
+                  Jenis Wisata Kuliner
+                </p>
+              </a>
+            </li>
 
             <li class="nav-header">Profile</li>
+            <li class="nav-item">
+              <a href="<?php echo base_url(); ?>admin/users" class="nav-link <?= checkUri($uriString, 'users') ?>">
+                <i class="nav-icon fas fa-users"></i>
+                <p>
+                  Master User
+                </p>
+              </a>
+            </li>
             <li class="nav-item">
               <a href="about.html" class="nav-link">
                 <i class="nav-icon fas fa-info-circle"></i>
