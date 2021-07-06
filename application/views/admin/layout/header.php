@@ -111,7 +111,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a href="testimony.html" class="nav-link">
+              <a href="<?php echo base_url(); ?>/admin/testimoni" class="nav-link">
                 <i class="nav-icon fas fa-comment"></i>
                 <p>
                   Testimony Wisata

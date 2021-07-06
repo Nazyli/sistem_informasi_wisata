@@ -99,7 +99,7 @@ if ($wisata->jenis_wisata_id != null) {
                 <div class="col-md-12">
                   <div class="card card-primary card-outline">
                     <div class="card-header">
-                      <h3 class="card-title text-primary">Testimony & Komentar</h3>
+                      <h3 class="card-title text-primary"><?php echo count($testimoni->result());?>  Testimony & Komentar</h3>
                     </div>
                     <div class="card-body">
                       <div class="row">

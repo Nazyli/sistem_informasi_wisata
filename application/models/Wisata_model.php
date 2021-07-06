@@ -16,7 +16,7 @@ class Wisata_model extends CI_Model
 
     public function getAll()
     {
-        $query = $this->db->get('wisata');
+        $query = $this->db->order_by('nama', 'ASC')->get('wisata');
         return $query;
     }
     public function getAllRekreasi()
