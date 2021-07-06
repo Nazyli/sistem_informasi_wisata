@@ -34,11 +34,20 @@ class Testimoni extends CI_Controller
 
 	public function index()
 	{
-		$data['judul'] = 'Rekreasi';
 		$data['wisata'] = $this->wisata_model->getAll();
 
 		$this->load->view("admin/layout/header");
 		$this->load->view("admin/testimoni/index", $data);
+		$this->load->view("admin/layout/footer");
+	}
+
+	public function detail($id)
+	{
+		$data['wisata'] = $this->wisata_model->findById($id);
+		$data['testimoni'] = $this->testimoni_model->findByWisataIdOrderByCreated($id);
+
+		$this->load->view("admin/layout/header");
+		$this->load->view("admin/testimoni/detail", $data);
 		$this->load->view("admin/layout/footer");
 	}
 }

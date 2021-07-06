@@ -80,7 +80,7 @@ $this->load->model('testimoni_model');
                                             <?php }
                                             } ?>
                                             <td>
-                                                <a href="testimony_detail.html" class="btn btn-block btn-primary btn-xs">Show All</a>
+                                                <a href="<?php echo base_url(); ?>admin/testimoni/detail/<?= $i->id; ?>" class="btn btn-block btn-primary btn-xs">Show All</a>
                                             </td>
                                         </tr>
                                     <?php } ?>

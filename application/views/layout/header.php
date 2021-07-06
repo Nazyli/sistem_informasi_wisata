@@ -59,11 +59,18 @@
                     <li class=" user user-menu">
                         <?php
                         if ($this->session->userdata('logged_in') == TRUE) { ?>
-                            <a href="<?php echo base_url(); ?>/login/logout" class="nav-link">Logout, <?php echo $this->session->userdata('username') ?></a>
-                        <?php } else { ?>
-                            <a href="<?php echo base_url(); ?>login" class="nav-link">Login</a>
-                        <?php } ?>
+                    <li class="nav-item dropdown">
+                        <a id="dropdownSubMenu1" href="<?php echo base_url(); ?>assets#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle"><?php echo $this->session->userdata('username') ?></a>
+                        <ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow">
+                            <li><a href="<?php echo base_url(); ?>admin" class="dropdown-item">Admin</a></li>
+                            <li class="dropdown-divider"></li>
+                            <li><a href="<?php echo base_url(); ?>/login/logout" class="dropdown-item">Logout </a></li>
+                        </ul>
                     </li>
+                <?php } else { ?>
+                    <a href="<?php echo base_url(); ?>login" class="nav-link">Login</a>
+                <?php } ?>
+                </li>
                 </ul>
             </div>
         </nav>

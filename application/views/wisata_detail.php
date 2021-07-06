@@ -106,8 +106,8 @@
                                     <div class="card card-primary card-outline">
                                         <div class="card-header">
                                             <h3 class="card-title text-primary">
-                                            <?php echo count($testimoni->result());?>    
-                                            Testimony & Komentar
+                                                <?php echo count($testimoni->result()); ?>
+                                                Testimony & Komentar
                                             </h3>
                                         </div>
                                         <div class="card-body">
@@ -118,12 +118,13 @@
                                                             <div class="user-block">
                                                                 <img class="img-circle img-bordered-sm" src="https://img.pngio.com/cool-phone-icon-202181-free-icons-library-cool-cell-phone-png-512_512.jpg" alt="User Image">
                                                                 <span class="username">
-                                                                    <a href="#"><?php echo $i->nama; ?> - <?php echo $i->profesi; ?></a>
+                                                                    <a href="#"><?php echo $i->nama; ?></a>
                                                                 </span>
                                                                 <span class="description">
-                                                                    <?php
-                                                                    createStar($i->rating);
-                                                                    ?>
+                                                                    <?php echo $i->profesi; ?> <sup>
+                                                                        <?php
+                                                                        createStar($i->rating);
+                                                                        ?></sup>
                                                                 </span>
                                                             </div>
                                                             <p>
