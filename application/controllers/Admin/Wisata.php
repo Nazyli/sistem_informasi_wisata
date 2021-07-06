@@ -123,7 +123,7 @@ class Wisata extends CI_Controller
 		$data->deskripsi    = $this->input->post('deskripsi', TRUE);
 		$data->jenis_wisata_id   = $this->input->post('jenisWisata', TRUE);
 		$data->fasilitas = $this->input->post('fasilitas', TRUE);
-		$data->bintang = $data->bintang;
+		$data->bintang = $this->testimoni_model->countStar($id);
 		$data->kontak = $this->input->post('noTelp', TRUE);
 		$data->alamat = $this->input->post('alamat', TRUE);
 		$data->latlong = $this->input->post('LatLot', TRUE);
