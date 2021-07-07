@@ -43,8 +43,12 @@
                                         <label for="exampleInputBorder"><strong><i class="fas fa-user-cog"></i> Role</strong></label>
                                         <select class="custom-select form-control-border" name="role">
                                             <option disabled value></option>
-                                            <option value="admin" <?php if($userId->role == 'admin'){echo "selected";}?> >Administrator</option>
-                                            <option value="member" <?php if($userId->role == 'member'){echo "selected";}?> >Membership</option>
+                                            <option value="admin" <?php if ($userId->role == 'admin') {
+                                                                        echo "selected";
+                                                                    } ?>>Administrator</option>
+                                            <option value="member" <?php if ($userId->role == 'member') {
+                                                                        echo "selected";
+                                                                    } ?>>Membership</option>
                                         </select>
                                     </div>
                                     <button class="btn btn-primary btn-block"><b>Save</b></button>
@@ -137,7 +141,9 @@
                                         </td>
                                         <td>
                                             <a href="<?php echo base_url(); ?>admin/users/edit/<?= $i->id; ?>" class="btn btn-outline-primary btn-sm"><i class="fas fa-pencil-alt fa-xl"></i></a>
-                                            <a href="<?php echo base_url(); ?>admin/users/delete/<?= $i->id; ?>" class="btn btn-outline-danger btn-sm" onclick="swalSuccesDelete(event)"><i class="fas fa-trash fa-xl"></i></a>
+                                            <?php if ($this->session->userdata('id') != $i->id) { ?>
+                                                <a href="<?php echo base_url(); ?>admin/users/delete/<?= $i->id; ?>" class="btn btn-outline-danger btn-sm" onclick="swalSuccesDelete(event)"><i class="fas fa-trash fa-xl"></i></a>
+                                            <?php } ?>
                                         </td>
                                     </tr>
                                 <?php } ?>

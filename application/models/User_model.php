@@ -43,4 +43,11 @@ class User_model extends CI_Model
         $query = $this->db->query($sql, array($data->nama, $data->username, $data->email, $data->password, $data->role, $data->last_login, $data->id));
         return $query;
     }
+
+    function delete($id)
+    {
+        $sql = "DELETE FROM users WHERE id = ?";
+        $query = $this->db->query($sql, array($id));
+        return $query;
+    }
 }

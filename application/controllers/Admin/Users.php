@@ -27,6 +27,7 @@ class Users extends CI_Controller
 			redirect('login');
 		}
 		$this->load->model('user_model');
+		$this->load->model('testimoni_model');
 	}
 
 	public function index()
@@ -73,4 +74,16 @@ class Users extends CI_Controller
 		echo $this->session->set_flashdata('msg', array('success', 'User berhasil diperbarui!'));
 		redirect('admin/users');
 	}
+
+	public function delete($id)
+    {
+        $wisata = $this->testimoni_model->findByUserID($id);
+        if (count($wisata->result()) > 0) {
+            echo $this->session->set_flashdata('msg', array('error', 'Gagal hapus data, sedang digunakan di data testimoni!'));
+            redirect('admin/users');
+        }
+        $res = $this->user_model->delete($id);
+        echo $this->session->set_flashdata('msg', array('success', 'User berhasil dihapus!'));
+        redirect('admin/users');
+    }
 }

@@ -18,6 +18,11 @@ class Testimoni_model extends CI_Model
         return $query->row();
     }
 
+    public function findByUserID($id){
+        $query = $this->db->get_where('testimoni',['user_id'=>$id]);
+        return $query;
+    }
+
     public function findByWisataId($id){
         $sql = "SELECT t.*, i.nama AS profesi FROM testimoni t JOIN profesi i ON t.profesi_id = i.id WHERE wisata_id = ? ORDER BY rating DESC";
         $query = $this->db->query($sql, array($id));
