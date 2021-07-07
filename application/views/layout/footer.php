@@ -2,7 +2,7 @@
     <div class="float-right d-none d-sm-inline">
         <b>Version</b> 1.0
     </div>
-    <strong>Develop By <a href="<?php echo base_url(); ?>assetsadmin/about.html">Mahasiswa</a> &copy; STT NF
+    <strong>Develop By <a href="<?php echo base_url(); ?>about/me">Mahasiswa</a> &copy; STT NF
         <script>
             document.write(new Date().getFullYear());
         </script> ~ Sistem Informasi Wisata Kota Depok.

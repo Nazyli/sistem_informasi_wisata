@@ -45,23 +45,8 @@ $uriString = $this->uri->uri_string();
               <img src="<?php echo base_url(); ?>assets/dist/img/user.jpg" class="img-circle" alt="User Image">
               <p>
                 <?php echo $this->session->userdata('username') ?> - Web Developer
-                <small>Member since Jan. 2021</small>
+                <small>Member since - <?php echo date("d F Y", strtotime($this->session->userdata('created_at')));  ?></small>
               </p>
-            </li>
-            <!-- Menu Body -->
-            <li class="user-body">
-              <div class="row">
-                <div class="col-md-4 text-center">
-                  <a href="#">Followers</a>
-                </div>
-                <div class="col-md-4 text-center">
-                  <a href="#">Sales</a>
-                </div>
-                <div class="col-md-4 text-center">
-                  <a href="#">Friends</a>
-                </div>
-              </div>
-              <!-- /.row -->
             </li>
             <!-- Menu Footer-->
             <li class="user-footer">
@@ -143,6 +128,8 @@ $uriString = $this->uri->uri_string();
                 </li>
               </ul>
             </li>
+            <li class="nav-header">Master Data</li>
+
             <li class="nav-item">
               <a href="<?php echo base_url(); ?>admin/jenis_wisata" class="nav-link <?= checkUri($uriString, 'jenis_wisata') ?>">
                 <i class="nav-icon fas fa-map-marked-alt"></i>
@@ -179,7 +166,7 @@ $uriString = $this->uri->uri_string();
               </a>
             </li>
             <li class="nav-item">
-              <a href="about.html" class="nav-link">
+              <a href="<?php echo base_url(); ?>about" class="nav-link <?= checkUri($uriString, 'about') ?>">
                 <i class="nav-icon fas fa-info-circle"></i>
                 <p>
                   About

@@ -51,7 +51,7 @@
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a href="<?php echo base_url(); ?>assetsabout.html" class="nav-link">About Me</a>
+                            <a href="<?php echo base_url(); ?>about/me" class="nav-link">About Me</a>
                         </li>
                     </ul>
                 </div>

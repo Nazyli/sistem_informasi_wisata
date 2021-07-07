@@ -65,6 +65,7 @@ class Login extends CI_Controller
 				'email'     => $data->email,
 				'role'     => $data->role,
 				'id'     => $data->id,
+				'created_at'     => $data->created_at,
 				'logged_in' => TRUE
 			);
 			$this->session->set_userdata($sesdata);
