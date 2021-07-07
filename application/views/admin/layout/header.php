@@ -147,7 +147,7 @@ $uriString = $this->uri->uri_string();
               <a href="<?php echo base_url(); ?>admin/jenis_wisata" class="nav-link <?= checkUri($uriString, 'jenis_wisata') ?>">
                 <i class="nav-icon fas fa-map-marked-alt"></i>
                 <p>
-                  Jenis Wisata Rekreasi
+                  Jenis Rekreasi
                 </p>
               </a>
             </li>
@@ -155,7 +155,16 @@ $uriString = $this->uri->uri_string();
               <a href="<?php echo base_url(); ?>admin/jenis_kuliner" class="nav-link <?= checkUri($uriString, 'jenis_kuliner') ?>">
                 <i class="nav-icon fas fa-drumstick-bite"></i>
                 <p>
-                  Jenis Wisata Kuliner
+                  Jenis Kuliner
+                </p>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a href="<?php echo base_url(); ?>admin/profesi" class="nav-link <?= checkUri($uriString, 'profesi') ?>">
+                <i class="nav-icon fas fa-industry"></i>
+                <p>
+                  Profesi
                 </p>
               </a>
             </li>
