@@ -104,6 +104,8 @@ $('#register').validate({
       required: true,
       equalTo: "#password"
     },
+    role: { required: true, },
+
   },
   messages: {},
   errorClass: "invalid-feedback",

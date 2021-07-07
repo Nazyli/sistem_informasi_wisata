@@ -20,16 +20,32 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-3">
-                    <?php if (isset($jenis_kuliner)) { ?>
+                    <?php if (isset($userId)) { ?>
                         <div class="card card-primary">
                             <div class="card-header">
                                 <h3 class="card-title">Edit Data</h3>
                             </div>
                             <div class="card-body">
-                                <form action="<?php echo base_url(); ?>admin/jenis_kuliner/update/<?= $jenis_kuliner->id; ?>" method="post" id="addJenisWisata">
+                                <form action="<?php echo base_url(); ?>admin/users/update/<?= $userId->id; ?>" method="post" id="addJenisWisata">
                                     <div class="form-group">
-                                        <label for="exampleInputBorder"><strong><i class="fas fa-map-marked-alt"></i> Jenis Wisata Kuliner</strong></label>
-                                        <input type="text" class="form-control form-control-border" id="namaJenisWisata" name="namaJenisWisata" value="<?= $jenis_kuliner->nama; ?>">
+                                        <label for="exampleInputBorder"><strong><i class="fas fa-id-card "></i> Full Name</strong></label>
+                                        <input type="text" class="form-control form-control-border" id="nama" name="nama" value="<?= $userId->nama; ?>">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputBorder"><strong><i class="fas fa-user"></i> Username</strong></label>
+                                        <input type="text" class="form-control form-control-border" id="username" name="username" value="<?= $userId->username; ?>">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputBorder"><strong><i class="fas fa-envelope"></i> Email</strong></label>
+                                        <input type="text" class="form-control form-control-border" id="email" name="email" value="<?= $userId->email; ?>">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputBorder"><strong><i class="fas fa-user-cog"></i> Role</strong></label>
+                                        <select class="custom-select form-control-border" name="role">
+                                            <option disabled value></option>
+                                            <option value="admin" <?php if($userId->role == 'admin'){echo "selected";}?> >Administrator</option>
+                                            <option value="member" <?php if($userId->role == 'member'){echo "selected";}?> >Membership</option>
+                                        </select>
                                     </div>
                                     <button class="btn btn-primary btn-block"><b>Save</b></button>
                                 </form>
@@ -41,10 +57,34 @@
                                 <h3 class="card-title">Add Data</h3>
                             </div>
                             <div class="card-body">
-                                <form action="<?php echo base_url(); ?>admin/jenis_kuliner/save" method="post" id="addJenisWisata">
+                                <form action="<?php echo base_url(); ?>admin/users/save" method="post" id="register">
                                     <div class="form-group">
-                                        <label for="exampleInputBorder"><strong><i class="fas fa-map-marked-alt"></i> Jenis Wisata Kuliner</strong></label>
-                                        <input type="text" class="form-control form-control-border" id="namaJenisWisata" name="namaJenisWisata">
+                                        <label for="exampleInputBorder"><strong><i class="fas fa-id-card "></i> Full Name</strong></label>
+                                        <input type="text" class="form-control form-control-border" id="nama" name="nama">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputBorder"><strong><i class="fas fa-user"></i> Username</strong></label>
+                                        <input type="text" class="form-control form-control-border" id="username" name="username">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputBorder"><strong><i class="fas fa-envelope"></i> Email</strong></label>
+                                        <input type="text" class="form-control form-control-border" id="email" name="email">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputBorder"><strong><i class="fas fa-lock"></i> Password</strong></label>
+                                        <input type="password" class="form-control form-control-border" id="password" name="password">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputBorder"><strong><i class="fas fa-lock"></i> Retype password</strong></label>
+                                        <input type="password" class="form-control form-control-border" id="retype" name="retype">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputBorder"><strong><i class="fas fa-user-cog"></i> Role</strong></label>
+                                        <select class="custom-select form-control-border" name="role">
+                                            <option disabled selected value></option>
+                                            <option value="admin">Administrator</option>
+                                            <option value="member">Membership</option>
+                                        </select>
                                     </div>
                                     <button class="btn btn-primary btn-block"><b>Save</b></button>
                                 </form>
@@ -57,8 +97,8 @@
                         <div class=" card-header">
                         <h3 class="card-title">Data Master Users</h3>
                         <div class="card-tools">
-                            <?php if (isset($jenis_kuliner)) { ?>
-                                <a href="<?php echo base_url(); ?>admin/jenis_kuliner" class="btn btn-primary btn-sm"> Add Data </a>
+                            <?php if (isset($userId)) { ?>
+                                <a href="<?php echo base_url(); ?>admin/users" class="btn btn-primary btn-sm"> Add Data </a>
                             <?php } ?>
                             <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
                                 <i class="fas fa-minus"></i>
@@ -76,7 +116,7 @@
                                     <th>Nama</th>
                                     <th>Username</th>
                                     <th>Email</th>
-                                    <th>role</th>
+                                    <th>Role</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
@@ -91,13 +131,13 @@
                                         <td>
                                             <?php if ($i->role == 'admin') { ?>
                                                 <span class="badge badge-danger">Administrator</span>
-                                            <?php } else {?>
+                                            <?php } else { ?>
                                                 <span class="badge badge-primary">Membership</span>
-                                            <?php }?>
+                                            <?php } ?>
                                         </td>
                                         <td>
-                                            <a href="<?php echo base_url(); ?>admin/jenis_kuliner/edit/<?= $i->id; ?>" class="btn btn-outline-primary btn-sm"><i class="fas fa-pencil-alt fa-xl"></i></a>
-                                            <a href="<?php echo base_url(); ?>admin/jenis_kuliner/delete/<?= $i->id; ?>" class="btn btn-outline-danger btn-sm" onclick="swalSuccesDelete(event)"><i class="fas fa-trash fa-xl"></i></a>
+                                            <a href="<?php echo base_url(); ?>admin/users/edit/<?= $i->id; ?>" class="btn btn-outline-primary btn-sm"><i class="fas fa-pencil-alt fa-xl"></i></a>
+                                            <a href="<?php echo base_url(); ?>admin/users/delete/<?= $i->id; ?>" class="btn btn-outline-danger btn-sm" onclick="swalSuccesDelete(event)"><i class="fas fa-trash fa-xl"></i></a>
                                         </td>
                                     </tr>
                                 <?php } ?>

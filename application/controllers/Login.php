@@ -29,7 +29,7 @@ class Login extends CI_Controller
 	{
 		if ($this->session->userdata('logged_in') !== TRUE) {
 			$this->load->view('login');
-		}else {
+		} else {
 			redirect('admin/home');
 		}
 	}
@@ -44,7 +44,7 @@ class Login extends CI_Controller
 		$username    = $this->input->post('username', TRUE);
 		$email    = $this->input->post('email', TRUE);
 		$password = md5($this->input->post('password', TRUE));
-		$role = $this->input->post('role', TRUE);;
+		$role = $this->input->post('role', TRUE);
 		if (!isset($role)) {
 			$role = 'member';
 		}
@@ -58,24 +58,20 @@ class Login extends CI_Controller
 	{
 		$email    = $this->input->post('email', TRUE);
 		$password = md5($this->input->post('password', TRUE));
-		$validate = $this->user_model->validate($email, $password);
-		if ($validate->num_rows() > 0) {
-			$data  = $validate->row_array();
-			$name  = $data['username'];
-			$email = $data['email'];
-			$role = $data['role'];
+		$data = $this->user_model->validate($email, $password)->row();
+		if (isset($data)) {
 			$sesdata = array(
-				'username'  => $name,
-				'email'     => $email,
-				'role'     => $role,
+				'username'  => $data->username,
+				'email'     => $data->email,
+				'role'     => $data->role,
 				'logged_in' => TRUE
 			);
 			$this->session->set_userdata($sesdata);
-			$data['last_login'] = date("Y-m-d H:i:s");
+			$data->last_login = date("Y-m-d H:i:s");
 			$res = $this->user_model->update($data);
 			// access login for admin
-			if ($role === 'admin') {
-				echo $this->session->set_flashdata('msg', array('success', 'Selamat datang, ' . $data['nama']));
+			if ($data->role === 'admin') {
+				echo $this->session->set_flashdata('msg', array('success', 'Selamat datang, ' . $data->nama));
 				redirect('admin/home');
 				// access login for member
 			} else {

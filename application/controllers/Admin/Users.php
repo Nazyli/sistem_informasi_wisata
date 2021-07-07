@@ -37,4 +37,40 @@ class Users extends CI_Controller
 		$this->load->view("admin/users/index", $data);
 		$this->load->view("admin/layout/footer");
 	}
+
+	public function edit($id)
+    {
+		$data['users'] = $this->user_model->getAll();
+
+        $data['userId'] = $this->user_model->findById($id);
+        $this->load->view("admin/layout/header");
+        $this->load->view("admin/users/index", $data);
+        $this->load->view("admin/layout/footer");
+    }
+	
+	public function save()
+	{
+		$nama    = $this->input->post('nama', TRUE);
+		$username    = $this->input->post('username', TRUE);
+		$email    = $this->input->post('email', TRUE);
+		$password = md5($this->input->post('password', TRUE));
+		$role = $this->input->post('role', TRUE);
+		$data = [$nama, $username, $email, $password, $role];
+		$res = $this->user_model->save($data);
+		echo $this->session->set_flashdata('msg', array('success', 'User berhasil ditambahkan!'));
+		redirect('admin/users');
+	}
+
+	public function update($id)
+	{
+        $data = $this->user_model->findById($id);
+		$data->nama    = $this->input->post('nama', TRUE);
+		$data->username    = $this->input->post('username', TRUE);
+		$data->email    = $this->input->post('email', TRUE);
+		$data->password = md5($this->input->post('password', TRUE));
+		$data->role = $this->input->post('role', TRUE);
+		$res = $this->user_model->update($data);
+		echo $this->session->set_flashdata('msg', array('success', 'User berhasil diperbarui!'));
+		redirect('admin/users');
+	}
 }

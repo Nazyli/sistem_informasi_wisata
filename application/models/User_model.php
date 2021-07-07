@@ -16,6 +16,12 @@ class User_model extends CI_Model
         return $query;
     }
 
+    public function findById($id)
+    {
+        $query = $this->db->get_where('users', ['id' => $id]);
+        return $query->row();
+    }
+
     function validate($email, $password)
     {
         $this->db->where('email', $email);
@@ -33,7 +39,8 @@ class User_model extends CI_Model
     function update($data)
     {
         $sql = "UPDATE users SET nama = ?, username = ?, email = ?, password = ?, role = ?, last_login = ? WHERE id = ?";
-        $query = $this->db->query($sql, array($data['nama'], $data['username'], $data['email'], $data['password'], $data['role'], $data['last_login'], $data['id']));
+        // $query = $this->db->query($sql, array($data['nama'], $data['username'], $data['email'], $data['password'], $data['role'], $data['last_login'], $data['id']));
+        $query = $this->db->query($sql, array($data->nama, $data->username, $data->email, $data->password, $data->role, $data->last_login, $data->id));
         return $query;
     }
 }
