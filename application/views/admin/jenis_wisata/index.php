@@ -74,7 +74,7 @@
                                 <tr>
                                     <th>No</th>
                                     <th>Nama</th>
-                                    <th>Total</th>
+                                    <th>Total Wisata</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>

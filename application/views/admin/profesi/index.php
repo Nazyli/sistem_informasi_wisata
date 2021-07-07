@@ -74,7 +74,8 @@
                                 <tr>
                                     <th>No</th>
                                     <th>Nama</th>
-                                    <th>Total</th>
+                                    <th>Total Testimoni</th>
+                                    <th>Total Users</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
@@ -84,7 +85,8 @@
                                     <tr>
                                         <td><?= $no++; ?></td>
                                         <td><?= $i->nama; ?></td>
-                                        <td> <?= $i->total; ?></td>
+                                        <td> <?= $i->total_testimoni; ?></td>
+                                        <td> <?= $i->total_user; ?></td>
                                         <td>
                                             <a href="<?php echo base_url(); ?>admin/profesi/edit/<?= $i->id; ?>" class="btn btn-outline-primary btn-sm"><i class="fas fa-pencil-alt fa-xl"></i></a>
                                             <a href="<?php echo base_url(); ?>admin/profesi/delete/<?= $i->id; ?>" class="btn btn-outline-danger btn-sm" onclick="swalSuccesDelete(event)"><i class="fas fa-trash fa-xl"></i></a>

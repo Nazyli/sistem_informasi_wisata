@@ -14,8 +14,8 @@ class Profesi_model extends CI_Model
     }
     public function getAllTotalAndOrderByNama()
     {
-        $sql = 'SELECT p.*, COUNT(t.profesi_id) AS total FROM profesi p LEFT JOIN testimoni t ON p.id = t.profesi_id
-        GROUP BY p.id ORDER BY nama;';
+        $sql = 'SELECT p.*, (SELECT COUNT(*) FROM testimoni WHERE profesi_id =p.id) AS total_testimoni, (SELECT COUNT(*) FROM users WHERE profesi_id =p.id) AS total_user FROM profesi p 
+        GROUP BY p.id ORDER BY nama';
         $query = $this->db->query($sql);
         return $query;
     }

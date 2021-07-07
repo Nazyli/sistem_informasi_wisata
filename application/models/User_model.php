@@ -23,6 +23,12 @@ class User_model extends CI_Model
         return $query->row();
     }
 
+    public function findByProfesiId($id)
+    {
+        $query = $this->db->get_where('users', ['profesi_id' => $id]);
+        return $query;
+    }
+
     function validate($email, $password)
     {
         $this->db->where('email', $email);

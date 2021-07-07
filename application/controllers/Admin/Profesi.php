@@ -28,6 +28,7 @@ class profesi extends CI_Controller
         }
         $this->load->model('profesi_model');
         $this->load->model('testimoni_model');
+        $this->load->model('user_model');
     }
 
     public function index()
@@ -67,9 +68,14 @@ class profesi extends CI_Controller
 
     public function delete($id)
     {
-        $wisata = $this->testimoni_model->findByProfesiID($id);
-        if (count($wisata->result()) > 0) {
+        $testimoni = $this->testimoni_model->findByProfesiID($id);
+        if (count($testimoni->result()) > 0) {
             echo $this->session->set_flashdata('msg', array('error', 'Gagal hapus data, sedang digunakan di data user testimoni!'));
+            redirect('admin/profesi');
+        }
+        $user = $this->user_model->findByProfesiID($id);
+        if (count($user->result()) > 0) {
+            echo $this->session->set_flashdata('msg', array('error', 'Gagal hapus data, sedang digunakan di data user!'));
             redirect('admin/profesi');
         }
         $res = $this->profesi_model->delete($id);
