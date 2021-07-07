@@ -27,12 +27,15 @@ class Users extends CI_Controller
 			redirect('login');
 		}
 		$this->load->model('user_model');
+		$this->load->model('profesi_model');
 		$this->load->model('testimoni_model');
 	}
 
 	public function index()
 	{
 		$data['users'] = $this->user_model->getAll();
+		$data['profesi']  = $this->profesi_model->getAll();
+
 
 		$this->load->view("admin/layout/header");
 		$this->load->view("admin/users/index", $data);
@@ -40,15 +43,16 @@ class Users extends CI_Controller
 	}
 
 	public function edit($id)
-    {
+	{
 		$data['users'] = $this->user_model->getAll();
+		$data['profesi']  = $this->profesi_model->getAll();
 
-        $data['userId'] = $this->user_model->findById($id);
-        $this->load->view("admin/layout/header");
-        $this->load->view("admin/users/index", $data);
-        $this->load->view("admin/layout/footer");
-    }
-	
+		$data['userId'] = $this->user_model->findById($id);
+		$this->load->view("admin/layout/header");
+		$this->load->view("admin/users/index", $data);
+		$this->load->view("admin/layout/footer");
+	}
+
 	public function save()
 	{
 		$nama    = $this->input->post('nama', TRUE);
@@ -56,7 +60,8 @@ class Users extends CI_Controller
 		$email    = $this->input->post('email', TRUE);
 		$password = md5($this->input->post('password', TRUE));
 		$role = $this->input->post('role', TRUE);
-		$data = [$nama, $username, $email, $password, $role];
+		$profesi_id = $this->input->post('profesi', TRUE);
+		$data = [$nama, $username, $email, $password, $role, $profesi_id];
 		$res = $this->user_model->save($data);
 		echo $this->session->set_flashdata('msg', array('success', 'User berhasil ditambahkan!'));
 		redirect('admin/users');
@@ -64,26 +69,29 @@ class Users extends CI_Controller
 
 	public function update($id)
 	{
-        $data = $this->user_model->findById($id);
+		$data = $this->user_model->findById($id);
 		$data->nama    = $this->input->post('nama', TRUE);
 		$data->username    = $this->input->post('username', TRUE);
 		$data->email    = $this->input->post('email', TRUE);
-		$data->password = md5($this->input->post('password', TRUE));
+		if ($this->input->post('password', TRUE) !== NULL) {
+			$password = md5($this->input->post('password', TRUE));
+		}
 		$data->role = $this->input->post('role', TRUE);
+		$data->profesi_id = $this->input->post('profesi', TRUE);
 		$res = $this->user_model->update($data);
 		echo $this->session->set_flashdata('msg', array('success', 'User berhasil diperbarui!'));
 		redirect('admin/users');
 	}
 
 	public function delete($id)
-    {
-        $wisata = $this->testimoni_model->findByUserID($id);
-        if (count($wisata->result()) > 0) {
-            echo $this->session->set_flashdata('msg', array('error', 'Gagal hapus data, sedang digunakan di data testimoni!'));
-            redirect('admin/users');
-        }
-        $res = $this->user_model->delete($id);
-        echo $this->session->set_flashdata('msg', array('success', 'User berhasil dihapus!'));
-        redirect('admin/users');
-    }
+	{
+		$wisata = $this->testimoni_model->findByUserID($id);
+		if (count($wisata->result()) > 0) {
+			echo $this->session->set_flashdata('msg', array('error', 'Gagal hapus data, sedang digunakan di data testimoni!'));
+			redirect('admin/users');
+		}
+		$res = $this->user_model->delete($id);
+		echo $this->session->set_flashdata('msg', array('success', 'User berhasil dihapus!'));
+		redirect('admin/users');
+	}
 }

@@ -51,6 +51,16 @@
                                                                     } ?>>Membership</option>
                                         </select>
                                     </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputBorder"><strong><i class="fas fa-industry"></i> Profesi</strong></label>
+                                        <select class="custom-select form-control-border" name="profesi">
+                                            <?php foreach ($profesi->result() as $i) { ?>
+                                                <option value="<?= $i->id; ?>" <?php if ($i->id == $userId->profesi_id) {
+                                                                                    echo "selected";
+                                                                                } ?>><?= $i->nama; ?></option>
+                                            <?php } ?>
+                                        </select>
+                                    </div>
                                     <button class="btn btn-primary btn-block"><b>Save</b></button>
                                 </form>
                             </div>
@@ -88,6 +98,15 @@
                                             <option disabled selected value></option>
                                             <option value="admin">Administrator</option>
                                             <option value="member">Membership</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputBorder"><strong><i class="fas fa-industry"></i> Profesi</strong></label>
+                                        <select class="custom-select form-control-border" name="profesi">
+                                            <option disabled selected value></option>
+                                            <?php foreach ($profesi->result() as $i) { ?>
+                                                <option value="<?= $i->id; ?>"><?= $i->nama; ?></option>
+                                            <?php } ?>
                                         </select>
                                     </div>
                                     <button class="btn btn-primary btn-block"><b>Save</b></button>

@@ -105,6 +105,7 @@ $('#register').validate({
       equalTo: "#password"
     },
     role: { required: true, },
+    profesi: { required: true, },
 
   },
   messages: {},

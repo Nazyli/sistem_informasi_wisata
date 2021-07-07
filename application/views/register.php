@@ -38,7 +38,7 @@
                         <label id="email-error" class="invalid-feedback" for="nama"></label>
                     </div>
                     <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Username" name="username" >
+                        <input type="text" class="form-control" placeholder="Username" name="username">
                         <div class="input-group-append">
                             <div class="input-group-text">
                                 <span class="fas fa-user"></span>
@@ -72,6 +72,20 @@
                             </div>
                         </div>
                         <label id="email-error" class="invalid-feedback" for="retype"></label>
+                    </div>
+                    <div class="input-group mb-3">
+                        <select class="custom-select" name="profesi">
+                            <option disabled selected value>Profesi</option>
+                            <?php foreach ($profesi->result() as $i) { ?>
+                                <option value="<?= $i->id; ?>"><?= $i->nama; ?></option>
+                            <?php } ?>
+                        </select>
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fas fa-industry"></span>
+                            </div>
+                        </div>
+                        <label id="email-error" class="invalid-feedback" for="profesi"></label>
                     </div>
                     <div class="row">
                         <div class="col-8">

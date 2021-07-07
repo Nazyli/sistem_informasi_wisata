@@ -44,7 +44,7 @@ $uriString = $this->uri->uri_string();
             <li class="user-header">
               <img src="<?php echo base_url(); ?>assets/dist/img/user.jpg" class="img-circle" alt="User Image">
               <p>
-                <?php echo $this->session->userdata('username') ?> - Web Developer
+                <?php echo $this->session->userdata('username') ?> - <?= $this->session->userdata('profesi') ?>
                 <small>Member since - <?php echo date("d F Y", strtotime($this->session->userdata('created_at')));  ?></small>
               </p>
             </li>
