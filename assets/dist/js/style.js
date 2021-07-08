@@ -106,6 +106,7 @@ $('#register').validate({
     },
     role: { required: true, },
     profesi: { required: true, },
+    passLama: { required: true, },
 
   },
   messages: {},

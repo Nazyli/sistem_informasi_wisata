@@ -51,7 +51,7 @@ $uriString = $this->uri->uri_string();
             <!-- Menu Footer-->
             <li class="user-footer">
               <div class="float-left">
-                <a href="#" class="btn btn-primary btn-sm">Profile</a>
+                <a href="<?php echo base_url(); ?>admin/profil" class="btn btn-primary btn-sm">Profile</a>
               </div>
               <div class="float-right">
                 <a href="<?php echo base_url(); ?>login/logout" class="btn btn-danger btn-sm">Log out</a>
@@ -162,6 +162,14 @@ $uriString = $this->uri->uri_string();
                 <i class="nav-icon fas fa-users"></i>
                 <p>
                   Master User
+                </p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="<?php echo base_url(); ?>admin/profile" class="nav-link <?= checkUri($uriString, 'profile') ?>">
+                <i class="nav-icon fas fa-user"></i>
+                <p>
+                  My Profile
                 </p>
               </a>
             </li>

@@ -26,7 +26,7 @@
                                 <h3 class="card-title">Edit Data</h3>
                             </div>
                             <div class="card-body">
-                                <form action="<?php echo base_url(); ?>admin/users/update/<?= $userId->id; ?>" method="post" id="addJenisWisata">
+                                <form action="<?php echo base_url(); ?>admin/users/update/<?= $userId->id; ?>" method="post" id="register">
                                     <div class="form-group">
                                         <label for="exampleInputBorder"><strong><i class="fas fa-id-card "></i> Full Name</strong></label>
                                         <input type="text" class="form-control form-control-border" id="nama" name="nama" value="<?= $userId->nama; ?>">
