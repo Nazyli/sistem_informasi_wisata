@@ -2,7 +2,7 @@
 class Wisata extends CI_Controller
 {
 
-	unction __construct()
+	function __construct()
 	{
 		parent::__construct();
 		$this->load->model('user_model');
