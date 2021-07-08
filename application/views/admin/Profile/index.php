@@ -49,11 +49,11 @@
                             </ul>
                             <div class="row">
                                 <div class="col-md-6">
-                                    <a href="<?php echo base_url(); ?>admin/profile/edit" class="btn btn-primary btn-block"><b>Edit</b></a>
+                                    <a href="<?php echo base_url(); ?>profile/edit" class="btn btn-primary btn-block"><b>Edit</b></a>
 
                                 </div>
                                 <div class="col-md-6">
-                                    <a href="<?php echo base_url(); ?>admin/profile/changePassword" class="btn btn-primary btn-block"><b>Change Password</b></a>
+                                    <a href="<?php echo base_url(); ?>profile/changePassword" class="btn btn-primary btn-block"><b>Change Password</b></a>
 
                                 </div>
                             </div>

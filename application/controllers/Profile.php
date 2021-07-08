@@ -41,6 +41,17 @@ class Profile extends CI_Controller
 		$this->load->view("admin/profile/index", $data);
 		$this->load->view("admin/layout/footer");
 	}
+	public function me()
+	{
+		$id = $this->session->userdata('id');
+		$data['user'] = $this->user_model->findById($id);
+		$data['profesi'] = $this->profesi_model->findById($data['user']->profesi_id);
+
+
+		$this->load->view("layout/header");
+		$this->load->view("admin/profile/index", $data);
+		$this->load->view("layout/footer");
+	}
 	public function edit()
 	{
 		$id = $this->session->userdata('id');
@@ -48,9 +59,17 @@ class Profile extends CI_Controller
 		$data['profesi'] = $this->profesi_model->findById($data['user']->profesi_id);
 		$data['profesi_all'] = $this->profesi_model->getAll();
 
-		$this->load->view("admin/layout/header");
+		if ($data['user']->role == 'admin') {
+			$this->load->view("admin/layout/header");
+		} else {
+			$this->load->view("layout/header");
+		}
 		$this->load->view("admin/profile/edit", $data);
-		$this->load->view("admin/layout/footer");
+		if ($data['user']->role == 'admin') {
+			$this->load->view("admin/layout/footer");
+		} else {
+			$this->load->view("layout/footer");
+		}
 	}
 
 	public function changePassword()
@@ -59,10 +78,17 @@ class Profile extends CI_Controller
 		$data['user'] = $this->user_model->findById($id);
 		$data['profesi'] = $this->profesi_model->findById($data['user']->profesi_id);
 		$data['profesi_all'] = $this->profesi_model->getAll();
-
-		$this->load->view("admin/layout/header");
+		if ($data['user']->role == 'admin') {
+			$this->load->view("admin/layout/header");
+		} else {
+			$this->load->view("layout/header");
+		}
 		$this->load->view("admin/profile/change_password", $data);
-		$this->load->view("admin/layout/footer");
+		if ($data['user']->role == 'admin') {
+			$this->load->view("admin/layout/footer");
+		} else {
+			$this->load->view("layout/footer");
+		}
 	}
 
 	public function update($id)
@@ -74,7 +100,11 @@ class Profile extends CI_Controller
 		$data->profesi_id = $this->input->post('profesi', TRUE);
 		$res = $this->user_model->update($data);
 		echo $this->session->set_flashdata('msg', array('success', 'User berhasil diperbarui!'));
-		redirect('admin/profile');
+		if ($data->role == 'admin') {
+			redirect('profile');
+		} else {
+			redirect('profile/me');
+		}
 	}
 
 	public function updatePassword($id)
@@ -83,11 +113,15 @@ class Profile extends CI_Controller
 		$passLama = md5($this->input->post('passLama', TRUE));
 		if ($data->password != $passLama) {
 			echo $this->session->set_flashdata('msg', array('error', 'Password Lama yang dimasukkan salah!'));
-			redirect('admin/profile/changePassword');
+			redirect('profile/changePassword');
 		}
 		$data->password = md5($this->input->post('password', TRUE));
 		$res = $this->user_model->update($data);
 		echo $this->session->set_flashdata('msg', array('success', 'Password berhasil diperbarui!'));
-		redirect('admin/profile');
+		if ($data->role == 'admin') {
+			redirect('profile');
+		} else {
+			redirect('profile/me');
+		}
 	}
 }

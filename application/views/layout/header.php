@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css">
+  <link rel="stylesheet" href="<?php echo base_url(); ?>assets/plugins/toastr/toastr.min.css">
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/dist/css/adminlte.min.css">
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/dist/css/style.css">
 </head>
@@ -42,16 +43,15 @@
                         <li class="nav-item">
                             <a href="<?php echo base_url(); ?>wisata/kuliner" class="nav-link">Wisata Kuliner</a>
                         </li>
-                        <li class="nav-item dropdown">
-                            <a id="dropdownSubMenu1" href="<?php echo base_url(); ?>assets#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">Registrasi</a>
-                            <ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow">
-                                <li><a href="<?php echo base_url(); ?>assetsrekreasi_tambah.html" class="dropdown-item">Registrasi Wisata Rekreasi</a></li>
-                                <li class="dropdown-divider"></li>
-                                <li><a href="<?php echo base_url(); ?>assetskuliner_tambah.html" class="dropdown-item">Registrasi Wisata Kuliner </a></li>
-                            </ul>
-                        </li>
+                        <?php
+                        if ($this->session->userdata('logged_in') == TRUE) {
+                        ?>
                         <li class="nav-item">
-                            <a href="<?php echo base_url(); ?>about/me" class="nav-link">About Me</a>
+                            <a href="<?php echo base_url(); ?>profile/me" class="nav-link">My Profile</a>
+                        </li>
+                        <?php }?>
+                        <li class="nav-item">
+                            <a href="<?php echo base_url(); ?>about/me" class="nav-link">About</a>
                         </li>
                     </ul>
                 </div>

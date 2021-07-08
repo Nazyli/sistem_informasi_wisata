@@ -170,7 +170,7 @@ $uriString = $this->uri->uri_string();
               </a>
             </li>
             <li class="nav-item">
-              <a href="<?php echo base_url(); ?>admin/profile" class="nav-link <?= checkUri($uriString, 'profile') ?>">
+              <a href="<?php echo base_url(); ?>profile" class="nav-link <?= checkUri($uriString, 'profile') ?>">
                 <i class="nav-icon fas fa-user"></i>
                 <p>
                   My Profile

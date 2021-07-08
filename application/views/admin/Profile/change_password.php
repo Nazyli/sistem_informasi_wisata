@@ -29,7 +29,7 @@
                             <h3 class="profile-username text-center"><?= $user->nama; ?></h3>
 
                             <p class="text-muted text-center"><?= $profesi->nama; ?></p>
-                            <form action="<?php echo base_url(); ?>admin/profile/updatePassword/<?= $user->id; ?>" method="post" id="register">
+                            <form action="<?php echo base_url(); ?>profile/updatePassword/<?= $user->id; ?>" method="post" id="register">
 
                                 <ul class="list-group list-group-unbordered mb-3">
                                     <li class="list-group-item">
