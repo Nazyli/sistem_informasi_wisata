@@ -1,4 +1,8 @@
-<?php $this->load->view('function/function');
+<?php 
+$id = $this->session->userdata('id');
+$userLogin = $this->user_model->findById($id);
+$userProfesi = $this->profesi_model->findById($userLogin->profesi_id);
+$this->load->view('function/function');
 $uriString = $this->uri->uri_string();
 ?>
 <!DOCTYPE html>
@@ -38,14 +42,14 @@ $uriString = $this->uri->uri_string();
         <li class="dropdown user user-menu">
           <a class="nav-link" data-toggle="dropdown" href="#">
             <img src="<?php echo base_url(); ?>assets/dist/img/user.jpg" class="user-image-sm" alt="User Image">
-            <span class="hidden-xs"><?php echo $this->session->userdata('username') ?></span>
+            <span class="hidden-xs"><?= $userLogin->username; ?></span>
           </a>
           <ul class="dropdown-menu">
             <li class="user-header">
               <img src="<?php echo base_url(); ?>assets/dist/img/user.jpg" class="img-circle" alt="User Image">
               <p>
-                <?php echo $this->session->userdata('username') ?> - <?= $this->session->userdata('profesi') ?>
-                <small>Member since - <?php echo date("d F Y", strtotime($this->session->userdata('created_at')));  ?></small>
+                <?= $userLogin->username;  ?> - <?= $this->session->userdata('profesi') ?>
+                <small>Member since - <?php echo date("d F Y", strtotime($userLogin->created_at ));  ?></small>
               </p>
             </li>
             <!-- Menu Footer-->

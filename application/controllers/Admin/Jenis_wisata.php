@@ -22,6 +22,8 @@ class Jenis_wisata extends CI_Controller
     function __construct()
     {
         parent::__construct();
+        $this->load->model('user_model');
+		$this->load->model('profesi_model');
         if ($this->session->userdata('logged_in') !== TRUE) {
             echo $this->session->set_flashdata('msg', array('warning', 'Anda tidak memiliki akses!, silakan login'));
             redirect('login');

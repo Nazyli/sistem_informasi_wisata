@@ -84,7 +84,7 @@ class Login extends CI_Controller
 				redirect('admin/home');
 				// access login for member
 			} else {
-				redirect('home/member');
+				redirect('home');
 			}
 		} else {
 			echo $this->session->set_flashdata('msg', array('error', 'Username / Password Salah'));

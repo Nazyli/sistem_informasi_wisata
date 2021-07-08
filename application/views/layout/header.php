@@ -58,12 +58,18 @@
                 <ul class="order-1 order-md-3 navbar-nav navbar-no-expand ml-auto">
                     <li class=" user user-menu">
                         <?php
-                        if ($this->session->userdata('logged_in') == TRUE) { ?>
+                        if ($this->session->userdata('logged_in') == TRUE) {
+                            $id = $this->session->userdata('id');
+                            $userLogin = $this->user_model->findById($id);
+                            $userProfesi = $this->profesi_model->findById($userLogin->profesi_id);
+                        ?>
                     <li class="nav-item dropdown">
-                        <a id="dropdownSubMenu1" href="<?php echo base_url(); ?>assets#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle"><?php echo $this->session->userdata('username') ?></a>
+                        <a id="dropdownSubMenu1" href="<?php echo base_url(); ?>assets#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle"><?= $userLogin->username; ?></a>
                         <ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow">
+                            <?php if($this->session->userdata('role') == 'admin'){?>
                             <li><a href="<?php echo base_url(); ?>admin/home" class="dropdown-item">Admin</a></li>
                             <li class="dropdown-divider"></li>
+                            <?php } ?>
                             <li><a href="<?php echo base_url(); ?>/login/logout" class="dropdown-item">Logout </a></li>
                         </ul>
                     </li>
