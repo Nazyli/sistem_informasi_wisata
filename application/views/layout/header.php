@@ -47,6 +47,9 @@
                         if ($this->session->userdata('logged_in') == TRUE) {
                         ?>
                         <li class="nav-item">
+                            <a href="<?php echo base_url(); ?>testimoni" class="nav-link">My Testimoni</a>
+                        </li>
+                        <li class="nav-item">
                             <a href="<?php echo base_url(); ?>profile/me" class="nav-link">My Profile</a>
                         </li>
                         <?php }?>

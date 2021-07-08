@@ -57,4 +57,11 @@ class Testimoni_model extends CI_Model
         return $query;
     }
 
+    function updateByUser($data)
+    {
+        $sql = "UPDATE testimoni SET nama = ?, email = ?, profesi_id = ? WHERE user_id = ?";
+        $query = $this->db->query($sql, array($data->nama, $data->email, $data->profesi_id, $data->id));
+        return $query;
+    }
+
 }

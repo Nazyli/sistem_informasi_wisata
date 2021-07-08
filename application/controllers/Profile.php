@@ -28,6 +28,7 @@ class Profile extends CI_Controller
 		}
 		$this->load->model('user_model');
 		$this->load->model('profesi_model');
+		$this->load->model('testimoni_model');
 	}
 
 	public function index()
@@ -99,6 +100,7 @@ class Profile extends CI_Controller
 		$data->email    = $this->input->post('email', TRUE);
 		$data->profesi_id = $this->input->post('profesi', TRUE);
 		$res = $this->user_model->update($data);
+		$res = $this->testimoni_model->updateByUser($data);
 		echo $this->session->set_flashdata('msg', array('success', 'User berhasil diperbarui!'));
 		if ($data->role == 'admin') {
 			redirect('profile');

@@ -19,6 +19,12 @@ class Wisata_model extends CI_Model
         $query = $this->db->order_by('nama', 'ASC')->get('wisata');
         return $query;
     }
+    public function getByUserId($id)
+    {
+        $sql = 'SELECT w.*, komentar, created_at FROM wisata w JOIN testimoni t ON w.id = t.wisata_id WHERE user_id = ? ORDER BY created_at DESC';
+        $query = $this->db->query($sql, array($id));
+        return $query;
+    }
     public function getAllRekreasi()
     {
         $sql = 'SELECT w.*, jw.nama AS wisata FROM wisata w JOIN jenis_wisata jw ON w.jenis_wisata_id = jw.id WHERE jenis_wisata_id IS NOT NULL ORDER BY nama';

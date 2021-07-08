@@ -78,6 +78,7 @@ class Users extends CI_Controller
 		}
 		$data->role = $this->input->post('role', TRUE);
 		$data->profesi_id = $this->input->post('profesi', TRUE);
+		$res = $this->testimoni_model->updateByUser($data);
 		$res = $this->user_model->update($data);
 		echo $this->session->set_flashdata('msg', array('success', 'User berhasil diperbarui!'));
 		redirect('admin/users');
