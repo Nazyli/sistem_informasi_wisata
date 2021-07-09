@@ -44,4 +44,46 @@ class Testimoni extends CI_Controller
 		$this->load->view("layout/footer");
 		
 	}
+	public function edit($id)
+	{
+		$idUser = $this->session->userdata('id');
+		$data['user'] = $this->user_model->findById($idUser);
+		$data['profesi'] = $this->profesi_model->findById($data['user']->profesi_id);
+		$data['wisata'] = $this->wisata_model->findByTestimoniId($id);
+
+		$this->load->view("layout/header");
+		$this->load->view("testimoni/edit", $data);
+		$this->load->view("layout/footer");
+		
+	}
+	public function update($id)
+	{
+		$data = $this->testimoni_model->findById($id);
+		$data->komentar    = $this->input->post('komentar', TRUE);
+		$data->rating    = $this->input->post('rating', TRUE);
+
+		$this->testimoni_model->update($data);
+
+		// update star
+		$wisata = $this->wisata_model->findById($data->wisata_id);
+		$wisata->bintang = $this->testimoni_model->countStar($data->wisata_id);
+		$this->wisata_model->update($wisata);
+
+		echo $this->session->set_flashdata('msg', array('success', 'Testimoni berhasil diperbarui!'));
+		redirect('testimoni');
+	}
+
+	public function delete($id)
+	{
+		$data = $this->testimoni_model->findById($id);
+		$res = $this->testimoni_model->delete($id);
+
+		// update star
+		$wisata = $this->wisata_model->findById($data->wisata_id);
+		$wisata->bintang = $this->testimoni_model->countStar($data->wisata_id);
+		$this->wisata_model->update($wisata);
+
+		echo $this->session->set_flashdata('msg', array('success', 'Testimoni berhasil dihapus!'));
+		redirect('testimoni');
+	}
 }

@@ -40,3 +40,19 @@
   .colored-toast .swal2-content {
     color: white;
   }
+  
+
+  .rating {
+    direction: rtl;
+    unicode-bidi: bidi-override;
+    color: #ddd; /* Personal choice */
+  }
+  .rating input {
+    display: none;
+  }
+  .rating label:hover,
+  .rating label:hover ~ label,
+  .rating input:checked + label,
+  .rating input:checked + label ~ label {
+    color: #ffc107; /* Personal color choice. Lifted from Bootstrap 4 */
+  }

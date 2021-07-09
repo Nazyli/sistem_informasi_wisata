@@ -27,7 +27,7 @@
             </div>
             <div class="card-body">
                 <p class="login-box-msg">Sistem Informasi Wisata Kota Depok <small>(v 2.0)</small> </p>
-                <form action="<?php echo base_url(); ?>/login/auth" method="post" id="login">
+                <form action="<?php echo base_url(); ?>login/auth" method="post" id="login">
                     <div class="input-group mb-3">
                         <input type="email" class="form-control" placeholder="Email (admin@gmail.com)" name="email">
                         <div class="input-group-append">

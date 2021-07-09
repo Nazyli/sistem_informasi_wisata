@@ -8,7 +8,7 @@
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="<?php echo base_url(); ?></a></li>
-                        <li class="breadcrumb-item"><a href="<?php echo base_url(); ?>admin/testimoni">Pengelolaan Pencatatan</a></li>
+                        <li class=" breadcrumb-item"><a href="<?php echo base_url(); ?>admin/testimoni">Pengelolaan Pencatatan</a></li>
                         <li class="breadcrumb-item active">My Testimoni</li>
                     </ol>
                 </div>
@@ -24,7 +24,7 @@
                     <!-- Profile Image -->
                     <div class="card card-primary card-outline">
 
-                    <div class="card-body box-profile">
+                        <div class="card-body box-profile">
                             <div class="text-center">
                                 <img class="profile-user-img img-fluid img-circle" src="https://i.pravatar.cc/50" alt="User profile picture">
                             </div>
@@ -54,7 +54,7 @@
 
                         </div>
                     </div>
-                        
+
                 </div>
 
                 <div class="col-md-9">
@@ -73,28 +73,47 @@
                     <div class="card-body">
                         <div class="tab-content">
                             <div class="active tab-pane" id="activity">
-                                <?php foreach ($wisata->result() as $i) { ?>
+                                <form action="<?php echo base_url(); ?>testimoni/update/<?= $wisata->testimoni_id; ?>" method="post" id="testimoni">
                                     <div class="post">
                                         <div class="user-block">
-                                            <img class="img-circle img-bordered-sm" src="https://i.pravatar.cc/20?u=<?= $i->id; ?>" alt="user image">
+                                            <img class="img-circle img-bordered-sm" src="https://i.pravatar.cc/20?u=<?= $wisata->id; ?>" alt="user image">
                                             <span class="username">
-                                                <a href="#"><?= $i->nama; ?></a>
+                                                <a href="#"><?= $wisata->nama; ?></a>
                                                 <div class="float-right btn-tool">
-                                                    <a href="#" class=""> <?= createStar($i->rating); ?></a>
-                                                    <a href="<?php echo base_url(); ?>testimoni/edit/<?= $i->testimoni_id; ?>"class="text-primary ml-3"><i class="fas fa-pencil-alt fa-xl"></i></a>
-                                                    <a href="<?php echo base_url(); ?>testimoni/delete/<?= $i->testimoni_id; ?>" class="text-danger ml-3" onclick="swalSuccesDelete(event)"><i class="fas fa-trash fa-xl"></i></a>
+                                                    <div class="rating d-inline">
+                                                        <input id="rating-5" type="radio" name="rating" value="5" <?php if ($wisata->rating == 5) {
+                                                                                                                        echo "checked";
+                                                                                                                    } ?> /><label for="rating-5"><i class="fas fa-star"></i></label>
+                                                        <input id="rating-4" type="radio" name="rating" value="4" <?php if ($wisata->rating == 4) {
+                                                                                                                        echo "checked";
+                                                                                                                    } ?> /><label for="rating-4"><i class="fas fa-star"></i></label>
+                                                        <input id="rating-3" type="radio" name="rating" value="3" <?php if ($wisata->rating == 3) {
+                                                                                                                        echo "checked";
+                                                                                                                    } ?> /><label for="rating-3"><i class="fas fa-star"></i></label>
+                                                        <input id="rating-2" type="radio" name="rating" value="2" <?php if ($wisata->rating == 2) {
+                                                                                                                        echo "checked";
+                                                                                                                    } ?> /><label for="rating-2"><i class="fas fa-star"></i></label>
+                                                        <input id="rating-1" type="radio" name="rating" value="1" <?php if ($wisata->rating == 1) {
+                                                                                                                        echo "checked";
+                                                                                                                    } ?> /><label for="rating-1"><i class="fas fa-star"></i></label>
+                                                    </div>
                                                 </div>
                                             </span>
-                                            <span class="description"><?= $i->web; ?> - <?= $i->created_at; ?></span>
+                                            <span class="description"><?= $wisata->web; ?> - <?= $wisata->created_at; ?></span>
                                         </div>
                                         <p class="ulasan">
-                                            <?= $i->komentar; ?>
+                                        <div class="input-group input-group-sm mb-0">
+                                            <input class="form-control form-control-sm" name="komentar" placeholder="Edit Komentar" value="<?= $wisata->komentar; ?>">
+                                            <div class="input-group-append">
+                                                <button type="submit" class="btn btn-danger">Edit</button>
+                                            </div>
+                                        </div>
                                         </p>
                                         <p class="mt-2">
-                                            <a href="whatsapp://send?text=<?= 'By : ' . $i->nama . ' - ' . $i->komentar; ?>" class="link-black text-sm mr-2"><i class="fas fa-share mr-1"></i> Share</a>
+                                            <a href="whatsapp://send?text=<?= 'By : ' . $wisata->nama . ' - ' . $wisata->komentar; ?>" class="link-black text-sm mr-2"><i class="fas fa-share mr-1"></i> Share</a>
                                             <a href="#" class="link-black text-sm"><i class="far fa-thumbs-up mr-1"></i> Like</a>
                                     </div>
-                                <?php } ?>
+                                </form>
                             </div>
                         </div>
                     </div>

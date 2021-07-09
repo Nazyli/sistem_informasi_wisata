@@ -21,9 +21,15 @@ class Wisata_model extends CI_Model
     }
     public function getByUserId($id)
     {
-        $sql = 'SELECT w.*, komentar, created_at FROM wisata w JOIN testimoni t ON w.id = t.wisata_id WHERE user_id = ? ORDER BY created_at DESC';
+        $sql = 'SELECT w.*, komentar, rating, created_at, t.id AS testimoni_id FROM wisata w JOIN testimoni t ON w.id = t.wisata_id WHERE user_id = ? ORDER BY created_at DESC';
         $query = $this->db->query($sql, array($id));
         return $query;
+    }
+    public function findByTestimoniId($id)
+    {
+        $sql = 'SELECT w.*, komentar, rating, created_at, t.id AS testimoni_id FROM wisata w JOIN testimoni t ON w.id = t.wisata_id WHERE t.id = ? ';
+        $query = $this->db->query($sql, array($id));
+        return $query->row();
     }
     public function getAllRekreasi()
     {
