@@ -54,7 +54,7 @@
                       <td><?= $i->wisata; ?></td>
                       <td><?= createStar($i->bintang); ?></td>
                       <td><?= $i->kontak; ?></td>
-                      <td> <a href="https://drive.google.com/">Google Drive</a></td>
+                      <td> <a href="<?php echo base_url(); ?>admin/gallery_wisata/index/<?= $i->id; ?>">Gallery Foto</a></td>
                       <td>
                         <a href="<?php echo base_url(); ?>admin/wisata/detail/<?= $i->id; ?>" class="btn btn-outline-info btn-sm"><i class="fas fa-info-circle fa-xl"></i></a>
                         <a href="<?php echo base_url(); ?>admin/wisata/edit/<?= $i->id; ?>" class="btn btn-outline-primary btn-sm"><i class="fas fa-pencil-alt fa-xl"></i></a>
