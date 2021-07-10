@@ -66,10 +66,17 @@
                                         <div class="card-body">
                                             <div class="row">
                                                 <?php
-                                                for ($x = 1; $x <= 6; $x++) {  ?>
+                                                foreach ($gallery->result() as $i) {
+                                                    if ($i->foto_wisata != NULL) {
+                                                        $fotoPath = 'assets/upload/wisata/' . $i->foto_wisata;
+                                                        $foto = (file_exists($fotoPath)) ? $fotoPath : 'assets/dist/img/wisata.jpg';
+                                                    } else {
+                                                        $foto = 'assets/dist/img/wisata.jpg';
+                                                    }
+                                                ?>
                                                     <div class="col-sm-2">
-                                                        <a href="http://cvsolokoi.com/wp-content/uploads/2021/01/9.png" data-toggle="lightbox" data-title="Gambar <?php echo $x; ?>" data-gallery="gallery">
-                                                            <img src="http://cvsolokoi.com/wp-content/uploads/2021/01/9.png" class="img-fluid mb-2" alt="Gambar" />
+                                                        <a href="<?= base_url() . $foto; ?>" data-toggle="lightbox" data-title="Gambar <?= $i->id; ?>" data-gallery="gallery">
+                                                            <img src="<?= base_url() . $foto; ?>" class="img-fluid mb-2 rounded mx-auto d-block" style="max-height :83px" alt="Gambar" />
                                                         </a>
                                                     </div>
                                                 <?php } ?>

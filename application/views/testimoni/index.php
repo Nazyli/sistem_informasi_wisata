@@ -81,10 +81,23 @@
                     <div class="card-body">
                         <div class="tab-content">
                             <div class="active tab-pane" id="activity">
-                                <?php foreach ($wisata->result() as $i) { ?>
+                                <?php foreach ($wisata->result() as $i) {
+                                    $galleryWisata = $this->gallery_wisata_model->randWisataLimit($i->id, 1)->row();
+                                    if (isset($galleryWisata)) {
+                                        if ($galleryWisata->foto_wisata != NULL) {
+                                            $fotoPath = 'assets/upload/wisata/' . $galleryWisata->foto_wisata;
+                                            $foto = (file_exists($fotoPath)) ? $fotoPath : 'assets/dist/img/wisata.jpg';
+                                        } else {
+                                            $foto = 'assets/dist/img/wisata.jpg';
+                                        }
+                                        $foto_rand = $foto;
+                                    } else {
+                                        $foto_rand = 'assets/dist/img/wisata.jpg';
+                                    }
+                                ?>
                                     <div class="post">
                                         <div class="user-block">
-                                            <img class="img-circle img-bordered-sm" src="https://i.pravatar.cc/20?u=<?= $i->id; ?>" alt="user image">
+                                            <img class="img-circle img-bordered-sm" src="<?= base_url() . $foto_rand; ?>" alt="user image">
                                             <span class="username">
                                                 <a href="<?php echo base_url(); ?>wisata/detail/<?php echo $i->id; ?>"><?= $i->nama; ?></a>
                                                 <div class="float-right btn-tool">

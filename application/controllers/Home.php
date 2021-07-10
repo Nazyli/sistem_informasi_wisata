@@ -8,6 +8,7 @@ class Home extends CI_Controller
 		$this->load->model('user_model');
 		$this->load->model('profesi_model');
 		$this->load->model('wisata_model');
+		$this->load->model('gallery_wisata_model');
 	}
 	public function index()
 	{

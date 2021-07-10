@@ -25,7 +25,21 @@
               <p class="card-text">
               <div class="row">
                 <div class="col-md-4">
-                  <img src="https://placeimg.com/200/200/arc" class="img-fluid mb-2" alt="Gambar" />
+                <?php
+                    $galleryWisata = $this->gallery_wisata_model->randWisataLimit($getOne->id, 1)->row();
+                    if (isset($galleryWisata)) {
+                      if ($galleryWisata->foto_wisata != NULL) {
+                        $fotoPath = 'assets/upload/wisata/' . $galleryWisata->foto_wisata;
+                        $foto = (file_exists($fotoPath)) ? $fotoPath : 'assets/dist/img/wisata.jpg';
+                      } else {
+                        $foto = 'assets/dist/img/wisata.jpg';
+                      }
+                      $foto_rand = $foto;
+                    } else {
+                      $foto_rand = 'assets/dist/img/wisata.jpg';
+                    }
+                    ?>
+                    <img src="<?= base_url().$foto_rand; ?>" class="img-fluid mb-2 rounded" alt="Gambar" />
                 </div>
                 <div class="col-md-8">
                   <p class="text-secondary">
@@ -49,7 +63,21 @@
                 <p class="card-text">
                 <div class="row">
                   <div class="col-md-4">
-                    <img src="https://placeimg.com/480/480/nature" class="img-fluid mb-2" alt="Gambar" />
+                  <?php
+                    $galleryWisata = $this->gallery_wisata_model->randWisataLimit($i->id, 1)->row();
+                    if (isset($galleryWisata)) {
+                      if ($galleryWisata->foto_wisata != NULL) {
+                        $fotoPath = 'assets/upload/wisata/' . $galleryWisata->foto_wisata;
+                        $foto = (file_exists($fotoPath)) ? $fotoPath : 'assets/dist/img/wisata.jpg';
+                      } else {
+                        $foto = 'assets/dist/img/wisata.jpg';
+                      }
+                      $foto_rand = $foto;
+                    } else {
+                      $foto_rand = 'assets/dist/img/wisata.jpg';
+                    }
+                    ?>
+                    <img src="<?= base_url().$foto_rand; ?>" class="img-fluid mb-2 rounded" alt="Gambar" />
                   </div>
                   <div class="col-md-8">
                     <p class="text-secondary">

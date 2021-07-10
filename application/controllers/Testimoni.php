@@ -26,6 +26,7 @@ class Testimoni extends CI_Controller
 		$this->load->model('profesi_model');
 		$this->load->model('testimoni_model');
 		$this->load->model('wisata_model');
+		$this->load->model('gallery_wisata_model');
         if ($this->session->userdata('logged_in') !== TRUE) {
 			echo $this->session->set_flashdata('msg', array('warning', 'Anda tidak memiliki akses!, silakan login'));
 			redirect('login');
