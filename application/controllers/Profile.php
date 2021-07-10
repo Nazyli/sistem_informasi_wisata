@@ -95,12 +95,29 @@ class Profile extends CI_Controller
 	public function update($id)
 	{
 		$data = $this->user_model->findById($id);
+		// Change profile
+		if (($_FILES['foto']['name']) != '') {
+			$config['upload_path']          = './assets/upload/user';
+			$config['allowed_types']        = 'gif|jpg|png|jpeg';
+			$config['max_size']             = 1000;
+			// $config['max_width']            = 1024;
+			// $config['max_height']           = 768;
+			$config['encrypt_name']			= TRUE;
+			$this->load->library('upload', $config);
+			if (!$this->upload->do_upload('foto')) {
+				echo $this->session->set_flashdata('msg', array('error', $this->upload->display_errors()));
+				redirect('profile/edit');
+			} else {
+				$data->foto = $this->upload->data("file_name");
+			}
+		}
+
 		$data->nama    = $this->input->post('nama', TRUE);
 		$data->username    = $this->input->post('username', TRUE);
 		$data->email    = $this->input->post('email', TRUE);
 		$data->profesi_id = $this->input->post('profesi', TRUE);
-		$res = $this->user_model->update($data);
-		$res = $this->testimoni_model->updateByUser($data);
+		$this->user_model->update($data);
+		$this->testimoni_model->updateByUser($data);
 		echo $this->session->set_flashdata('msg', array('success', 'User berhasil diperbarui!'));
 		if ($data->role == 'admin') {
 			redirect('profile');

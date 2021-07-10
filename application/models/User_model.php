@@ -10,6 +10,7 @@ class User_model extends CI_Model
     public $profesi_id;
     public $created_at;
     public $last_login;
+    public $foto;
 
     public function getAll()
     {
@@ -45,9 +46,8 @@ class User_model extends CI_Model
     }
     function update($data)
     {
-        $sql = "UPDATE users SET nama = ?, username = ?, email = ?, password = ?, role = ?, profesi_id = ?, last_login = ? WHERE id = ?";
-        // $query = $this->db->query($sql, array($data['nama'], $data['username'], $data['email'], $data['password'], $data['role'], $data['last_login'], $data['id']));
-        $query = $this->db->query($sql, array($data->nama, $data->username, $data->email, $data->password, $data->role, $data->profesi_id, $data->last_login, $data->id));
+        $sql = "UPDATE users SET nama = ?, username = ?, email = ?, password = ?, role = ?, profesi_id = ?, last_login = ?, foto = ? WHERE id = ?";
+        $query = $this->db->query($sql, array($data->nama, $data->username, $data->email, $data->password, $data->role, $data->profesi_id, $data->last_login, $data->foto, $data->id));
         return $query;
     }
 

@@ -8,6 +8,7 @@ class Testimoni_model extends CI_Model
     public $profesi_id;
     public $rating;
     public $komentar;
+    public $foto;
 
     public function getAll(){
         $query = $this->db->get('testimoni');
@@ -59,8 +60,8 @@ class Testimoni_model extends CI_Model
 
     function updateByUser($data)
     {
-        $sql = "UPDATE testimoni SET nama = ?, email = ?, profesi_id = ? WHERE user_id = ?";
-        $query = $this->db->query($sql, array($data->nama, $data->email, $data->profesi_id, $data->id));
+        $sql = "UPDATE testimoni SET nama = ?, email = ?, profesi_id = ?, foto = ? WHERE user_id = ?";
+        $query = $this->db->query($sql, array($data->nama, $data->email, $data->profesi_id, $data->foto, $data->id));
         return $query;
     }
 

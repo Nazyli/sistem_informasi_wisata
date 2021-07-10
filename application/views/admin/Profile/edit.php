@@ -29,7 +29,7 @@
                             <h3 class="profile-username text-center"><?= $user->nama; ?></h3>
 
                             <p class="text-muted text-center"><?= $profesi->nama; ?></p>
-                            <form action="<?php echo base_url(); ?>profile/update/<?= $user->id; ?>" method="post" id="register">
+                            <form action="<?php echo base_url(); ?>profile/update/<?= $user->id; ?>" method="post" id="register" enctype="multipart/form-data">
                                 <ul class="list-group list-group-unbordered mb-3">
 
                                     <li class="list-group-item">
@@ -63,7 +63,7 @@
                                 <div class="form-group">
                                     <label for="customFile">Change account picture</label>
                                     <div class="custom-file">
-                                        <input type="file" class="custom-file-input" id="customFile">
+                                        <input type="file" class="custom-file-input" id="foto" name="foto">
                                         <label class="custom-file-label" for="customFile">Choose file</label>
                                     </div>
                                 </div>
