@@ -9,7 +9,7 @@
     </ol>
     <div class="carousel-inner" style="margin-top: 3.5rem!important;margin-bottom: -3rem!important;">
         <div class="carousel-item active">
-            <img class="d-block w-100" alt="Carousel Bootstrap First" src="<?php echo base_url(); ?>/assets/dist/img/slide/1.jpg" />
+            <img class="d-block w-100" alt="Carousel Bootstrap First" src="<?php echo base_url(); ?>assets/dist/img/slide/1.jpg" />
             <div class="carousel-caption">
                 <h4>
                     Wisata Rekreasi & Kuliner Unggulan Kota Depok
@@ -20,7 +20,7 @@
             </div>
         </div>
         <div class="carousel-item">
-            <img class="d-block w-100" alt="Carousel Bootstrap Second" src="<?php echo base_url(); ?>/assets/dist/img/slide/2.jpg" />
+            <img class="d-block w-100" alt="Carousel Bootstrap Second" src="<?php echo base_url(); ?>assets/dist/img/slide/2.jpg" />
             <div class="carousel-caption">
                 <h4>
                     Daftar Wisata Rekreasi Kota Depok
@@ -32,7 +32,7 @@
             </div>
         </div>
         <div class="carousel-item">
-            <img class="d-block w-100" alt="Carousel Bootstrap Third" src="<?php echo base_url(); ?>/assets/dist/img/slide/3.jpg" />
+            <img class="d-block w-100" alt="Carousel Bootstrap Third" src="<?php echo base_url(); ?>assets/dist/img/slide/3.jpg" />
             <div class="carousel-caption">
                 <h4>
                     Daftar Wisata Kuliner Kota Depok
@@ -43,5 +43,5 @@
                 </p>
             </div>
         </div>
-    </div> <a class="carousel-control-prev" href="<?php echo base_url(); ?>/assets#carousel-711235" data-slide="prev"><span class="carousel-control-prev-icon"></span> <span class="sr-only">Previous</span></a> <a class="carousel-control-next" href="<?php echo base_url(); ?>/assets#carousel-711235" data-slide="next"><span class="carousel-control-next-icon"></span> <span class="sr-only">Next</span></a>
+    </div> <a class="carousel-control-prev" href="#carousel-711235" data-slide="prev"><span class="carousel-control-prev-icon"></span> <span class="sr-only">Previous</span></a> <a class="carousel-control-next" href="#carousel-711235" data-slide="next"><span class="carousel-control-next-icon"></span> <span class="sr-only">Next</span></a>
 </div>
