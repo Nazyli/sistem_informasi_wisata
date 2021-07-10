@@ -119,6 +119,15 @@
                                                                 <img class="img-circle img-bordered-sm" src="https://img.pngio.com/cool-phone-icon-202181-free-icons-library-cool-cell-phone-png-512_512.jpg" alt="User Image">
                                                                 <span class="username">
                                                                     <a href="#"><?php echo $i->nama; ?></a>
+                                                                    <?php if ($this->session->userdata('logged_in') == TRUE) {
+                                                                        if ($i->user_id == $this->session->userdata('id')) {
+                                                                    ?>
+                                                                            <div class="float-right btn-tool">
+                                                                                <a href="<?php echo base_url(); ?>testimoni/edit/<?= $i->id; ?>" class="text-primary ml-3"><i class="fas fa-pencil-alt fa-xl"></i></a>
+                                                                                <a href="<?php echo base_url(); ?>testimoni/delete/<?= $i->id; ?>" class="text-danger ml-3" onclick="swalSuccesDelete(event)"><i class="fas fa-trash fa-xl"></i></a>
+                                                                            </div>
+                                                                    <?php }
+                                                                    } ?>
                                                                 </span>
                                                                 <span class="description">
                                                                     <?php echo $i->profesi; ?> <sup>
@@ -156,13 +165,13 @@
                                                                                     </div>
                                                                                 </div>
                                                                             </span>
-                                                                            <span class="description mt-1"> 
-                                                                            <b> <?= $profesi->nama; ?></b> - 
+                                                                            <span class="description mt-1">
+                                                                                <b> <?= $profesi->nama; ?></b> -
                                                                                 <?php if ($user->role == 'admin') { ?>
                                                                                     <span class="badge badge-danger">Administrator</span>
                                                                                 <?php } else { ?>
                                                                                     <span class="badge badge-primary">Membership</span>
-                                                                                <?php } ?> 
+                                                                                <?php } ?>
                                                                             </span>
                                                                             <label id="rating-error" class="invalid-feedback" for="rating"></label>
                                                                         </div>
