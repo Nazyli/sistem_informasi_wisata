@@ -43,11 +43,11 @@ class Gallery_wisata extends CI_Controller
 
     public function save($id)
     {
-        $data['gallery_wisata'] = $this->gallery_wisata_model->findByWisataId($id);
-        if (count($data['gallery_wisata']->result()) >= 6) {
-            echo $this->session->set_flashdata('msg', array('error', 'Setiap wisata maksimal memiliki 6 foto gallery'));
-            redirect('admin/gallery_wisata/index/' . $id);
-        }
+        // $data['gallery_wisata'] = $this->gallery_wisata_model->findByWisataId($id);
+        // if (count($data['gallery_wisata']->result()) >= 6) {
+        //     echo $this->session->set_flashdata('msg', array('error', 'Setiap wisata maksimal memiliki 6 foto gallery'));
+        //     redirect('admin/gallery_wisata/index/' . $id);
+        // }
 
         $config['upload_path']          = './assets/upload/wisata';
         $config['allowed_types']        = 'gif|jpg|png|jpeg';

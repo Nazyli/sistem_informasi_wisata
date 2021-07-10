@@ -16,6 +16,13 @@ class Gallery_wisata_model extends CI_Model
         return $query;
     }
 
+    public function randWisataLimit($id, $limit)
+    {
+        $sql = 'SELECT * FROM gallery_wisata WHERE wisata_id = ? ORDER BY RAND() LIMIT ?';
+        $query = $this->db->query($sql, array($id, $limit));
+        return $query;
+    }
+
     public function save($data)
     {
         $sql = 'INSERT INTO gallery_wisata (foto_wisata, wisata_id) VALUES (?, ?)';

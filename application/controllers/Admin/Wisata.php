@@ -32,6 +32,7 @@ class Wisata extends CI_Controller
 		$this->load->model('testimoni_model');
 		$this->load->model('jenis_kuliner_model');
 		$this->load->model('jenis_wisata_model');
+		$this->load->model('gallery_wisata_model');
 	}
 
 	public function rekreasi()
@@ -55,6 +56,8 @@ class Wisata extends CI_Controller
 	public function detail($id)
 	{
 		$data['wisata'] = $this->wisata_model->findById($id);
+		
+		$data['gallery'] = $this->gallery_wisata_model->findByWisataId($id);
 
 		$data['testimoni'] = $this->testimoni_model->findByWisataId($id);
 

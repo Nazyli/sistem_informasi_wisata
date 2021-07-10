@@ -32,6 +32,7 @@ class Testimoni extends CI_Controller
 		$this->load->model('testimoni_model');
 		$this->load->model('jenis_kuliner_model');
 		$this->load->model('jenis_wisata_model');
+		$this->load->model('gallery_wisata_model');
 	}
 
 	public function index()
@@ -46,6 +47,18 @@ class Testimoni extends CI_Controller
 	public function detail($id)
 	{
 		$data['wisata'] = $this->wisata_model->findById($id);
+		$galleryWisata = $this->gallery_wisata_model->randWisataLimit($id, 1)->row();
+		if (isset($galleryWisata)) {
+			if ($galleryWisata->foto_wisata != NULL) {
+				$fotoPath = 'assets/upload/wisata/' . $galleryWisata->foto_wisata;
+				$foto = (file_exists($fotoPath)) ? $fotoPath : 'assets/dist/img/wisata.jpg';
+			} else {
+				$foto = 'assets/dist/img/wisata.jpg';
+			}
+			$data['foto_rand'] = $foto;
+		} else {
+			$data['foto_rand'] = 'assets/dist/img/wisata.jpg';
+		}
 		$data['testimoni'] = $this->testimoni_model->findByWisataIdOrderByCreated($id);
 
 		$this->load->view("admin/layout/header");
