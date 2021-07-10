@@ -134,7 +134,65 @@
                                                     </div>
 
                                                 <?php } ?>
-
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="card card-primary card-outline">
+                                                        <div class="card-body">
+                                                            <?php if ($this->session->userdata('logged_in') == TRUE) { ?>
+                                                                <form action="<?php echo base_url(); ?>testimoni/saveByWisata/<?= $rekreasi->id ?>" method="post" id="testimoni">
+                                                                    <div class="post">
+                                                                        <div class="user-block">
+                                                                            <img class="img-circle img-bordered-sm" src="https://i.pravatar.cc/150" alt="user image">
+                                                                            <span class="username">
+                                                                                <a href="<?php echo base_url(); ?>profile/me"><?= $user->nama; ?></a>
+                                                                                <div class="float-right btn-tool">
+                                                                                    <div class="rating-star d-inline">
+                                                                                        <input id="rating-5" type="radio" name="rating" value="5" /><label for="rating-5"><i class="fas fa-star"></i></label>
+                                                                                        <input id="rating-4" type="radio" name="rating" value="4" /><label for="rating-4"><i class="fas fa-star"></i></label>
+                                                                                        <input id="rating-3" type="radio" name="rating" value="3" /><label for="rating-3"><i class="fas fa-star"></i></label>
+                                                                                        <input id="rating-2" type="radio" name="rating" value="2" /><label for="rating-2"><i class="fas fa-star"></i></label>
+                                                                                        <input id="rating-1" type="radio" name="rating" value="1" /><label for="rating-1"><i class="fas fa-star"></i></label>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </span>
+                                                                            <span class="description mt-1"> 
+                                                                            <b> <?= $profesi->nama; ?></b> - 
+                                                                                <?php if ($user->role == 'admin') { ?>
+                                                                                    <span class="badge badge-danger">Administrator</span>
+                                                                                <?php } else { ?>
+                                                                                    <span class="badge badge-primary">Membership</span>
+                                                                                <?php } ?> 
+                                                                            </span>
+                                                                            <label id="rating-error" class="invalid-feedback" for="rating"></label>
+                                                                        </div>
+                                                                        <p class="ulasan">
+                                                                        <div class="input-group input-group-sm mb-0">
+                                                                            <input class="form-control form-control-sm" type="text" id="komentar" name="komentar" placeholder="Add Response Testimoni">
+                                                                            <div class="input-group-append">
+                                                                                <button type="submit" class="btn btn-danger">Send</button>
+                                                                            </div>
+                                                                            <label id="komentar-error" class="invalid-feedback" for="komentar"></label>
+                                                                        </div>
+                                                                        </p>
+                                                                    </div>
+                                                                </form>
+                                                            <?php } else { ?>
+                                                                <blockquote class="quote-secondary">
+                                                                    <h5><i class="fas fa-comments"></i> Note:</h5>
+                                                                    <b><a href="<?php echo base_url(); ?>login">Silakan Login!</a> </b> untuk menambahkan komentar
+                                                                </blockquote>
+                                                                <div class="input-group input-group-sm mb-0">
+                                                                    <input class="form-control form-control-sm" type="text" id="komentar" name="komentar" placeholder="Add Response Testimoni" disabled>
+                                                                    <div class="input-group-append">
+                                                                        <button type="submit" class="btn btn-danger" disabled>Send</button>
+                                                                    </div>
+                                                                    <label id="komentar-error" class="invalid-feedback" for="komentar"></label>
+                                                                </div>
+                                                            <?php } ?>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>

@@ -78,9 +78,9 @@
                                         <div class="user-block">
                                             <img class="img-circle img-bordered-sm" src="https://i.pravatar.cc/20?u=<?= $wisata->id; ?>" alt="user image">
                                             <span class="username">
-                                                <a href="#"><?= $wisata->nama; ?></a>
+                                                <a href="<?php echo base_url(); ?>wisata/detail/<?php echo $wisata->id; ?>"><?= $wisata->nama; ?></a>
                                                 <div class="float-right btn-tool">
-                                                    <div class="rating d-inline">
+                                                    <div class="rating-star d-inline">
                                                         <input id="rating-5" type="radio" name="rating" value="5" <?php if ($wisata->rating == 5) {
                                                                                                                         echo "checked";
                                                                                                                     } ?> /><label for="rating-5"><i class="fas fa-star"></i></label>
@@ -100,6 +100,7 @@
                                                 </div>
                                             </span>
                                             <span class="description"><?= $wisata->web; ?> - <?= $wisata->created_at; ?></span>
+                                            <label id="rating-error" class="invalid-feedback" for="rating"></label>
                                         </div>
                                         <p class="ulasan">
                                         <div class="input-group input-group-sm mb-0">

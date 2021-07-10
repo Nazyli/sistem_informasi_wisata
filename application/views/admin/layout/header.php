@@ -55,7 +55,7 @@ $uriString = $this->uri->uri_string();
             <!-- Menu Footer-->
             <li class="user-footer">
               <div class="float-left">
-                <a href="<?php echo base_url(); ?>admin/profil" class="btn btn-primary btn-sm">Profile</a>
+                <a href="<?php echo base_url(); ?>admin/profile" class="btn btn-primary btn-sm">Profile</a>
               </div>
               <div class="float-right">
                 <a href="<?php echo base_url(); ?>login/logout" class="btn btn-danger btn-sm">Log out</a>

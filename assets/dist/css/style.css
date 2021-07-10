@@ -42,17 +42,17 @@
   }
   
 
-  .rating {
+  .rating-star {
     direction: rtl;
     unicode-bidi: bidi-override;
     color: #ddd; /* Personal choice */
   }
-  .rating input {
+  .rating-star input {
     display: none;
   }
-  .rating label:hover,
-  .rating label:hover ~ label,
-  .rating input:checked + label,
-  .rating input:checked + label ~ label {
+  .rating-star label:hover,
+  .rating-star label:hover ~ label,
+  .rating-star input:checked + label,
+  .rating-star input:checked + label ~ label {
     color: #ffc107; /* Personal color choice. Lifted from Bootstrap 4 */
   }

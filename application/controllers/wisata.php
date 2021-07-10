@@ -32,6 +32,10 @@ class Wisata extends CI_Controller
 	}
 	public function detail($id)
 	{
+		$userId = $this->session->userdata('id');
+		$data['user'] = $this->user_model->findById($userId);
+		$data['profesi'] = $this->profesi_model->findById($data['user']->profesi_id);
+
 		$data['rekreasi'] = $this->wisata_model->findById($id);
 
 		$data['testimoni'] = $this->testimoni_model->findByWisataId($id);

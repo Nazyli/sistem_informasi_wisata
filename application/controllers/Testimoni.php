@@ -44,6 +44,32 @@ class Testimoni extends CI_Controller
 		$this->load->view("layout/footer");
 		
 	}
+	public function saveByWisata($id)
+	{
+		$wisata = $this->wisata_model->findById($id);
+		$idUser = $this->session->userdata('id');
+		$user = $this->user_model->findById($idUser);
+
+
+		// Save Testimoni
+		$nama = $user->nama;
+		$email = $user->email;
+		$wisata_id = $id;
+		$profesi_id = $user->profesi_id;
+		$komentar    = $this->input->post('komentar', TRUE);
+		$rating    = $this->input->post('rating', TRUE);
+		$user_id = $user->id;
+
+		$data = [$nama, $email, $wisata_id, $profesi_id, $rating, $komentar, $user_id];
+		$this->testimoni_model->save($data);
+
+		// update star
+		$wisata->bintang = $this->testimoni_model->countStar($wisata->id);
+		$this->wisata_model->update($wisata);
+
+		echo $this->session->set_flashdata('msg', array('success', 'Testimoni berhasil ditambahkan!'));
+		redirect('wisata/detail/'.$id);
+	}
 	public function edit($id)
 	{
 		$idUser = $this->session->userdata('id');

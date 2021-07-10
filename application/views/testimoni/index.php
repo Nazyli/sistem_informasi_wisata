@@ -78,7 +78,7 @@
                                         <div class="user-block">
                                             <img class="img-circle img-bordered-sm" src="https://i.pravatar.cc/20?u=<?= $i->id; ?>" alt="user image">
                                             <span class="username">
-                                                <a href="#"><?= $i->nama; ?></a>
+                                                <a href="<?php echo base_url(); ?>wisata/detail/<?php echo $i->id; ?>"><?= $i->nama; ?></a>
                                                 <div class="float-right btn-tool">
                                                     <a href="#" class=""> <?= createStar($i->rating); ?></a>
                                                     <a href="<?php echo base_url(); ?>testimoni/edit/<?= $i->testimoni_id; ?>"class="text-primary ml-3"><i class="fas fa-pencil-alt fa-xl"></i></a>
