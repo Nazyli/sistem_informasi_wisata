@@ -206,3 +206,7 @@ function showNotif(status, message) {
   // toastr.error('Lorem ipsum dolor sit amet, consetetur sadipscing elitr.')
   toastr[status](message);
 }
+
+$(function () {
+  bsCustomFileInput.init();
+});

@@ -30,8 +30,8 @@
 
                             <p class="text-muted text-center"><?= $profesi->nama; ?></p>
                             <form action="<?php echo base_url(); ?>profile/update/<?= $user->id; ?>" method="post" id="register">
-
                                 <ul class="list-group list-group-unbordered mb-3">
+
                                     <li class="list-group-item">
                                         <b>Nama</b> <a class="float-right">
                                             <input type="text" class="form-control form-control-border" id="nama" name="nama" value="<?= $user->nama; ?>">
@@ -50,16 +50,23 @@
                                     </li>
                                     <li class="list-group-item">
                                         <b>Profesi</b><a class="float-right">
-                                        <select class="custom-select form-control-border" name="profesi">
-                                            <?php foreach ($profesi_all->result() as $i) { ?>
-                                                <option value="<?= $i->id; ?>" <?php if ($i->id == $user->profesi_id) {
-                                                                                    echo "selected";
-                                                                                } ?>><?= $i->nama; ?></option>
-                                            <?php } ?>
-                                        </select>
+                                            <select class="custom-select form-control-border" name="profesi">
+                                                <?php foreach ($profesi_all->result() as $i) { ?>
+                                                    <option value="<?= $i->id; ?>" <?php if ($i->id == $user->profesi_id) {
+                                                                                        echo "selected";
+                                                                                    } ?>><?= $i->nama; ?></option>
+                                                <?php } ?>
+                                            </select>
                                         </a>
                                     </li>
                                 </ul>
+                                <div class="form-group">
+                                    <label for="customFile">Change account picture</label>
+                                    <div class="custom-file">
+                                        <input type="file" class="custom-file-input" id="customFile">
+                                        <label class="custom-file-label" for="customFile">Choose file</label>
+                                    </div>
+                                </div>
                                 <button class="btn btn-primary btn-block"><b>Save</b></button>
                             </form>
                         </div>
