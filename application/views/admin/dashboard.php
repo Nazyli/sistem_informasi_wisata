@@ -175,9 +175,17 @@
                 <?php foreach ($new_testimoni->result() as $i) { ?>
                   <div class="post">
                     <div class="user-block">
-                      <img class="img-circle img-bordered-sm" src="<?php echo base_url(); ?>assets/dist/img/testimony/artis.jpg" alt="user image">
+                      <?php
+                      if ($i->foto != NULL) {
+                        $fotoPath = 'assets/upload/user/' . $i->foto;
+                        $foto = (file_exists($fotoPath)) ? $fotoPath : 'assets/dist/img/default.png';
+                      } else {
+                        $foto = 'assets/dist/img/default.png';
+                      }
+                      ?>
+                      <img class="img-circle img-bordered-sm" src="<?= base_url() . $foto; ?>" alt="user image">
                       <span class="username">
-                        <a href="#"><?= $i->nama; ?></a>
+                        <a href="<?= base_url() . 'admin/testimoni/detail/' . $i->wisata_id ?>"><?= $i->nama; ?></a>
                         <a href="#" class="float-right btn-tool">
                           <?php createStar($i->rating); ?>
 

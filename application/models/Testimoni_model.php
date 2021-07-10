@@ -67,7 +67,7 @@ class Testimoni_model extends CI_Model
 
     function save($data)
     {
-        $sql = "INSERT INTO testimoni(nama, email, wisata_id, profesi_id, rating, komentar, user_id) VALUES (?, ?, ?, ?, ?, ?, ?)";
+        $sql = "INSERT INTO testimoni(nama, email, wisata_id, profesi_id, rating, komentar, user_id, foto) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
         $query = $this->db->query($sql, $data);
         return $query;
     }

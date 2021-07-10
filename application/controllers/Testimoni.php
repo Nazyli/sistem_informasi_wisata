@@ -59,8 +59,9 @@ class Testimoni extends CI_Controller
 		$komentar    = $this->input->post('komentar', TRUE);
 		$rating    = $this->input->post('rating', TRUE);
 		$user_id = $user->id;
+		$foto = $user->foto;
 
-		$data = [$nama, $email, $wisata_id, $profesi_id, $rating, $komentar, $user_id];
+		$data = [$nama, $email, $wisata_id, $profesi_id, $rating, $komentar, $user_id, $foto];
 		$this->testimoni_model->save($data);
 
 		// update star

@@ -8,7 +8,7 @@
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="<?php echo base_url(); ?></a></li>
-                        <li class="breadcrumb-item"><a href="<?php echo base_url(); ?>admin/testimoni">Pengelolaan Pencatatan</a></li>
+                        <li class=" breadcrumb-item"><a href="<?php echo base_url(); ?>admin/testimoni">Pengelolaan Pencatatan</a></li>
                         <li class="breadcrumb-item active">My Testimoni</li>
                     </ol>
                 </div>
@@ -24,9 +24,17 @@
                     <!-- Profile Image -->
                     <div class="card card-primary card-outline">
 
-                    <div class="card-body box-profile">
+                        <div class="card-body box-profile">
                             <div class="text-center">
-                                <img class="profile-user-img img-fluid img-circle" src="https://i.pravatar.cc/50" alt="User profile picture">
+                                <?php
+                                if ($user->foto != NULL) {
+                                    $fotoPath = 'assets/upload/user/' . $user->foto;
+                                    $foto = (file_exists($fotoPath)) ? $fotoPath : 'assets/dist/img/default.png';
+                                } else {
+                                    $foto = 'assets/dist/img/default.png';
+                                }
+                                ?>
+                                <img class="profile-user-img img-fluid img-circle" src="<?= base_url() . $foto; ?>" alt="User profile picture">
                             </div>
 
                             <h3 class="profile-username text-center"><?= $user->nama; ?></h3>
@@ -54,7 +62,7 @@
 
                         </div>
                     </div>
-                        
+
                 </div>
 
                 <div class="col-md-9">
@@ -81,7 +89,7 @@
                                                 <a href="<?php echo base_url(); ?>wisata/detail/<?php echo $i->id; ?>"><?= $i->nama; ?></a>
                                                 <div class="float-right btn-tool">
                                                     <a href="#" class=""> <?= createStar($i->rating); ?></a>
-                                                    <a href="<?php echo base_url(); ?>testimoni/edit/<?= $i->testimoni_id; ?>"class="text-primary ml-3"><i class="fas fa-pencil-alt fa-xl"></i></a>
+                                                    <a href="<?php echo base_url(); ?>testimoni/edit/<?= $i->testimoni_id; ?>" class="text-primary ml-3"><i class="fas fa-pencil-alt fa-xl"></i></a>
                                                     <a href="<?php echo base_url(); ?>testimoni/delete/<?= $i->testimoni_id; ?>" class="text-danger ml-3" onclick="swalSuccesDelete(event)"><i class="fas fa-trash fa-xl"></i></a>
                                                 </div>
                                             </span>

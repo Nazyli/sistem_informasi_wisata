@@ -1,7 +1,9 @@
-<?php 
+<?php
 $id = $this->session->userdata('id');
 $userLogin = $this->user_model->findById($id);
 $userProfesi = $this->profesi_model->findById($userLogin->profesi_id);
+$fotoPath = 'assets/upload/user/' . $userLogin->foto;
+$foto = (file_exists($fotoPath)) ? $fotoPath : 'assets/dist/img/default.png';
 $this->load->view('function/function');
 $uriString = $this->uri->uri_string();
 ?>
@@ -41,15 +43,15 @@ $uriString = $this->uri->uri_string();
       <ul class="navbar-nav ml-auto">
         <li class="dropdown user user-menu">
           <a class="nav-link" data-toggle="dropdown" href="#">
-            <img src="<?php echo base_url(); ?>assets/dist/img/user.jpg" class="user-image-sm" alt="User Image">
+            <img src="<?= base_url().$foto; ?>" class="user-image-sm" alt="User Image">
             <span class="hidden-xs"><?= $userLogin->username; ?></span>
           </a>
           <ul class="dropdown-menu">
             <li class="user-header">
-              <img src="<?php echo base_url(); ?>assets/dist/img/user.jpg" class="img-circle" alt="User Image">
+              <img src="<?= base_url().$foto; ?>" class="img-circle" alt="User Image">
               <p>
                 <?= $userLogin->username;  ?> - <?= $this->session->userdata('profesi') ?>
-                <small>Member since - <?php echo date("d F Y", strtotime($userLogin->created_at ));  ?></small>
+                <small>Member since - <?php echo date("d F Y", strtotime($userLogin->created_at));  ?></small>
               </p>
             </li>
             <!-- Menu Footer-->
@@ -84,7 +86,7 @@ $uriString = $this->uri->uri_string();
       <div class="sidebar">
         <div class="user-panel mt-3 pb-3 mb-3 d-flex">
           <div class="image">
-            <img src="<?php echo base_url(); ?>assets/dist/img/user.jpg" class="img-circle elevation-2" alt="User Image">
+            <img src="<?= base_url().$foto; ?>" class="img-circle elevation-2" alt="User Image">
           </div>
           <div class="info">
             <a href="<?php echo base_url(); ?>admin/home" class="d-block">Administrator</a>
@@ -109,7 +111,9 @@ $uriString = $this->uri->uri_string();
                 </p>
               </a>
             </li>
-            <li class="nav-item <?php if (strpos($uriString, 'wisata/')) {echo "menu-open";}?>">
+            <li class="nav-item <?php if (strpos($uriString, 'wisata/')) {
+                                  echo "menu-open";
+                                } ?>">
               <a href="#" class="nav-link <?= checkUri($uriString, 'wisata/') ?>">
                 <i class="nav-icon fas fa-copy"></i>
                 <p>

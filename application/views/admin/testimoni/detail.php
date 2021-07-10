@@ -81,7 +81,15 @@
                                 <?php foreach ($testimoni->result() as $i) { ?>
                                     <div class="post">
                                         <div class="user-block">
-                                            <img class="img-circle img-bordered-sm" src="https://i.pravatar.cc/20?u=<?= $i->id; ?>" alt="user image">
+                                            <?php
+                                            if ($i->foto != NULL) {
+                                                $fotoPath = 'assets/upload/user/' . $i->foto;
+                                                $foto = (file_exists($fotoPath)) ? $fotoPath : 'assets/dist/img/default.png';
+                                            } else {
+                                                $foto = 'assets/dist/img/default.png';
+                                            }
+                                            ?>
+                                            <img class="img-circle img-bordered-sm" src="<?= base_url() . $foto; ?>" alt="user image">
                                             <span class="username">
                                                 <a href="#"><?= $i->nama; ?></a>
                                                 <div class="float-right btn-tool">

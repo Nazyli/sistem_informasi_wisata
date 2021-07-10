@@ -116,7 +116,15 @@
                                                     <div class="col-md-4">
                                                         <div class="post clearfix">
                                                             <div class="user-block">
-                                                                <img class="img-circle img-bordered-sm" src="https://img.pngio.com/cool-phone-icon-202181-free-icons-library-cool-cell-phone-png-512_512.jpg" alt="User Image">
+                                                                <?php
+                                                                if ($i->foto != NULL) {
+                                                                    $fotoPath = 'assets/upload/user/' . $i->foto;
+                                                                    $foto = (file_exists($fotoPath)) ? $fotoPath : 'assets/dist/img/default.png';
+                                                                } else {
+                                                                    $foto = 'assets/dist/img/default.png';
+                                                                }
+                                                                ?>
+                                                                <img class="img-circle img-bordered-sm" src="<?= base_url() . $foto; ?>" alt="User Image">
                                                                 <span class="username">
                                                                     <a href="#"><?php echo $i->nama; ?></a>
                                                                     <?php if ($this->session->userdata('logged_in') == TRUE) {
@@ -152,7 +160,15 @@
                                                                 <form action="<?php echo base_url(); ?>testimoni/saveByWisata/<?= $rekreasi->id ?>" method="post" id="testimoni">
                                                                     <div class="post">
                                                                         <div class="user-block">
-                                                                            <img class="img-circle img-bordered-sm" src="https://i.pravatar.cc/150" alt="user image">
+                                                                            <?php
+                                                                            if ($user->foto != NULL) {
+                                                                                $fotoPath = 'assets/upload/user/' . $user->foto;
+                                                                                $foto = (file_exists($fotoPath)) ? $fotoPath : 'assets/dist/img/default.png';
+                                                                            } else {
+                                                                                $foto = 'assets/dist/img/default.png';
+                                                                            }
+                                                                            ?>
+                                                                            <img class="img-circle img-bordered-sm" src="<?= base_url() . $foto; ?>" alt="user image">
                                                                             <span class="username">
                                                                                 <a href="<?php echo base_url(); ?>profile/me"><?= $user->nama; ?></a>
                                                                                 <div class="float-right btn-tool">

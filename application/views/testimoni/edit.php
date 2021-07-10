@@ -26,7 +26,15 @@
 
                         <div class="card-body box-profile">
                             <div class="text-center">
-                                <img class="profile-user-img img-fluid img-circle" src="https://i.pravatar.cc/50" alt="User profile picture">
+                                <?php
+                                if ($user->foto != NULL) {
+                                    $fotoPath = 'assets/upload/user/' . $user->foto;
+                                    $foto = (file_exists($fotoPath)) ? $fotoPath : 'assets/dist/img/default.png';
+                                } else {
+                                    $foto = 'assets/dist/img/default.png';
+                                }
+                                ?>
+                                <img class="profile-user-img img-fluid img-circle" src="<?= base_url() . $foto; ?>" alt="User profile picture">
                             </div>
 
                             <h3 class="profile-username text-center"><?= $user->nama; ?></h3>

@@ -64,9 +64,16 @@ $this->load->model('testimoni_model');
                                                     <td>
                                                         <div class="post clearfix">
                                                             <div class="user-block">
-                                                                <img class="img-circle img-bordered-sm" src="https://i.pravatar.cc/20?u=<?= $testimoni[$j]->id; ?>" alt="User Image">
+                                                                <?php
+                                                                if ($testimoni[$j]->foto != NULL) {
+                                                                    $fotoPath = 'assets/upload/user/' . $testimoni[$j]->foto;;
+                                                                    $foto = (file_exists($fotoPath)) ? $fotoPath : 'assets/dist/img/default.png';
+                                                                } else {
+                                                                    $foto = 'assets/dist/img/default.png';
+                                                                }
+                                                                ?>
+                                                                <img class="img-circle img-bordered-sm" src="<?= base_url() . $foto; ?>" alt="User Image">
                                                                 <span class="username text-xs">
-                                                                    <a href="#"><?= $testimoni[$j]->nama; ?></a>
                                                                     <a href="#"><?= $testimoni[$j]->nama; ?></a>
                                                                 </span>
                                                                 <span class="description text-xs">
