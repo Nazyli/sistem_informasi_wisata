@@ -77,13 +77,13 @@
             <span class="info-box-icon"><i class="far fa-images"></i></span>
             <div class="info-box-content">
               <span class="info-box-text">Gallery Foto</span>
-              <span class="info-box-number">123 Foto</span>
+              <span class="info-box-number"><?php echo count($gallery->result()); ?> Foto</span>
 
               <div class="progress">
                 <div class="progress-bar" style="width: 100%"></div>
               </div>
               <span class="progress-description">
-                70% Increase in 30 Days
+                Foto - foto wisata
               </span>
             </div>
             <!-- /.info-box-content -->

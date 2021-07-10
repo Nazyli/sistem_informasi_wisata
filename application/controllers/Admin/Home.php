@@ -30,10 +30,12 @@ class Home extends CI_Controller
 		}
 		$this->load->model('wisata_model');
 		$this->load->model('testimoni_model');
+		$this->load->model('gallery_wisata_model');
 	}
 
 	public function index()
 	{
+		$data['gallery'] = $this->gallery_wisata_model->getAll();
 		$data['rekreasi'] = $this->wisata_model->getAllRekreasi();
 		$data['kuliner'] = $this->wisata_model->getAllKuliner();
 		$data['testimoni'] = $this->testimoni_model->getAll();

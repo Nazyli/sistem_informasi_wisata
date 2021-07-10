@@ -15,6 +15,11 @@ class Gallery_wisata_model extends CI_Model
         $query = $this->db->get_where('gallery_wisata', ['wisata_id' => $id]);
         return $query;
     }
+    public function getAll()
+    {
+        $query = $this->db->get('gallery_wisata');
+        return $query;
+    }
 
     public function randWisataLimit($id, $limit)
     {
