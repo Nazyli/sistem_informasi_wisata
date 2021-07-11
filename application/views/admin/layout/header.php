@@ -129,7 +129,7 @@ $uriString = $this->uri->uri_string();
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="<?php echo base_url(); ?>admin/wisata/kuliner" class="nav-link <?= checkUri($uriString, 'kuliner') ?>">
+                  <a href="<?php echo base_url(); ?>admin/wisata/wisata_kuliner" class="nav-link <?= checkUri($uriString, 'wisata_kuliner') ?>">
                     <i class="far fa-circle nav-icon text-info"></i>
                     <p class="">Wisata Kuliner</p>
                   </a>

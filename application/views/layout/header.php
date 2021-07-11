@@ -41,7 +41,7 @@
                             <a href="<?php echo base_url(); ?>wisata/rekreasi" class="nav-link">Wisata Rekreasi</a>
                         </li>
                         <li class="nav-item">
-                            <a href="<?php echo base_url(); ?>wisata/kuliner" class="nav-link">Wisata Kuliner</a>
+                            <a href="<?php echo base_url(); ?>wisata/wisata_kuliner" class="nav-link">Wisata Kuliner</a>
                         </li>
                         <?php
                         if ($this->session->userdata('logged_in') == TRUE) {

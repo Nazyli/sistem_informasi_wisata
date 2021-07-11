@@ -44,7 +44,7 @@ class Wisata extends CI_Controller
 		$this->load->view("admin/wisata/index", $data);
 		$this->load->view("admin/layout/footer");
 	}
-	public function kuliner()
+	public function wisata_kuliner()
 	{
 		$data['judul'] = 'Kuliner';
 		$data['wisata'] = $this->wisata_model->getAllKuliner();

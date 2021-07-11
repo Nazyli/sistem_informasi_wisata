@@ -21,7 +21,7 @@ class Wisata extends CI_Controller
 		$this->load->view("wisata", $data);
 		$this->load->view("layout/footer");
 	}
-	public function kuliner()
+	public function wisata_kuliner()
 	{
 		$data['wisata'] = 'Wisata Kuliner';
 		$data['getOne'] = $this->wisata_model->randKuliner(1)->row();

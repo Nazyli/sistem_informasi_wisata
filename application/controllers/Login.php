@@ -58,7 +58,7 @@ class Login extends CI_Controller
 		redirect('login');
 	}
 
-	public function auth()
+	public function proses()
 	{
 		$email    = $this->input->post('email', TRUE);
 		$password = md5($this->input->post('password', TRUE));
