@@ -28,8 +28,8 @@ Setting database configuration in application/config/database.php
 Verify the deployment by navigating to your server address in
 your preferred browser, example : 
 ```sh
-127.0.0.1/siwikode_v2
-http://localhost/siwikode_v2
+127.0.0.1/siwikode
+http://localhost/siwikode
 ```
 
 
