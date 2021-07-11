@@ -48,7 +48,7 @@
               <div class="progress">
                 <div class="progress-bar" style="width: 100%"></div>
               </div>
-              <a href="<?= base_url(). 'admin/wisata/kuliner' ;?>" class="text-light">
+              <a href="<?= base_url(). 'admin/wisata/wisata_kuliner' ;?>" class="text-light">
                 More info <i class="fas fa-arrow-circle-right"></i>
               </a>
             </div>

@@ -59,6 +59,35 @@
         </div>
     </div>
 
+    <div class="modal hide fade" tabindex="-1" role="dialog" id="myModal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Selamat Datang!</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Untuk memulai aplikasi dapat menggunakan akun:</p>
+                    <div class="alert alert-danger">
+                        <b>Administrator : </b>
+                        <h6>Email : admin@gmail.com </h6>
+                        <h6>Password : admin </h6>
+                    </div>
+                    <div class="alert alert-primary">
+                        <b>Membership : </b>
+                        <h6>Email : member@gmail.com </h6>
+                        <h6>Password : admin </h6>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-thumbs-up"></i> Great!</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="<?php echo base_url(); ?>assets/plugins/jquery/jquery.min.js"></script>
     <script src="<?php echo base_url(); ?>assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="<?php echo base_url(); ?>assets/plugins/datatables/jquery.dataTables.min.js"></script>
@@ -70,6 +99,7 @@
     <script src="<?php echo base_url(); ?>assets/plugins/jquery-validation/localization/messages_id.min.js"></script>
     <script src="<?php echo base_url(); ?>assets/plugins/sweetalert2/sweetalert2.min.js"></script>
     <script src="<?php echo base_url(); ?>assets/plugins/toastr/toastr.min.js"></script>
+    <script src="<?php echo base_url(); ?>assets/plugins/bs-custom-file-input/bs-custom-file-input.min.js"></script>
     <script src="<?php echo base_url(); ?>assets/dist/js/adminlte.min.js"></script>
     <script src="<?php echo base_url(); ?>assets/dist/js/style.js"></script>
     <script>
@@ -78,7 +108,11 @@
             $msg = $this->session->flashdata('msg');
         ?>
             $(document).ready(showNotif('<?php echo $msg[0]; ?>', '<?php echo $msg[1]; ?>'));
-        <?php } unset($_SESSION['msg']); ?>
+        <?php }
+        unset($_SESSION['msg']); ?>
+        $(window).on('load', function() {
+            $('#myModal').modal('show');
+        });
     </script>
 </body>
 
