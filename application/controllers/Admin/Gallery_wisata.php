@@ -74,12 +74,15 @@ class Gallery_wisata extends CI_Controller
     {
         $data = $this->gallery_wisata_model->findById($id);
         $this->load->helper("file");
-        $path = 'assets/upload/wisata/'.$data->foto_wisata;
-        unlink($path);
-        
+        if ($data->foto_wisata != NULL) {
+            $path = 'assets/upload/wisata/' . $data->foto_wisata;
+            if (file_exists($path)) {
+                unlink($path);
+            }
+        }
+
         $this->gallery_wisata_model->delete($id);
         echo $this->session->set_flashdata('msg', array('success', 'Foto Wisata berhasil dihapus!'));
         redirect('admin/gallery_wisata/index/' . $data->wisata_id);
-
     }
 }

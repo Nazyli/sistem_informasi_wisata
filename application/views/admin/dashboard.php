@@ -31,7 +31,7 @@
                 <div class="progress-bar" style="width: 100%"></div>
               </div>
               <span class="progress-description">
-                <a href="rekreasi.html" class="text-light">
+                <a href="<?= base_url(). 'admin/wisata/rekreasi' ;?>" class="text-light">
                   More info <i class="fas fa-arrow-circle-right"></i>
                 </a>
               </span>
@@ -48,7 +48,7 @@
               <div class="progress">
                 <div class="progress-bar" style="width: 100%"></div>
               </div>
-              <a href="kuliner.html" class="text-light">
+              <a href="<?= base_url(). 'admin/wisata/kuliner' ;?>" class="text-light">
                 More info <i class="fas fa-arrow-circle-right"></i>
               </a>
             </div>
@@ -65,7 +65,7 @@
               <div class="progress">
                 <div class="progress-bar" style="width: 100%"></div>
               </div>
-              <a href="testimony.html" class="text-light">
+              <a href="<?= base_url(). 'admin/testimoni' ;?>" class="text-light">
                 More info <i class="fas fa-arrow-circle-right"></i>
               </a>
             </div>

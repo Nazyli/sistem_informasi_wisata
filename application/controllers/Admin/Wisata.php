@@ -56,7 +56,7 @@ class Wisata extends CI_Controller
 	public function detail($id)
 	{
 		$data['wisata'] = $this->wisata_model->findById($id);
-		
+
 		$data['gallery'] = $this->gallery_wisata_model->findByWisataId($id);
 
 		$data['testimoni'] = $this->testimoni_model->findByWisataId($id);
@@ -148,19 +148,31 @@ class Wisata extends CI_Controller
 	public function delete($id)
 	{
 		$data = $this->wisata_model->findById($id);
+		$nextUrl = '';
+		if ($data->jenis_wisata_id  != NULL) {
+			$nextUrl = 'admin/wisata/rekreasi';
+		} else {
+			$nextUrl = 'admin/wisata/kuliner';
+		}
 		$testimoni = $this->testimoni_model->findByWisataId($id);
 		if (count($testimoni->result()) > 0) {
 			echo $this->session->set_flashdata('msg', array('error', 'Gagal hapus data, sedang digunakan di testimoni!'));
-			redirect('admin/wisata/rekreasi');
+			redirect($nextUrl);
 		}
+		$gallery_wisata = $this->gallery_wisata_model->findByWisataId($id);
+		if (count($gallery_wisata->result()) > 0) {
+			echo $this->session->set_flashdata('msg', array('error', 'Gagal hapus data, sedang digunakan di gallery!'));
+			redirect($nextUrl);
+		}
+
 		$res = $this->wisata_model->delete($id);
 
 		if ($data->jenis_wisata_id  != NULL) {
 			echo $this->session->set_flashdata('msg', array('success', 'Wisata Rekreasi berhasil dihapus!'));
-			redirect('admin/wisata/rekreasi');
+			redirect($nextUrl);
 		} else {
 			echo $this->session->set_flashdata('msg', array('success', 'Wisata Kuliner berhasil dihapus!'));
-			redirect('admin/wisata/kuliner');
+			redirect($nextUrl);
 		}
 	}
 }
