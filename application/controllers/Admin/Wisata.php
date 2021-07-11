@@ -99,7 +99,7 @@ class Wisata extends CI_Controller
 			redirect('admin/wisata/rekreasi');
 		} else {
 			echo $this->session->set_flashdata('msg', array('success', 'Wisata Kuliner berhasil ditambahkan!'));
-			redirect('admin/wisata/kuliner');
+			redirect('admin/wisata/wisata_kuliner');
 		}
 	}
 
@@ -141,7 +141,7 @@ class Wisata extends CI_Controller
 			redirect('admin/wisata/rekreasi');
 		} else {
 			echo $this->session->set_flashdata('msg', array('success', 'Wisata Kuliner berhasil diperbarui!'));
-			redirect('admin/wisata/kuliner');
+			redirect('admin/wisata/wisata_kuliner');
 		}
 	}
 
@@ -152,7 +152,7 @@ class Wisata extends CI_Controller
 		if ($data->jenis_wisata_id  != NULL) {
 			$nextUrl = 'admin/wisata/rekreasi';
 		} else {
-			$nextUrl = 'admin/wisata/kuliner';
+			$nextUrl = 'admin/wisata/wisata_kuliner';
 		}
 		$testimoni = $this->testimoni_model->findByWisataId($id);
 		if (count($testimoni->result()) > 0) {
