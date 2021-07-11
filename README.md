@@ -3,7 +3,8 @@
 Aplikasi Sistem Informasi Kota Depok menyajikan berbagai informasi seputar wisata rekreasi & kuliner unggulan kota Depok
 - Develop by Mahasiswa
 - STT Terpadu Nurul Fikri
-- ✨2 Teknik Informatika 8 ✨
+- ✨ 2 Teknik Informatika 8  ✨
+
 
 ### Team
 
@@ -12,6 +13,7 @@ Aplikasi Sistem Informasi Kota Depok menyajikan berbagai informasi seputar wisat
 | Evry Nazyli Ciptanto | 0110220045 |
 | Ahmad Zulfikor | 0110220212 |
 | Muhammad Zulfikar | 0110220034 |
+
 
 ### Demo
 Demo can be found at : 
@@ -36,8 +38,12 @@ http://localhost/siwikode_v2
  \
 ![picture](assets/dist/img/ss/ss2.png)
 
-## License
+### Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-MIT
+Please make sure to update tests as appropriate.
+
+### License
+[MIT](https://choosealicense.com/licenses/mit/)
 
 **Free Software, Hell Yeah!**
