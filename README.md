@@ -1,8 +1,43 @@
-# Pemrograman WEB - Tugas 2
-## Sistem Informasi Wisata Kota Depok - SIWIKODE
-STT Terpadu Nurul Fikri
+# Aplikasi Sistem Informasi Wisata Kota Depok
+### Pemrograman WEB Lanjutan - S I W I K O D E
+Aplikasi Sistem Informasi Kota Depok menyajikan berbagai informasi seputar wisata rekreasi & kuliner unggulan kota Depok
+- Develop by Mahasiswa
+- STT Terpadu Nurul Fikri
+- ✨2 Teknik Informatika 8 ✨
 
-## Screenshots
+### Team
+
+| NAMA | NIM |
+| ------ | ------ |
+| Evry Nazyli Ciptanto | 0110220045 |
+| Ahmad Zulfikor | 0110220212 |
+| Muhammad Zulfikar | 0110220034 |
+
+### Demo
+Demo can be found at : 
+> Note `SIWIKODE WEB :` https://siwikode-ti8-kel8.000webhostapp.com/
+
+
+### Installation
+```sh
+Download [DBSIWIKODE MYSQL](dbsiwikode.sql) to run.
+Setting database configuration in application/config/database.php
+```
+Verify the deployment by navigating to your server address in
+your preferred browser, example : 
+```sh
+127.0.0.1/siwikode_v2
+http://localhost/siwikode_v2
+```
+
+
+### Screenshots
 ![picture](assets/dist/img/ss/ss1.png)  
  \
 ![picture](assets/dist/img/ss/ss2.png)
+
+## License
+
+MIT
+
+**Free Software, Hell Yeah!**
