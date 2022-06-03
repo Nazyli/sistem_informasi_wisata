@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>SIWIKODE | Sistem Informasi Wisata Kota Depok</title>
+    <title>Error | Sistem Informasi Wisata Kota Bandung</title>
     <link rel="shortcut icon" type="image/x-icon" href="<?php echo base_url(); ?>assets/dist/img/logo.png">
 
     <!-- Google Font: Source Sans Pro -->
@@ -43,7 +43,7 @@
                         Meanwhile, you may <a href="<?php echo base_url(); ?>">return to dashboard</a> or try using the search form.
                     </p>
 
-                    <h1 class="m-2 text-primary text-justify"> Sistem Informasi Wisata Kota Depok <small>SIWIKODE</small></h1>
+                    <h1 class="m-2 text-primary text-justify"> Sistem Informasi Wisata Kota Bandung</h1>
 
                 </div>
             </div>

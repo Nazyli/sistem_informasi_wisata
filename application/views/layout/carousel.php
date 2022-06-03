@@ -12,10 +12,10 @@
             <img class="d-block w-100" alt="Carousel Bootstrap First" src="<?php echo base_url(); ?>assets/dist/img/slide/1.jpg" />
             <div class="carousel-caption">
                 <h4>
-                    Wisata Rekreasi & Kuliner Unggulan Kota Depok
+                    Wisata Rekreasi & Kuliner Unggulan Kota Bandung
                 </h4>
                 <p>
-                    Nikmatin berbagai pilihan Wisata Rekreasi & Wisata Kuliner yang terbaik di Kota Depok
+                    Nikmatin berbagai pilihan Wisata Rekreasi & Wisata Kuliner yang terbaik di Kota Bandung
                 </p>
             </div>
         </div>
@@ -23,10 +23,10 @@
             <img class="d-block w-100" alt="Carousel Bootstrap Second" src="<?php echo base_url(); ?>assets/dist/img/slide/2.jpg" />
             <div class="carousel-caption">
                 <h4>
-                    Daftar Wisata Rekreasi Kota Depok
+                    Daftar Wisata Rekreasi Kota Bandung
                 </h4>
                 <p>
-                    Di Kota Depok andak akan menemukan berbagai Wisata Rekreasi yang terbaik baik untuk anda maupun untuk
+                    Di Kota Bandung anda akan menemukan berbagai Wisata Rekreasi yang terbaik baik untuk anda maupun untuk
                     keluarga anda.
                 </p>
             </div>
@@ -35,11 +35,11 @@
             <img class="d-block w-100" alt="Carousel Bootstrap Third" src="<?php echo base_url(); ?>assets/dist/img/slide/3.jpg" />
             <div class="carousel-caption">
                 <h4>
-                    Daftar Wisata Kuliner Kota Depok
+                    Daftar Wisata Kuliner Kota Bandung
                 </h4>
                 <p>
-                    Makanan terbaik kuliner di Kota Depok kami sajikan berbagai macam pilihan ketika anda berkunjung di Kota
-                    Depok
+                    Makanan terbaik kuliner di Kota Bandung kami sajikan berbagai macam pilihan ketika anda berkunjung di Kota
+                    Bandung
                 </p>
             </div>
         </div>

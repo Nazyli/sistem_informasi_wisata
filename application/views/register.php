@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>SIWIKODE | Sistem Informasi Wisata Kota Depok</title>
+    <title>Register | Sistem Informasi Wisata Kota Bandung</title>
     <link rel="shortcut icon" type="image/x-icon" href="<?php echo base_url(); ?>assets/dist/img/logo.png">
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -22,7 +22,7 @@
     <div class="register-box">
         <div class="card card-outline card-primary">
             <div class="card-header text-center">
-                <a href="<?php echo base_url(); ?>" class="h1"><b>SIWIKODE</b> </a>
+                <a href="<?php echo base_url(); ?>" class="h1"><b>Wisata Bandung</b> </a>
             </div>
             <div class="card-body">
                 <p class="login-box-msg">Register a new membership</p>

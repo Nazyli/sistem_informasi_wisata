@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>SIWIKODE | Sistem Informasi Wisata Kota Depok</title>
+    <title>Wisata Bandung | Sistem Informasi Wisata Kota Bandung</title>
     <link rel="shortcut icon" type="image/x-icon" href="<?php echo base_url(); ?>assets/dist/img/logo.png">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/plugins/fontawesome-free/css/all.min.css">
@@ -21,11 +21,11 @@
 
 <body class="hold-transition layout-top-nav layout-navbar-fixed text-sm">
     <div class="wrapper">
-        <nav class="main-header navbar navbar-expand-md navbar-dark navbar-primary text-sm border-bottom-0">
+        <nav class="main-header navbar navbar-expand-md navbar-dark navbar-teal text-sm border-bottom-0">
             <div class="container">
                 <a href="<?php echo base_url(); ?>" class="navbar-brand">
                     <img src="<?php echo base_url(); ?>assets/dist/img/logo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-                    <span class="brand-text font-weight-light">S I W I K O D E</span>
+                    <span class="brand-text font-weight-light">Wisata Bandung</span>
                 </a>
 
                 <button class="navbar-toggler order-1" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">

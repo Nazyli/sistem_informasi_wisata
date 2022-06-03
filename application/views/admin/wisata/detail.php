@@ -149,7 +149,7 @@ if ($wisata->jenis_wisata_id != null) {
               </div>
             </div>
             <div class="card-footer">
-              Sistem Informasi Wisata Kota Depok
+              Sistem Informasi Wisata Kota Bandung
             </div>
           </div>
         </div>

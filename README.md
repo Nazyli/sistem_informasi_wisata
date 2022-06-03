@@ -1,6 +1,6 @@
 # Aplikasi Sistem Informasi Wisata
-### Pemrograman WEB Lanjutan 
-Aplikasi Sistem Informasi menyajikan berbagai informasi seputar wisata rekreasi & kuliner unggulan
+
+Aplikasi Sistem Informasi Wisata menyajikan berbagai informasi seputar wisata rekreasi & kuliner unggulan
 - Develop by Mahasiswa
 - STT Terpadu Nurul Fikri
 - Teknik Informatika

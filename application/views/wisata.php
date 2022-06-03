@@ -4,7 +4,7 @@
     <div class="container">
       <div class="row mb-2 mt-4">
         <div class="col-sm-6">
-          <h1>Daftar <?php echo $wisata; ?> Kota Depok</h1>
+          <h1>Daftar <?php echo $wisata; ?> Kota Bandung</h1>
         </div>
         <div class="col-sm-6">
           <ol class="breadcrumb float-sm-right">

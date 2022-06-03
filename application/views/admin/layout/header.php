@@ -13,7 +13,7 @@ $uriString = $this->uri->uri_string();
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>SIWIKODE | Sistem Informasi Wisata Kota Depok</title>
+  <title>Wisata Bandung | Sistem Informasi Wisata Kota Bandung</title>
   <link rel="shortcut icon" type="image/x-icon" href="<?php echo base_url(); ?>assets/dist/img/logo.png">
 
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -29,14 +29,14 @@ $uriString = $this->uri->uri_string();
 
 <body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed text-sm">
   <div class="wrapper">
-    <nav class="main-header navbar navbar-expand navbar-dark navbar-primary text-sm border-bottom-0">
+    <nav class="main-header navbar navbar-expand navbar-dark navbar-gray text-sm border-bottom-0">
       <ul class="navbar-nav">
         <li class="nav-item">
           <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
         </li>
         <li class="nav-item d-none d-sm-inline-block">
           <a href="#" class="nav-link">
-            Sistem Informasi Wisata Kota Depok - SIWIKODE
+            Sistem Informasi Wisata Kota Bandung
           </a>
         </li>
       </ul>
@@ -57,7 +57,7 @@ $uriString = $this->uri->uri_string();
             <!-- Menu Footer-->
             <li class="user-footer">
               <div class="float-left">
-                <a href="<?php echo base_url(); ?>admin/profile" class="btn btn-primary btn-sm">Profile</a>
+                <a href="<?php echo base_url(); ?>profile" class="btn btn-primary btn-sm">Profile</a>
               </div>
               <div class="float-right">
                 <a href="<?php echo base_url(); ?>login/logout" class="btn btn-danger btn-sm">Log out</a>
@@ -78,9 +78,9 @@ $uriString = $this->uri->uri_string();
       </ul>
     </nav>
     <aside class="main-sidebar main-sidebar-custom sidebar-light-primary elevation-4">
-      <a href="<?php echo base_url(); ?>" class="brand-link text-sm navbar-primary">
+      <a href="<?php echo base_url(); ?>" class="brand-link text-sm navbar-gray">
         <img src="<?php echo base_url(); ?>assets/dist/img/logo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-        <span class="brand-text font-weight-light text-light">S I W I K O D E</span>
+        <span class="brand-text font-weight-light text-light">Wisata Bandung</span>
       </a>
 
       <div class="sidebar">

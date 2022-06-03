@@ -4,10 +4,10 @@
             <div class="row mb-2 mt-4">
                 <div class="col-sm-6">
                     <h1>
-                    Develop By Mahasiswa TI © STT NF
-        <script>
-          document.write(new Date().getFullYear());
-        </script>
+                        Develop By Mahasiswa TI - STT NF
+                        <script>
+                            document.write(new Date().getFullYear());
+                        </script>
                     </h1>
                 </div>
                 <div class="col-sm-6">
@@ -22,143 +22,33 @@
     </section>
 
     <section class="content">
-        <div class="container">
+        <div class="container mt-5">
             <div class="row">
                 <div class="col-12">
-                    <div class="card">
-                        <div class="card-header">
-                            <h3 class="card-title">Kelompok Kami</h3>
-                            <div class="card-tools">
-                                <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
-                                    <i class="fas fa-minus"></i>
-                                </button>
-                                <button type="button" class="btn btn-tool" data-card-widget="remove" title="Remove">
-                                    <i class="fas fa-times"></i>
-                                </button>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <div class="card">
-                                        <div class="card-header bg-navy">
-                                            <h3 class="card-title"><i class="far fa-user mr-1"></i> Ahmad Zulfikor</h3>
-                                            <div class="card-tools">
-                                                <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
-                                                    <i class="fas fa-minus"></i>
-                                                </button>
-                                                <button type="button" class="btn btn-tool" data-card-widget="remove" title="Remove">
-                                                    <i class="fas fa-times"></i>
-                                                </button>
-                                            </div>
-                                        </div>
-                                        <div class="card-body">
-                                            <div class="table-responsive">
-                                                <table class="table">
-                                                    <tbody>
-                                                        <tr>
-                                                            <th style="width:30%">Nama :</th>
-                                                            <td>Ahmad Zulfikor</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th>NIM : </th>
-                                                            <td>0110220212</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th>Kelas : </th>
-                                                            <td>TI - 08 Weekend</td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                                        </div>
-                                        <div class="card-footer">
-                                            <strong>Teknik informatika</strong>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="card">
-                                        <div class="card-header bg-navy">
-                                            <h3 class="card-title"><i class="far fa-user mr-1"></i> Evry Nazyli Ciptanto</h3>
-                                            <div class="card-tools">
-                                                <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
-                                                    <i class="fas fa-minus"></i>
-                                                </button>
-                                                <button type="button" class="btn btn-tool" data-card-widget="remove" title="Remove">
-                                                    <i class="fas fa-times"></i>
-                                                </button>
-                                            </div>
-                                        </div>
-                                        <div class="card-body">
-                                            <div class="table-responsive">
-                                                <table class="table">
-                                                    <tbody>
-                                                        <tr>
-                                                            <th style="width:30%">Nama :</th>
-                                                            <td>Evry Nazyli Ciptanto</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th>NIM : </th>
-                                                            <td>0110220045</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th>Kelas : </th>
-                                                            <td>TI - 08 Weekend</td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                                        </div>
-                                        <div class="card-footer">
-                                            <strong>Teknik informatika</strong>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="card">
-                                        <div class="card-header bg-navy">
-                                            <h3 class="card-title"><i class="far fa-user mr-1"></i> Muhammad Zulfikar</h3>
-                                            <div class="card-tools">
-                                                <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
-                                                    <i class="fas fa-minus"></i>
-                                                </button>
-                                                <button type="button" class="btn btn-tool" data-card-widget="remove" title="Remove">
-                                                    <i class="fas fa-times"></i>
-                                                </button>
-                                            </div>
-                                        </div>
-                                        <div class="card-body">
-                                            <div class="table-responsive">
-                                                <table class="table">
-                                                    <tbody>
-                                                        <tr>
-                                                            <th style="width:30%">Nama :</th>
-                                                            <td>Muhammad Zulfikar</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th>NIM : </th>
-                                                            <td>0110220034</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th>Kelas : </th>
-                                                            <td>TI - 08 Weekend</td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                                        </div>
-                                        <div class="card-footer">
-                                            <strong>Teknik informatika</strong>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-footer">
-                            Sistem Informasi Wisata Kota Depok
-                        </div>
-                    </div>
+                    <blockquote class="quote-orange mt-0">
+                        <h5>Sistem Informasi Wisata Kota Bandung</h5>
+                        <p>Bandung adalah ibu kota provinsi Jawa Barat,
+                            Indonesia serta menjadi kota terbesar ketiga di Indonesia setelah Jakarta dan Surabaya.
+                            Secara kepadatan kota ini merupakan kota terpadat ke-2 di Indonesia setelah Jakarta dengan kepadatan penduduk mencapai 15.051/km2.
+                            Kota ini terletak 140 km sebelah Tenggara Jakarta, dan merupakan kota terbesar di wilayah Pulau Jawa bagian selatan.
+                            Sedangkan wilayah Bandung Raya (Wilayah Metropolitan Bandung) merupakan metropolitan terbesar ketiga di Indonesia setelah Jabodetabek dan Gerbangkertosusila. Kota Bandung Berbatasan dengan Kota Cimahi dan Kabupaten Bandung Barat di Barat dan Utara, dan Kabupaten Bandung di Timur dan Selatan.</p>
+                    </blockquote>
+
+                    <blockquote class="quote-info">
+                        <h5>Info!</h5>
+                        <p><strong>Aplikasi ini dikerjakan oleh Mahasiswa TI - STT NF </strong><br>
+                            Bahasa Pemrograman: PHP <br>
+                            Framework Codeigniter <br>
+                            Database : MySQL </p>
+
+                    </blockquote>
+
+                    <blockquote class="quote-secondary mt-0">
+                        <p>
+                            <strong>Copyright © 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong>
+                            All rights reserved. <b>Version</b> 3.2.0
+                        </p>
+                    </blockquote>
                 </div>
             </div>
         </div>

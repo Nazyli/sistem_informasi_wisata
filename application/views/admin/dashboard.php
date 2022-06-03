@@ -4,7 +4,7 @@
       <div class="row mb-2">
         <div class="col-sm-6">
           <h1>Selamat Datang</h1>
-          <h6 class="mt-2 text-primary"> <i class="fas fa-minus mr-2"></i> Sistem Informasi Kota Depok</h6>
+          <h6 class="mt-2 text-primary"> <i class="fas fa-minus mr-2"></i> Sistem Informasi Kota Bandung</h6>
         </div>
         <div class="col-sm-6">
           <ol class="breadcrumb float-sm-right">
@@ -107,7 +107,7 @@
                 <img class="d-block w-100" src="<?php echo base_url(); ?>assets/dist/img/slide/1.jpg" alt="First slide">
                 <div class="carousel-caption">
                   <h4>
-                    Wisata Rekreasi & Kuliner Unggulan Kota Depok
+                    Wisata Rekreasi & Kuliner Unggulan Kota Bandung
                   </h4>
                 </div>
               </div>
@@ -115,7 +115,7 @@
                 <img class="d-block w-100" src="<?php echo base_url(); ?>assets/dist/img/slide/2.jpg" alt="Second slide">
                 <div class="carousel-caption">
                   <h4>
-                    Daftar Wisata Rekreasi Kota Depok
+                    Daftar Wisata Rekreasi Kota Bandung
                   </h4>
                 </div>
               </div>
@@ -123,7 +123,7 @@
                 <img class="d-block w-100" src="<?php echo base_url(); ?>assets/dist/img/slide/3.jpg" alt="Third slide">
                 <div class="carousel-caption">
                   <h4>
-                    Daftar Wisata Kuliner Kota Depok
+                    Daftar Wisata Kuliner Kota Bandung
                   </h4>
                 </div>
               </div>
@@ -149,10 +149,11 @@
               </div>
             </div>
             <blockquote class="bg-navy">
-              <h5 class="quote-primary text-light"><i class="fas fa-info"></i> SIWIKODE</h5>
-              <p>Aplikasi Sistem Informasi Kota Depok menyajikan berbagai informasi seputar wisata rekreasi &
-                kuliner unggulan kota Depok </p>
-              <small>Sistem Informasi Kota Depok <cite title="Source Title">SIWIKODE</cite></small>
+              <h5 class="quote-primary text-light"><i class="fas fa-info"></i> BANDUNG</h5>
+              <p class="text-justify">Aplikasi Sistem Informasi Kota Bandung menyajikan berbagai informasi seputar wisata rekreasi &
+                kuliner unggulan kota Bandung. 
+                Bandung adalah ibu kota provinsi Jawa Barat, Indonesia serta menjadi kota terbesar ketiga di Indonesia setelah Jakarta dan Surabaya. Secara kepadatan kota ini merupakan kota terpadat ke-2 di Indonesia setelah Jakarta dengan kepadatan penduduk mencapai 15.051/km2. Kota ini terletak 140 km sebelah Tenggara Jakarta, dan merupakan kota terbesar di wilayah Pulau Jawa bagian selatan </p>
+              <small>Sistem Informasi Kota Bandung </small>
             </blockquote>
           </div>
         </div>

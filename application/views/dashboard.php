@@ -3,7 +3,7 @@
     <div class="container">
       <div class="row mb-2">
         <div class="col-sm-6">
-          <h1 class="m-2 text-primary"> Sistem Informasi Wisata Kota Depok <small>SIWIKODE</small></h1>
+          <h1 class="m-2 text-primary"> Sistem Informasi Wisata Kota Bandung</h1>
         </div>
       </div>
     </div>

@@ -129,7 +129,7 @@
               </form>
             </div>
             <div class="card-footer">
-              Sistem Informasi Wisata Kota Depok
+              Sistem Informasi Wisata Kota Bandung
             </div>
           </div>
         </div>
