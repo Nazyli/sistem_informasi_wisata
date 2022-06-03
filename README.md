@@ -19,7 +19,7 @@ http://localhost/sistem_informasi_wisata
 ```
 ### Demo
 Demo can be found at : 
-> Note `Sistem Informasi Wisata WEB :` https://nazyli.com/
+> Note `Sistem Informasi Wisata Bandung WEB :` https://wisata-bandung.nazyli.com/
 
 
 ### Screenshots
